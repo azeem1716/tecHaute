@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "Balmond";
+    src: url('./Assests/Fonts/Balmond.ttf');
+}
+
+:root{
+    --theme-color:#110953;
+    --primary-color : #091929;
+    --secondary-color: #313341;
+    --white-color: #ffffff;
+    --green-color:#56ae77;
+    --blue-varient-1: #2d2288;
+}
+
+/* COLORS  */
+.primary-color{
+    color: var(--primary-color);
+}
+.secondary-color{
+    color: var(--secondary-color);
+}
+
+.white-color{
+    color: var(--white-color);
+}
+.theme-color{
+    color: var(--theme-color);
+}
+.green-color{
+    color: var(--green-color);
+}
+.blue-1{
+    color: var(--blue-varient-1);
+}
+
+/* COLORS  */
+
+
+
+/* FONT FAMILIES   */
+
+.balmond{
+    font-family: "Balmond";
+}
+  
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+/* FONT FAMILIES   */
+
+
+/* FONT SIZES  */
+
+
+.text-xxl{
+    font-size: 40px;
+}
+
+.text-xl{
+    font-size: 36px;
+}
+
+.text-lg{
+    font-size: 28px;
+}
+.text-md{
+    font-size: 18px;
+}
+
+.text-sm{
+    font-size: 12px;
+}
+
+/* FONT SIZES  */
+
+/* LINE HEIGHTS  */
+
+.lh-xl{
+    line-height: 32px;
+}
+
+.lh-lg{
+    line-height: 30px;
+}
+.lh-sm{
+    line-height: 12px;
+}
+
+/* LINE HEIGHTS  */
+
+/* LETTER SPACING  */
+
+.ls-lg{
+    letter-spacing: 4px;
+}
+
+/* LETTER SPACING  */
+
+
+.max-width{
+    max-width: 1440px;
+}
+
+.btn-comp{
+    width: 150px;
+    height: 46px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(to left,  #2667d2,#6a8dc7);
+    color: var(--white-color);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.btn-comp:hover{
+    background: linear-gradient(to right,  #2667d2,#6a8dc7);
+    transition: .8s ease;
+    
+}
+
+
+.divider-white{
+    height: 4px;
+    width: 20px;
+    background-color: white;
+}
+
+.divider-black{
+    height: 4px;
+    width: 20px;
+    background-color: black
+}
+
+
+
+.hero-section{
+    background-image: url('./Assests/Images/Hero-Banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: screen;
+}
+
+
+.hero-section .hero-text{
+    max-width: 500px;
+}
+
+
+.star-icon-box{
+    display: inline-flex;
+    background-color: #56af78;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+
+.text-carousel{
+    width: screen;
+    height: 100px;
+    background-color: var(--theme-color);
+    transform: rotate(-5deg);
+}
+
+
+.circle-icon{
+    background-color: var(--blue-varient-1);
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+}
+
+.swiper {
+    width: screen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 300px; */
+  }
+
+.experience-section{
+    background-image: url('./Assests/Images/Experience-Banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: screen;
+    height: 400px;
+}
+.experience-section img{
+    height: 400px;
+}
+
+.experice-driven-text{
+    max-width: 400px;
+}
+.chat-text{
+    margin-top: -10px;
+}
+
+.industries-section{
+    background-image: url('./Assests/Images/Experience-Banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: screen;
+    min-height: 400px;
+}
+
+.tag{
+    height: 60px;
+    width: 220px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.constr-tag{
+    background-color: #ffd6f8;
+    color: #e426c3;
+}
+
+.constr-icon{
+    background-color: #e426c3;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+
+.travel-tag{
+    background-color: #ffe9d6;
+    color: #fca65e;
+}
+
+.travel-icon{
+    background-color: #fca65e;
+    padding: 15px;
+    border-radius: 50px;
+}
