@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "Balmond";
+    src: url('../Assests/Fonts/Balmond.ttf');
+}
+
+:root{
+    --theme-color:#110953;
+    --primary-color : #091929;
+    --secondary-color: #313341;
+    --white-color: #ffffff;
+    --green-color:#56ae77;
+    --blue-varient-1: #2d2288;
+}
+
+
+/* 
+.curved-border {
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+}
+
+.curved-border::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-color: #6C8BB9; 
+    border-top-left-radius: 100% 50px;
+    border-top-right-radius: 100% 50px;
+} */
+
+
+
+
+/* COLORS  */
+.primary-color{
+    color: var(--primary-color);
+}
+.secondary-color{
+    color: var(--secondary-color);
+}
+
+.white-color{
+    color: var(--white-color);
+}
+.theme-color{
+    color: var(--theme-color);
+}
+.green-color{
+    color: var(--green-color);
+}
+.blue-1{
+    color: var(--blue-varient-1);
+}
+
+/* COLORS  */
+
+
+/* Text Color Classes */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.text-white {
+    color: var(--white-color);
+}
+
+.text-theme {
+    color: var(--theme-color);
+}
+
+.text-green {
+    color: var(--green-color);
+}
+
+.text-blue-1 {
+    color: var(--blue-varient-1);
+}
+
+/* Text Color Classes */
+
+
+/* FONT FAMILIES   */
+
+.balmond{
+    font-family: "Balmond";
+}
+  
+ /* Poppins Thin (100) */
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  /* Poppins Extra Light (200) */
+  .poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  /* Poppins Light (300) */
+  .poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  /* Poppins Regular (400) */
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  /* Poppins Medium (500) */
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  /* Poppins SemiBold (600) */
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  /* Poppins Bold (700) */
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  /* Poppins Extra Bold (800) */
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  /* Poppins Black (900) */
+  .poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+  
+/* FONT FAMILIES   */
+
+
+/* FONT SIZES  */
+
+
+.text-xxl{
+    font-size: 40px;
+}
+
+.text-xl{
+    font-size: 36px;
+}
+
+.text-lg{
+    font-size: 28px;
+}
+.text-md{
+    font-size: 18px;
+}
+
+.text-sm{
+    font-size: 12px;
+}
+
+/* FONT SIZES  */
+
+/* LINE HEIGHTS  */
+
+.lh-xl{
+    line-height: 32px;
+}
+
+.lh-lg{
+    line-height: 30px;
+}
+.lh-sm{
+    line-height: 12px;
+}
+
+/* LINE HEIGHTS  */
+
+/* LETTER SPACING  */
+
+.ls-lg{
+    letter-spacing: 4px;
+}
+
+/* LETTER SPACING  */
+
+
+.max-width{
+    max-width: 1440px;
+}
+
+.btn-comp{
+    width: 150px;
+    height: 46px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(to left,  #2667d2,#6a8dc7);
+    color: var(--white-color);
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.btn-comp:hover{
+    background: linear-gradient(to right,  #2667d2,#6a8dc7);
+    transition: 0.5s ease-in-out;
+    
+}
+
+
+.divider-white{
+    height: 4px;
+    width: 20px;
+    background-color: white;
+}
+
+.divider-black{
+    height: 4px;
+    width: 20px;
+    background-color: black
+}
+
+
+
+.hero-section{
+    background-image: url('../Assests/Images/Hero-Banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: screen;
+}
+
+
+.hero-section .hero-text{
+    max-width: 500px;
+}
+
+
+.star-icon-box{
+    display: inline-flex;
+    background-color: #56af78;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+
+.services-swiper{
+    width: screen;
+    overflow: hidden;
+}
+
+.text-carousel{
+    width: screen;
+    height: 100px;
+    background-color: var(--theme-color);
+    transform: rotate(-5deg);
+}
+
+
+.circle-icon{
+    background-color: var(--blue-varient-1);
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+}
+
+
+.experience-section{
+    background-image: url('../Assests/Images/Experience-Banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: screen;
+    height: 400px;
+}
+.experience-section img{
+    height: 400px;
+}
+
+.experice-driven-text{
+    max-width: 400px;
+}
+.chat-text{
+    margin-top: -10px;
+}
+
+.industries-section{
+    background-image: url('../Assests/Images/Experience-Banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: screen;
+    min-height: 600px;
+}
+
+.tag{
+    height: 60px;
+    width: 220px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.constr-tag{
+    background-color: #ffd6f8;
+    color: #e426c3;
+}
+
+.constr-icon{
+    background-color: #e426c3;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+
+.travel-tag{
+    background-color: #ffe9d6;
+    color: #fca65e;
+}
+
+.travel-icon{
+    background-color: #fca65e;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+.fitness-tag{
+    background-color: #dbffd6;
+    color: #21c945;
+}
+
+.fitness-icon{
+    background-color: #21c945;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+
+
+.wed-tag{
+    background-color: #fff3cf;
+    color: #e6b31b;
+}
+
+.wed-icon{
+    background-color: #e6b31b;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+
+.beauty-tag{
+    background-color: #adc3fe;
+    color: #2e5de1;
+}
+
+.beauty-icon{
+    background-color: #2e5de1;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+
+.beauty-tag{
+    background-color: #adc3fe;
+    color: #2e5de1;
+}
+
+.beauty-icon{
+    background-color: #2e5de1;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+
+.law-tag{
+    background-color: #fec5c5;
+    color: #ee3333;
+}
+
+.law-icon{
+    background-color: #ee3333;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+
+.salon-tag{
+    background-color: #ccfdfc;
+    color: #41d2d0;
+}
+
+.salon-icon{
+    background-color: #41d2d0;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+
+.spa-tag{
+    background-color: #eabfff;
+    color: #9d22db;
+}
+
+.spa-icon{
+    background-color: #9d22db;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+
+.interior-tag{
+    background-color: #ffabd1;
+    color: #e90e70;
+}
+
+.interior-icon{
+    background-color: #e90e70;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+
+.dental-tag{
+    background-color: #c6ffd6;
+    color: #34c85e;
+}
+
+.dental-icon{
+    background-color: #34c85e;
+    padding: 15px;
+    border-radius: 50px;
+}
+
+
+.combo-section{
+    background-image: url('../Assests/Images/Combo-Plan-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.mockup-image img{
+    position: absolute;
+    bottom: -200px;
+    right: 50px;
+    height: 90%;
+}
+
+
+
+
+/* .testimonial{
+    background-image: url('../Assests/Images/testimonial_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 300px;
+    width: 100%;
+} */
