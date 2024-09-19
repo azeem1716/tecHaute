@@ -12,6 +12,7 @@
     --white-color: #ffffff;
     --green-color:#56ae77;
     --blue-varient-1: #2d2288;
+    --yellow : #ffc107 ;
 }
 
 
@@ -62,8 +63,8 @@
 
 
 /* Text Color Classes */
-.text-primary {
-    color: var(--primary-color) !important;
+.text-black {
+    color: var(--primary-color)!important;
 }
 
 .text-secondary {
@@ -84,6 +85,10 @@
 
 .text-blue-1 {
     color: var(--blue-varient-1);
+}
+
+.text-yellow{
+    color: var(--yellow);
 }
 
 /* Text Color Classes */
@@ -246,15 +251,15 @@
     line-height: 32px;
 }
 
-.lh-lg{
-    line-height: 30px;
+.lh-large{
+    line-height: 30px !important;
 }
 .lh-sm{
     line-height: 12px;
 }
 
 .lh-0{
-    line-height: 0px;
+    line-height: 0px !important;
 }
 
 /* LINE HEIGHTS  */
@@ -523,6 +528,7 @@
     background-size: cover;
     background-position: center center;
     min-height: 100vh;
+    height: auto;
     position: relative;
 }
 
@@ -544,10 +550,55 @@
     width: 100%;
 } */
 
+.owl-carousel .owl-stage-outer {
+    height: auto !important;  /* Allow the height to be dynamic */
+}
+
+.owl-carousel .owl-item {
+    height: auto !important;  /* Ensure individual items don't force a specific height */
+}
 
 .owl-carousel .owl-item img {
-    all: unset !important; /* This removes all default styles */
+    /* Reset or override unwanted styles here */
+    width: auto !important;
+    height: auto !important;
+    /* Other styles to override */
 }
+
+.custom-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.custom-nav img {
+    cursor: pointer;
+    width: 40px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px; /* Space between icons and dots */
+}
+
+.dots span {
+    width: 15px; /* Increase dot size */
+    height: 15px; /* Increase dot size */
+    background-color: red !important; /* Use a bright color for testing */
+    border-radius: 50%; /* Make dots circular */
+    margin: 0 5px; /* Space between dots */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+
+.dots .active {
+    background-color: blue; /* Color for active dot */
+}
+
+
 
 
 .testimonial-container {
@@ -559,7 +610,7 @@
     max-width: 600px;
     margin: 0 auto; /* Center the container */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    overflow: hidden; /* Ensures that the profile image does not cause layout issues */
+  
 }
 
 .profile-image {
@@ -573,3 +624,88 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional shadow for the image */
     object-fit: cover; /* Ensures the image stays within the circle */
 }
+
+
+/* Our Work Section  */
+.our-work-image{
+width: 100%;
+}
+
+/* Our Work Section  */
+
+
+
+.accordion-item {
+    margin-bottom: 15px; /* Add gap between accordion items */
+}
+
+/* Your existing CSS styles */
+.accordion-item {
+    border: none !important;
+}
+.accordion-button::after {
+    background-image: url('../Assets/Icons/Accordion-Arrow.png') !important;
+}
+.accordion-button:focus {
+    box-shadow: none !important; /* Remove focus outline */
+    outline: none !important; /* Remove any outline */
+}
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(90deg) !important;
+}
+.accordion-item > .accordion-header .accordion-button {
+    background-color: #fafcff !important;
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 42px !important;
+}
+.accordion-item > .accordion-collapse {
+    background-color: #fafcff !important;
+    border: 1px solid #f0f0f0 !important;
+    border-radius: 42px !important;
+}
+
+
+
+/* web design section  */
+
+
+.image-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hover-image {
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover .hover-image {
+    transform: scale(1.1);
+}
+
+.overlay {
+    font-size: 24px;
+    font-family: "Poppins", sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(143, 10, 143, 0.8), rgba(128, 0, 128, 0));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+/* web design section  */
+
+
+
+

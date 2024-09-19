@@ -27,25 +27,52 @@ $(document).ready(function() {
     smartSpeed: 5000,                
   });
 });
+$(document).ready(function() {
+  var owl = $('#testimonial-carousel');
 
-
-$(document).ready(function(){
-  $('#testimonial-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    dots: true,
-    autoplay: false,  // Ensure autoplay is set to false
-    responsive: {
-      0: {
-        items: 1  // Show 1 item at a time on small screens
-      },
-      768: {
-        items: 1  // Show 1 item at a time on medium screens
-      },
-      1024: {
-        items: 2  // Show 2 items at a time on large screens
+  owl.owlCarousel({
+      loop: true,
+      margin: 10,
+      autoHeight: true,
+      nav: false,
+      dots: false,
+      autoplay: false,
+      responsive: {
+          0: { items: 1 },
+          768: { items: 1 },
+          1024: { items: 2 }
       }
-    }
+  });
+
+  $('.custom-nav .next').click(function() {
+      owl.trigger('next.owl.carousel');
+  });
+
+  $('.custom-nav .prev').click(function() {
+      owl.trigger('prev.owl.carousel');
+  });
+
+  owl.on('initialized.owl.carousel', function(event) {
+      var itemCount = event.item.count;
+      var dotsContainer = $('.custom-nav .dots');
+      dotsContainer.empty(); // Clear existing dots
+
+      for (var i = 0; i < itemCount; i++) {
+          dotsContainer.append('<span data-index="' + i + '"></span>');
+      }
+
+      dotsContainer.find('span').eq(0).addClass('active');
+  });
+
+  owl.on('changed.owl.carousel', function(event) {
+      var currentIndex = event.item.index;
+      $('.custom-nav .dots span').removeClass('active');
+      $('.custom-nav .dots span').eq(currentIndex).addClass('active');
+  });
+
+  $('.custom-nav .dots').on('click', 'span', function() {
+      var index = $(this).data('index');
+      owl.trigger('to.owl.carousel', [index, 300]);
   });
 });
+
