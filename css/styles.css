@@ -277,23 +277,72 @@
     max-width: 1440px;
 }
 
-.btn-comp{
-    width: 150px;
-    height: 46px;
-    border-radius: 50px;
-    border: none;
-    background: linear-gradient(to left,  #2667d2,#6a8dc7);
-    color: var(--white-color);
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
 
-.btn-comp:hover{
-    background: linear-gradient(to right,  #2667d2,#6a8dc7);
-    transition: 0.5s ease-in-out;
-    
-}
+
+
+
+/* Button component  */
+.btn-comp {
+    position: relative;
+    overflow: hidden;
+    width: 150px; /* Adjust size as needed */
+    height: 46px; /* Adjust size as needed */
+    border-radius: 50px; /* Adjust border-radius as needed */
+    background: linear-gradient(to left, #2667d2, #6a8dc7);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, background 0.5s ease;
+  }
+  
+  .btn-comp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(
+  82.3deg,
+  rgb(149, 114, 184) 10.8%, /* Lighter shade of the first color */
+  rgba(135, 120, 255, 1) 94.3% /* Lighter shade of the second color */
+);
+
+    /* background: linear-gradient(to left, #d2266c, #f68e4f); */
+/*     
+    background: linear-gradient(
+      82.3deg,
+      rgb(56, 46, 72) 10.8%,
+      rgba(99, 88, 238, 1) 94.3%
+    ); */
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    z-index: 0; /* Ensure it is behind the button content */
+  }
+  
+  .btn-comp:hover::before {
+    transform: scaleY(1);
+  }
+  
+  .btn-comp:hover {
+    color: #fff; /* Change text color if needed */
+  }
+  
+  .btn-comp .button-content {
+    position: relative;
+    z-index: 1; /* Ensure button content is above the pseudo-element */
+  }
+  
+  .btn-comp:active {
+    transform: scale(0.9); /* Adjust for a subtle scaling effect on click */
+  }
+  
+  
+
+/* Button component  */
+
 
 
 .divider-white{
@@ -306,6 +355,11 @@
     height: 4px;
     width: 20px;
     background-color: black
+}
+
+.divider-gray{
+    background-color: #e4e4e6;
+    height: 2px;
 }
 
 
@@ -332,7 +386,7 @@
     border-radius: 2px;
 }
 
-
+/* services  */
 .services-swiper{
     width: screen;
     overflow: hidden;
@@ -352,6 +406,41 @@
     width: 30px;
     border-radius: 50px;
 }
+
+
+/* services  */
+
+
+/* logos section  */
+
+.logos-box{
+background-color: white;
+border: 1px solid var(--secondary-color) ;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    perspective: 800px;
+  }
+  .box img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+  }
+
+
+/* logos section  */
 
 
 .experience-section{
@@ -703,9 +792,213 @@ width: 100%;
 .image-container:hover .overlay {
     opacity: 1;
 }
+.offers-bg{
+    background-image: url('../Assests/Images/Web-Design-Bg.png');
+    background-position: center center;
+    background-size: cover;
+    min-height: 400px;
+}
+.offers-cards-section {
+    background: linear-gradient(to top, #e8eaec 0%, #eaecee 5%, white 50%, white 100%);
+    min-height: 100vh;
+}
+
+.customer-satisfaction-box {
+    padding: 1.5rem; 
+    border: 3px dashed transparent; 
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease-in-out; 
+}
+
+.customer-satisfaction-box:hover {
+    border-color: var(--theme-color); 
+}
+
+
+
 
 /* web design section  */
 
 
 
 
+
+
+/* From Uiverse.io by gharsh11032000 */ 
+
+
+.animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background: linear-gradient(to left, #2667d2, #6a8dc7);
+    border-radius: 100px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 0 2px greenyellow;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: greenyellow;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  
+  .animated-button .arr {
+    right: -100%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    /* transform: translateX(-12px); */
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr {
+    right:10%;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(-12px);
+  }
+  
+  .animated-button:hover svg {
+    fill: #212121;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px greenyellow;
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+  
+
+
+
+
+
+/* 
+
+.btn-comp,
+.btn-comp *,
+.btn-comp:after,
+.btn-comp:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-comp {
+  -webkit-tap-highlight-color: transparent;
+  background: linear-gradient(to left,  #2667d2,#6a8dc7);
+  color: #fff;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+ 
+  line-height: 1.5;
+  text-transform: uppercase;
+  border-radius: 99rem;
+  border: none;
+  padding: 0.8rem 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 2px #6a8dc7;
+}
+
+.btn-comp span {
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
+
+.btn-comp .text {
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.btn-comp .marquee {
+  --spacing: 7em;
+  --start: 0em;
+  --end: 10em;
+  -webkit-animation: marquee 1s linear infinite;
+  animation: marquee 1s linear infinite;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  opacity: 0;
+  position: relative;
+  text-shadow: #fff var(--spacing) 0, #fff calc(var(--spacing) * -1) 0,
+    #fff calc(var(--spacing) * -2) 0;
+}
+
+.btn-comp:hover .marquee {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  opacity: 1;
+}
+
+.btn-comp:hover .text {
+  opacity: 0;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(var(--start));
+  }
+
+  100% {
+    transform: translateX(var(--end));
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(var(--start));
+  }
+
+  100% {
+    transform: translateX(var(--end));
+  }
+}
+
+.btn-comp:active {
+  transform: scale(0.95);
+} */
