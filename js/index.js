@@ -259,9 +259,67 @@ $(document).ready(function() {
     duration: 600 // Increased duration for the bounce
   });
 
+  anime({
+    targets: '.spiral img',
+    scaleX: [
+      { value: 1.5, duration: 800, easing: 'easeOutElastic(1, 0.5)' }, // Stretch along the x-axis
+      { value: 0.7, duration: 800, easing: 'easeOutElastic(1, 0.5)' }, // Shrink along the x-axis
+      { value: 1, duration: 1200, easing: 'easeOutElastic(1, 0.5)' }   // Return to original size
+    ],
+    duration: 3000, // Total duration of the animation
+    loop: true, // Repeat the animation indefinitely
+    direction: 'alternate' // Alternate between stretching and shrinking
+  });
+  
+
+  anime({
+    targets: '.concentric-square img',
+    rotate: {
+      value: '1turn', // Rotate a full turn
+      duration: 3000, // Duration of the rotation
+      easing: 'linear' // Linear easing for continuous rotation
+    },
+    scale: [
+      { value: 1.2, duration: 1000, easing: 'easeInOutSine' }, // Scale up
+      { value: 1, duration: 1000, easing: 'easeInOutSine' }    // Scale back down
+    ],
+    opacity: [
+      { value: 0.7, duration: 1000, easing: 'easeInOutSine' }, // Fade to 70%
+      { value: 1, duration: 1000, easing: 'easeInOutSine' }     // Fade back to full opacity
+    ],
+    loop: true // Repeat the animation indefinitely
+  });
+
+  
+  function getRandomPosition(max) {
+    return Math.random() * max - max / 2; // Generate random position within range
+  }
+  
+  function getRandomPosition(max, isY = false) {
+    return isY ? Math.random() * max - max / 2 : Math.random() * max - max / 2; // Generate random position within range
+  }
+  
+  function animateArrow() {
+    anime({
+      targets: '.arrow-2 img',
+      translateX: getRandomPosition(600), // Horizontal movement remains large
+      translateY: getRandomPosition(100, true), // Decreased vertical range to -50 to 50
+      duration: 2000, // Duration of the animation
+      easing: 'easeInOutQuad', // Easing function
+      complete: animateArrow // Repeat the animation when complete
+    });
+  }
+  
+  // Start the animation
+  animateArrow();
+  
+
 
 });
 // ANIME JS ANIMATIONS 
+
+
+
 
 // GSAP ANIMATIONS 
 
@@ -278,8 +336,8 @@ headings.forEach((heading) => {
   gsap.from(heading, {
     scrollTrigger: {
       trigger: heading, 
-      start: 'top 80%', 
-      end: 'top 30%', 
+      start: 'top 95%', 
+      end: 'bottom 20%', 
       scrub: 0.5, // Scrub for 0.5 seconds for smoother follow
       toggleActions: 'play reverse play reverse' 
     },
@@ -350,10 +408,11 @@ const satisfactionBoxes = gsap.utils.toArray('.customer-satisfaction-box');
 const satisfactionTl = gsap.timeline({
   scrollTrigger: {
     trigger: '.customer-satisfaction-container',
-    start: 'top 60%',
-    end: 'bottom 40%',
-    scrub: 1, // Smooth scrubbing
-    toggleActions: 'play none none reverse'
+    start: 'top 80%', 
+    end: 'bottom 80%',
+    scrub: 0.5, // Smoother scrubbing (lower values = smoother)
+    toggleActions: 'play none none reverse',
+    ease: "power2.out" // Add easing for smoothness
   }
 });
 
@@ -428,6 +487,39 @@ designCards.forEach((card, index) => {
       y: 0 
     }, 
     "<"); 
+
+
+
+   
+const columns = gsap.utils.toArray('.animated-column');
+
+columns.forEach((col, index) => {
+  const direction = index % 2 === 0 ? 'bottom' : 'top'; // Alternates direction
+  const offset = index % 2 === 0 ? 100 : -100; // Positive for bottom, negative for top
+
+  gsap.fromTo(col, 
+    {
+      y: offset,
+      opacity: 0,
+    }, 
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1, // Increased duration for smoother animation
+      ease: 'power4.out', // Smoother easing function
+      scrollTrigger: {
+        trigger: col,
+        start: 'top 75%', // Adjust based on your layout
+        toggleActions: 'play none none reverse',
+        stagger: {
+          amount: 0.3, // Increased stagger delay for smoother effect
+          from: "start", // Stagger from the start
+        },
+      },
+    }
+  );
+});
+
 });
 
 
