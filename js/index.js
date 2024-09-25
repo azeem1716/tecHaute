@@ -1,3 +1,13 @@
+document.getElementById("check").addEventListener("change", function() {
+  const sideMenu = document.getElementById("side-menu");
+  if (this.checked) {
+      sideMenu.style.left = "0"; // Open menu (slide in)
+  } else {
+      sideMenu.style.left = "-300px"; // Close menu (slide out)
+  }
+});
+
+
 
 
 $(document).ready(function() {
@@ -147,6 +157,26 @@ $(document).ready(function() {
 // ANIME JS ANIMATIONS 
 
 $(document).ready(function() {
+
+  anime({
+    targets: '#header-icon',
+    rotate: [
+      { value: -5, duration: 100, easing: 'easeInOutSine' },
+      { value: 5, duration: 100, easing: 'easeInOutSine' },
+      { value: -5, duration: 100, easing: 'easeInOutSine' },
+      { value: 0, duration: 100, easing: 'easeInOutSine' }
+    ],
+    scale: [
+      { value: 1.1, duration: 200, easing: 'easeInOutQuad' },  // Zoom in slightly
+      { value: 0.95, duration: 200, easing: 'easeInOutQuad' }, // Shrink slightly
+      { value: 1.05, duration: 200, easing: 'easeInOutQuad' }, // Zoom in again
+      { value: 1, duration: 200, easing: 'easeInOutQuad' }     // Back to normal size
+    ],
+    loop: true, // Infinite loop for continuous jiggle + zoom effect
+    duration: 1200 // Total time for one complete animation cycle
+  });
+
+  
   anime({
     targets: '.box',
     rotate: {
@@ -157,33 +187,53 @@ $(document).ready(function() {
     loop: true
   });
 
+
+
   anime({
     targets: '.arrow img',
+    translateX: [
+      { value: -10, duration: 100, easing: 'easeInOutSine' }, // Move left
+      { value: 10, duration: 100, easing: 'easeInOutSine' }, // Move right
+      { value: -5, duration: 100, easing: 'easeInOutSine' }, // Move left again
+      { value: 5, duration: 100, easing: 'easeInOutSine' }, // Move right again
+      { value: 0, duration: 100, easing: 'easeInOutSine' } // Return to original position
+    ],
     rotate: {
-      value: 360,
-      duration: 2000,
-      easing: 'linear',
+      value: '1turn', // Full 360-degree rotation
+      duration: 2000, // Duration for the complete rotation
+      easing: 'easeInOutSine' // Easing function for smoothness
     },
-    translateX: function() {
-      return anime.random(-500, 0);
-    },
-    translateY: function() {
-      return anime.random(-300, 300);
-    },
-    scale: [
-      { value: 1.5, duration: 700, easing: 'easeInOutQuad' },
-      { value: 1, duration: 700, easing: 'easeInOutQuad' }
-    ],
-    opacity: [
-      { value: 0.5, duration: 500, easing: 'easeInOutQuad' },
-      { value: 1, duration: 500, easing: 'easeInOutQuad' }
-    ],
-    duration: 4000,
-    easing: 'easeInOutSine',
-    loop: true,
-    direction: 'alternate',
-    delay: anime.stagger(100),
+    loop: true // Repeat indefinitely
   });
+
+
+  // anime({
+  //   targets: '.arrow img',
+  //   rotate: {
+  //     value: 360,
+  //     duration: 2000,
+  //     easing: 'linear',
+  //   },
+  //   translateX: function() {
+  //     return anime.random(-500, 0);
+  //   },
+  //   translateY: function() {
+  //     return anime.random(-300, 300);
+  //   },
+  //   scale: [
+  //     { value: 1.5, duration: 700, easing: 'easeInOutQuad' },
+  //     { value: 1, duration: 700, easing: 'easeInOutQuad' }
+  //   ],
+  //   opacity: [
+  //     { value: 0.5, duration: 500, easing: 'easeInOutQuad' },
+  //     { value: 1, duration: 500, easing: 'easeInOutQuad' }
+  //   ],
+  //   duration: 4000,
+  //   easing: 'easeInOutSine',
+  //   loop: true,
+  //   direction: 'alternate',
+  //   delay: anime.stagger(100),
+  // });
 
   anime({
     targets: '.abstract',
@@ -326,6 +376,38 @@ $(document).ready(function() {
 $(document).ready(function() {
   gsap.registerPlugin(ScrollTrigger);
 
+// GSAP 3D twirl effect on mouse move for multiple package cards
+const cards = document.querySelectorAll('.package-card');
+
+cards.forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const { clientX, clientY, target } = e;
+    const { left, top, width, height } = target.getBoundingClientRect();
+    
+    const x = (clientX - left) / width - 0.5; // Normalized X coordinate
+    const y = (clientY - top) / height - 0.5; // Normalized Y coordinate
+
+    // Adjust the strength of the effect by multiplying the x and y values
+    const strength = 10; // Adjust this value to decrease the effect
+    gsap.to(target, {
+      rotationY: x * strength,
+      rotationX: -y * strength,
+      transformPerspective: 800,
+      duration: 0.5, // Duration for the animation
+      ease: "power2.out"
+    });
+  });
+
+  // Reset the rotation on mouse leave
+  card.addEventListener('mouseleave', () => {
+    gsap.to(card, {
+      rotationY: 0,
+      rotationX: 0,
+      duration: 0.5,
+      ease: "power2.out"
+    });
+  });
+});
 
 
 // Select all headings with the class 'animated-heading'
@@ -563,7 +645,6 @@ gsap.from(secondDiv, {
 
 
 // GSAP ANIMATIONS 
-
 
 
 

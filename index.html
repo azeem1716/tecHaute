@@ -1,1284 +1,2128 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TecHaute</title>
+    <!-- Custom Css  -->
+    <link rel="stylesheet" href="css/styles.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TecHaute</title>
-  <!-- Custom Css  -->
-  <link rel="stylesheet" href="css/styles.css" />
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="Bootstrap/cs/bootstrap.min.css.css" />
 
-  <!-- Bootstrap Css -->
-  <link rel="stylesheet" href="Bootstrap/cs/bootstrap.min.css.css" />
+    <!-- OWl Carousel Css  -->
+    <link rel="stylesheet" href="owl-carousel/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owl-carousel/css/owl.theme.default.min.css" />
 
-  <!-- OWl Carousel Css  -->
-  <link rel="stylesheet" href="owl-carousel/css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="owl-carousel/css/owl.theme.default.min.css" />
+    <!-- Font Awesome Css  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- Font Awesome Css  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Anime JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
-  <!-- Anime JS  -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Locomotive Scroll CSS -->
+    <script src="https://unpkg.com/locomotive-scroll"></script>
 
-  <!-- Locomotive Scroll CSS -->
-  <script src="https://unpkg.com/locomotive-scroll"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <!-- GSAP CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    />
+  </head>
 
-  <!-- GSAP CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js">
+  <body>
+    <!-- Header for Desktop -->
+    <header class="desktop-header">
+      <div
+        class="d-none d-lg-flex justify-content-between align-items-center container my-4"
+      >
+        <div class="d-flex gap-4 text-white">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-google"></i>
+          <i class="fa-brands fa-pinterest-p"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-solid fa-wifi"></i>
+        </div>
 
+        <div class="d-flex gap-4">
+          <div class="d-flex justify-content-center align-items-baseline gap-2">
+            <div>
+              <img
+                src="Assests/Icons/live-chat svg.svg"
+                id="header-icon"
+                alt=""
+              />
+            </div>
+            <div>
+              <h6 class="text-md text-white poppins-medium lh-0">Live Chat</h6>
+              <span class="text-sm text-white poppins-regular lh-0"
+                >Feel Free to chat with us
+              </span>
+            </div>
+          </div>
 
-</head>
+          <div class="d-flex justify-content-center align-items-baseline gap-2">
+            <div>
+              <img src="Assests/Icons/call-us.svg" id="header-icon" alt="" />
+            </div>
+            <div>
+              <h6
+                class="text-md text-white poppins-medium lh-0 text-capitalize"
+              >
+                Call or text us
+              </h6>
+              <span
+                class="text-sm text-white poppins-regular lh-0 text-capitalize"
+                >Call Us On +123 456 7890
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<body>
-  <div id="movingElement"></div>
+      <div
+        class="header-container d-none d-lg-flex align-items-center container rounded-3"
+      >
+        <div
+          class="container d-flex justify-content-between align-items-center"
+        >
+          <!-- Logo -->
+          <div class="logo">
+            <a href="#">
+              <img
+                src="Assests/Icons/techaute_logo.svg"
+                alt="Logo"
+                class="img-fluid"
+                style="max-height: 50px"
+              />
+            </a>
+          </div>
 
-  <!-- Hero Section  -->
-  <div class="hero-section d-flex justify-content-center align-items-center">
-    <div class="container d-flex justify-content-center align-items-center">
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <div class="divider-white"></div>
-        <div class="hero-text text-center mt-3">
-          <h3 class="text-uppercase white-color poppins-regular text-sm ls-lg ">
-            Proficient Design Agency
-          </h3>
-          <h1 class="text-capitalize white-color balmond text-xxl animated-heading">
-            Surpassing with the modernization & originafity
-          </h1>
-          <p class="white-color poppins-regular text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-            earum.amet consectetur adipisicing elit. Sequi, earum.
-          </p>
+          <!-- Navigation Links -->
+          <nav class="navigation d-flex justify-content-center">
+            <ul class="nav-list d-flex list-unstyled m-0">
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-divider">|</li>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-divider">|</li>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-divider">|</li>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="#">Combo Packages</a>
+              </li>
+              <li class="nav-divider">|</li>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="#">Reviews</a>
+              </li>
+              <li class="nav-divider">|</li>
+              <li class="nav-item mx-4">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Button at the end -->
           <button class="btn-comp">
             <span class="button-content"> Get Started</span>
           </button>
-
-          <div
-            class="white-color poppins-regular text-sm d-inline-flex justify-content-center align-items-center gap-1 mt-3">
-            <span>Excellent</span>
-
-            <span class="d-flex gap-1">
-              <span class="star-icon-box"><i class="fa-solid fa-star white-color"></i></span>
-              <span class="star-icon-box"><i class="fa-solid fa-star white-color"></i></span>
-              <span class="star-icon-box"><i class="fa-solid fa-star white-color"></i></span>
-              <span class="star-icon-box"><i class="fa-solid fa-star white-color"></i></span>
-              <span class="star-icon-box"><i class="fa-solid fa-star white-color"></i></span>
-            </span>
-            <span>1100 +5 Star reviews on
-              <i class="fa-solid fa-star green-color"></i> Trustpilot
-            </span>
-          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Hero Section  -->
+    </header>
+    <!-- Header for Desktop -->
 
-
-  <!-- Services Carousel  -->
-  <div class="text-carousel d-flex justify-content-center align-items-center white-color balmond mt-5">
-    <div class="services-swiper">
-      <div class="owl-carousel owl-theme" id="services-carousel">
-        <div class="item">
-          <div class="d-flex align-items-center gap-5">
-            <div class="circle-icon"></div>
-            <div>
-              <h2>Design Subscription</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="d-flex align-items-center gap-5">
-            <div class="circle-icon"></div>
-            <div>
-              <h2>Website Maintenance</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="d-flex align-items-center gap-5">
-            <div class="circle-icon"></div>
-            <div>
-              <h2>Social Media</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="d-flex align-items-center gap-5">
-            <div class="circle-icon"></div>
-            <div>
-              <h2>Website</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="d-flex align-items-center gap-5">
-            <div class="circle-icon"></div>
-            <div>
-              <h2>Website</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="d-flex align-items-center gap-5">
-            <div class="circle-icon"></div>
-            <div>
-              <h2>Website</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="d-flex align-items-center gap-5">
-            <div class="circle-icon"></div>
-            <div>
-              <h2>Website</h2>
-            </div>
-          </div>
-        </div>
+    <!-- Header for Mobile  -->
+    <header class="mobile-header">
+      <div class="logo">
+        <img src="Assests/Images/TecHaute-White-logo.png" alt="" />
       </div>
-    </div>
-  </div>
-  <!-- Services Carousel  -->
+      <label for="check" class="hamburger">
+        <input type="checkbox" id="check" />
+        <div class="bar-container">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+    </header>
 
-  <!-- Logo Design Section  -->
-  <div class="mt-5 position-relative">
+    <nav class="side-menu" id="side-menu">
+      <ul>
+        <li class="d-flex justify-content-between">
+          <a href="#"><span class="icon-about">About </span> </a>
+          <span><i class="fa-solid fa-info text-white"></i></span>
+        </li>
 
-    <div class="arrow">
-      <img src="Assests/Icons/Vector Smart Object Arrow.svg" alt="Arrow">
-    </div>
+        <li class="d-flex justify-content-between">
+          <a href="#"><span class="icon-services">Services</span> </a>
+          <span><i class="fa-solid fa-gear text-white"></i></span>
+        </li>
 
-    <div class="spiral">
-      <img src="Assests/Icons/spiral.svg" alt="Spiral">
-    </div>
+        <li class="d-flex justify-content-between">
+          <a href="#"><span class="icon-combo">Combo Packages</span> </a>
+          <span><i class="fa-solid fa-boxes-packing text-white"></i></span>
+        </li>
 
+        <li class="d-flex justify-content-between">
+          <a href="#"><span class="icon-reviews">Reviews</span> </a>
+          <span><i class="fa-solid fa-comments text-white"></i></span>
+        </li>
 
-    <div class="abstract">
-      <img src="Assests/Icons/Vector Smart Object abstract.svg" alt="">
-    </div>
-
-    <div class="text-center mb-4">
-      <div class="divider-black mx-auto"></div>
-      <span class="text-uppercase text-theme poppins-regular text-sm ls-lg ">Our Unparalleled websites</span>
-     <h2 class="text-capitalize text-theme balmond text-center col-12 col-md-8 col-lg-3 mx-auto animated-heading">
-  To build concrete digital existence
-</h2>
-
-    </div>
-    <div class="container">
-      <div class="col-10 mx-auto">
-        <ul class="list-unstyled d-flex flex-wrap justify-content-between text-sm text-capitalize poppins-regular text-secondary work-list">
-          <li>Logo Design</li>
-          <li>Website Design</li>
-          <li>Digital Marketing</li>
-          <li>Mobile Apps</li>
-          <li>Video Animation</li>
-          <li>Marketing Colletral</li>
+        <li class="d-flex justify-content-between">
+          <a href="#"><span class="icon-contact">Contact </span> </a>
+          <span><i class="fa-solid fa-phone-volume text-white"></i></span>
+        </li>
       </ul>
-      </div>
-      <div class="col-12 divider-gray"></div>
-    </div>
+    </nav>
+    <!-- Header for Mobile  -->
 
-    <div>
-      <div class="container mt-5 logo-section">
-        <div class="row gy-4 ">
-          <!-- Column for extra small to medium screens (col-12 for xs, col-6 for sm, col-3 for md and up) -->
-          <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
-            <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
-              <div class="icon-wrapper">
-                <img src="Assests/Icons/3d-modeling.svg" alt="">
-              </div>
-              <div>
-                <span>Iconic Logo</span>
-              </div>
-            </div>
-            
-          </div>
+    <div id="movingElement"></div>
 
-          <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
-            <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
-              <div>
-                <img src="Assests/Icons/pencil.svg" alt="">
-              </div>
-              <div>
-                <span>Typographic Logo</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
-            <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
-              <div>
-                <img src="Assests/Icons/vector.svg" alt="">
-              </div>
-              <div>
-                <span>Illustrative Logo</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
-            <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
-              <div>
-                <img src="Assests/Icons/2d logo.svg" alt="">
-              </div>
-              <div>
-                <span>2D Logo</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
-            <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
-              <div>
-                <img src="Assests/Icons/leaf.svg" alt="">
-              </div>
-              <div>
-                <span>Animated Logo</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
-            <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
-              <div>
-                <img src="Assests/Icons/pyramid.svg" alt="">
-              </div>
-              <div>
-                <span>3D Logo</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
-            <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
-              <div>
-                <img src="Assests/Icons/Wordmark.svg" alt="">
-              </div>
-              <div>
-                <span>Wordmark Logo</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
-            <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
-              <div>
-                <img src="Assests/Icons/colour.svg" alt="">
-              </div>
-              <div>
-                <span>Emblem Logo</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="box">
-      <img src="Assests/Icons/Vector Smart Object.svg" alt="">
-    </div>
-
-    <div class="container mt-5 logo-cards-section">
-      <div class="row d-flex justify-content-center">
-        <div class="col-12 col-md-6">
-          <div class="logo-sec-card py-5 d-flex flex-column flex-md-row align-items-center h-100">
-            <!-- Main Content Section -->
-            <div class="w-100 h-100 ms-3">
-              <div class="mb-3 w-50">
-                <h3 class="text-lg text-white balmond text-capitalize">Trusted By 50+ Companies</h3>
-              </div>
-              <div class="mb-3">
-                <button class="btn-comp text-sm">Read All our user cases</button>
-              </div>
-              <div class="w-75">
-                <img src="Assests/Images/Freelancing-logos.png" alt="" class="w-100">
-              </div>
-            </div>
-            <!-- Image Section -->
-            <div class="logo-sec-card-image w-25 h-100 mt-4 mt-md-0 text-center">
-              <img src="Assests/Images/laptop-vector.png" alt="" class="h-75 w-auto laptop-bounce">
-            </div>
-
-            <div class="Concentric-circle w-100">
-              <img src="Assests/Icons/Concentric-circle.svg" alt="Concentric Circle" id="circle">
-            </div>
-
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6">
-          <div class="logo-sec-card py-5 d-flex flex-column flex-md-row align-items-center h-100">
-            <!-- Main Content Section -->
-            <div class="w-100 h-100 ms-3">
-              <div class="mb-3 w-50">
-                <h3 class="text-lg text-white balmond text-capitalize">See <br> Testimonials</h3>
-              </div>
-              <div class="mb-3">
-                <button class="btn-comp text-sm">Read All our user cases</button>
-              </div>
-              <div class="w-75">
-                <div class="stars lh-0">
-                  <span class="text-lg text-white balmond">4.9</span>
-                  <i class="fa-solid fa-star text-sm text-yellow"></i>
-                  <i class="fa-solid fa-star text-sm text-yellow"></i>
-                  <i class="fa-solid fa-star text-sm text-yellow"></i>
-                  <i class="fa-solid fa-star text-sm text-yellow"></i>
-                  <i class="fa-solid fa-star text-sm text-yellow"></i>
-                </div>
-              </div>
-            </div>
-            <!-- Image Section -->
-            <div class="logo-sec-card-image w-25 h-100 mt-4 mt-md-0 text-center">
-              <img src="Assests/Images/Peoples.png" alt="" class="h-100 w-auto peoples-animation">
-            </div>
-            <div class="loader-container w-25">
-              <img src="Assests/Icons/Loader-image.svg" alt="loader image" id="loader-image">
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-  </div>
-  <!-- Logo Design Section  -->
-
-  
-  <!-- Endorse your business -->
-<div class="experience-section  mt-5">
-  <div class="container ">
-    <div class="row align-items-center">
-      
-      <!-- Image Section -->
-      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-        <div class="bounce-image be-the-best">
-          <img src="./Assests/Images/Be-The-Best.png" alt="Be The Best Image" class="img-fluid" />
-        </div>
-      </div>
-      
-      <!-- Text and Buttons Section -->
-      <div class="col-lg-6 col-md-12 d-flex flex-column align-items-center justify-content-center text-center text-lg-start">
-        <div class="experience-driven-text">
+    <!-- Hero Section  -->
+    <div class="hero-section d-flex justify-content-center align-items-center">
+      <div class="container d-flex justify-content-center align-items-center">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+        >
           <div class="divider-white"></div>
-          <span class="text-uppercase white-color poppins-regular text-sm ls-lg">
-            Endorse your business
-          </span>
-          <h2 class="text-capitalize white-color balmond text-xxl">
-            With influential client Experience driven website
-          </h2>
-          <p class="white-color poppins-regular text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, earum.
-            amet consectetur adipisicing elit. Sequi, earum.
-          </p>
-        </div>
+          <div class="hero-text text-center mt-3">
+            <h3
+              class="text-uppercase white-color poppins-regular text-sm ls-lg"
+            >
+              Proficient Design Agency
+            </h3>
+            <h1 class="text-capitalize white-color balmond text-xxl">
+              Surpassing with the modernization & originafity
+            </h1>
+            <p class="white-color poppins-regular text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+              earum.amet consectetur adipisicing elit. Sequi, earum.
+            </p>
+            <button class="btn-comp">
+              <span class="button-content"> Get Started</span>
+            </button>
 
-        <!-- Button and Icons Section -->
-        <div class="d-flex flex-column flex-lg-row gap-4 align-items-center mt-4">
-          
-          <!-- Get Started Button -->
-          <div>
-            <button class="btn-comp">Get Started</button>
-          </div>
-          
-          <!-- Live Chat Icon -->
-          <div class="d-flex justify-content-center align-items-center gap-2 white-color">
-            <i class="fa-brands fa-rocketchat text-xl"></i>
-            <div>
-              <h2 class="text-md poppins-regular">Live Chat</h2>
-              <h2 class="text-sm poppins-regular chat-text">
-                Feel Free to chat with us
-              </h2>
+            <div
+              class="white-color poppins-regular text-sm d-inline-flex justify-content-center align-items-center gap-1 mt-3"
+            >
+              <span>Excellent</span>
+
+              <span class="d-flex gap-1">
+                <span class="star-icon-box"
+                  ><i class="fa-solid fa-star white-color"></i
+                ></span>
+                <span class="star-icon-box"
+                  ><i class="fa-solid fa-star white-color"></i
+                ></span>
+                <span class="star-icon-box"
+                  ><i class="fa-solid fa-star white-color"></i
+                ></span>
+                <span class="star-icon-box"
+                  ><i class="fa-solid fa-star white-color"></i
+                ></span>
+                <span class="star-icon-box"
+                  ><i class="fa-solid fa-star white-color"></i
+                ></span>
+              </span>
+              <span
+                >1100 +5 Star reviews on
+                <i class="fa-solid fa-star green-color"></i> Trustpilot
+              </span>
             </div>
           </div>
-          
-          <!-- Call Us Icon -->
-          <div class="d-flex justify-content-center align-items-center gap-2 white-color">
-            <i class="fa-solid fa-phone text-xl"></i>
-            <div>
-              <h2 class="text-md poppins-regular">Call or text us</h2>
-              <h2 class="text-sm poppins-regular chat-text">
-                Call Us On +123 456 7890
-              </h2>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Section  -->
+
+    <!-- Services Carousel  -->
+    <div
+      class="text-carousel d-flex justify-content-center align-items-center white-color balmond mt-5"
+    >
+      <div class="services-swiper">
+        <div class="owl-carousel owl-theme" id="services-carousel">
+          <div class="item">
+            <div class="d-flex align-items-center gap-5">
+              <div class="circle-icon"></div>
+              <div>
+                <h2>Design Subscription</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="d-flex align-items-center gap-5">
+              <div class="circle-icon"></div>
+              <div>
+                <h2>Website Maintenance</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="d-flex align-items-center gap-5">
+              <div class="circle-icon"></div>
+              <div>
+                <h2>Social Media</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="d-flex align-items-center gap-5">
+              <div class="circle-icon"></div>
+              <div>
+                <h2>Website</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="d-flex align-items-center gap-5">
+              <div class="circle-icon"></div>
+              <div>
+                <h2>Website</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="d-flex align-items-center gap-5">
+              <div class="circle-icon"></div>
+              <div>
+                <h2>Website</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="d-flex align-items-center gap-5">
+              <div class="circle-icon"></div>
+              <div>
+                <h2>Website</h2>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
     </div>
-  </div>
-</div>
-<!-- Endorse your business -->
+    <!-- Services Carousel  -->
 
-
-
-  <!-- Web Design Section -->
-<div class=" website-Design-Section">
-  <div class="arrow-2">
-    <img src="Assests/Icons/Vector Smart Object Arrow.svg" alt="Arrow-2">
-  </div>
-
-  <div class="concentric-square">
-    <img src="Assests/Icons/concentric-squares.svg" alt="concentric-square">
-  </div>
-
-
-  <div class="text-center mb-4">
-    <div class="divider-black mx-auto"></div>
-    <span class="text-uppercase text-theme poppins-regular text-sm ls-lg">Our Work</span>
-    <h2 class="text-capitalize text-theme balmond text-xxl animated-heading">
-      Stunning Custom Web Design Portfolio
-    </h2>    
-  </div>
-  <div class="container">
-    <div class="col-10 mx-auto">
-      <ul class="list-unstyled d-flex flex-wrap justify-content-between text-sm text-capitalize poppins-regular text-secondary work-list">
-        <li>Logo Design</li>
-        <li>Website Design</li>
-        <li>Digital Marketing</li>
-        <li>Mobile Apps</li>
-        <li>Video Animation</li>
-        <li>Marketing Colletral</li>
-    </ul>
-    
-    </div>
-    <div class="col-12 divider-gray"></div>
-  </div>
-
-  <div class="row gx-2 gy-2 mt-4 website-Designs-Cards web-Designs">
-    <!-- Loop through images for cleaner markup -->
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="website-Designs image-container position-relative h-100">
-        <img src="Assests/Images/Web Post 01.png" alt="Web Post 01" class="hover-image w-100 h-100" />
-        <div class="overlay">Overlay Text</div>
+    <!-- Logo Design Section  -->
+    <div class="mt-5 position-relative">
+      <div class="arrow">
+        <img src="Assests/Icons/Vector Smart Object Arrow.svg" alt="Arrow" />
       </div>
-    </div>
 
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="website-Designs image-container position-relative h-100">
-        <img src="Assests/Images/Web Post 02.png" alt="Web Post 02" class="hover-image w-100 h-100" />
-        <div class="overlay">Overlay Text</div>
+      <div class="spiral">
+        <img src="Assests/Icons/spiral.svg" alt="Spiral" />
       </div>
-    </div>
 
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="website-Designs image-container position-relative h-100">
-        <img src="Assests/Images/Web Post 03.png" alt="Web Post 03" class="hover-image w-100 h-100" />
-        <div class="overlay">Overlay Text</div>
+      <div class="abstract">
+        <img src="Assests/Icons/Vector Smart Object abstract.svg" alt="" />
       </div>
-    </div>
 
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="website-Designs image-container position-relative h-100">
-        <img src="Assests/Images/Web Post 04.png" alt="Web Post 04" class="hover-image w-100 h-100" />
-        <div class="overlay">Overlay Text</div>
-      </div>
-    </div>
-
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="website-Designs image-container position-relative h-100">
-        <img src="Assests/Images/Web Post 05.png" alt="Web Post 05" class="hover-image w-100 h-100" />
-        <div class="overlay">Overlay Text</div>
-      </div>
-    </div>
-
-    <div class="col-12 col-sm-6 col-md-4">
-      <div class="website-Designs image-container position-relative h-100">
-        <img src="Assests/Images/Web Post 06.png" alt="Web Post 06" class="hover-image w-100 h-100" />
-        <div class="overlay">Overlay Text</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="offers-bg d-flex flex-column justify-content-between py-5">
-    <div class="col mx-auto">
-      <button class="btn-comp">Get Started</button>
-    </div>
-
-    <div>
       <div class="text-center mb-4">
         <div class="divider-black mx-auto"></div>
-        <span class="text-uppercase text-theme poppins-regular text-sm ls-lg">Our Work</span>
-        <h2 class="text-capitalize text-theme balmond text-xxl animated-heading">
-          Get a taste of what we do
+        <span class="text-uppercase text-theme poppins-regular text-sm ls-lg"
+          >Our Unparalleled websites</span
+        >
+        <h2
+          class="text-capitalize text-theme balmond text-center col-12 col-md-8 col-lg-3 mx-auto animated-heading"
+        >
+          To build concrete digital existence
         </h2>
-        <p class="col-12 col-md-8 col-lg-4 mx-auto text-secondary text-capitalize poppins-regular">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam odit corporis nulla rerum quos iure.
-        </p>
-        
       </div>
       <div class="container">
         <div class="col-10 mx-auto">
-          <ul class="list-unstyled d-flex flex-wrap justify-content-between text-sm text-capitalize poppins-regular text-secondary work-list">
+          <ul
+            class="list-unstyled d-flex flex-wrap justify-content-between text-sm text-capitalize poppins-regular text-secondary work-list"
+          >
             <li>Logo Design</li>
             <li>Website Design</li>
             <li>Digital Marketing</li>
             <li>Mobile Apps</li>
             <li>Video Animation</li>
             <li>Marketing Colletral</li>
-        </ul>
+          </ul>
+        </div>
+        <div class="col-12 divider-gray"></div>
+      </div>
+
+      <div>
+        <div class="container mt-5 logo-section">
+          <div class="row gy-4">
+            <!-- Column for extra small to medium screens (col-12 for xs, col-6 for sm, col-3 for md and up) -->
+            <div
+              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
+              >
+                <div class="icon-wrapper">
+                  <img src="Assests/Icons/3d-modeling.svg" alt="" />
+                </div>
+                <div>
+                  <span>Iconic Logo</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
+              >
+                <div>
+                  <img src="Assests/Icons/pencil.svg" alt="" />
+                </div>
+                <div>
+                  <span>Typographic Logo</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
+              >
+                <div>
+                  <img src="Assests/Icons/vector.svg" alt="" />
+                </div>
+                <div>
+                  <span>Illustrative Logo</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
+              >
+                <div>
+                  <img src="Assests/Icons/2d logo.svg" alt="" />
+                </div>
+                <div>
+                  <span>2D Logo</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
+              >
+                <div>
+                  <img src="Assests/Icons/leaf.svg" alt="" />
+                </div>
+                <div>
+                  <span>Animated Logo</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
+              >
+                <div>
+                  <img src="Assests/Icons/pyramid.svg" alt="" />
+                </div>
+                <div>
+                  <span>3D Logo</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
+              >
+                <div>
+                  <img src="Assests/Icons/Wordmark.svg" alt="" />
+                </div>
+                <div>
+                  <span>Wordmark Logo</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
+              >
+                <div>
+                  <img src="Assests/Icons/colour.svg" alt="" />
+                </div>
+                <div>
+                  <span>Emblem Logo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="Assests/Icons/Vector Smart Object.svg" alt="" />
+      </div>
+
+      <div class="container mt-5 logo-cards-section">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-md-6">
+            <div
+              class="logo-sec-card py-5 d-flex flex-column flex-md-row align-items-center h-100"
+            >
+              <!-- Main Content Section -->
+              <div class="w-100 h-100 ms-3">
+                <div class="mb-3 w-50">
+                  <h3 class="text-lg text-white balmond text-capitalize">
+                    Trusted By 50+ Companies
+                  </h3>
+                </div>
+                <div class="mb-3">
+                  <button class="btn-comp text-sm">
+                    Read All our user cases
+                  </button>
+                </div>
+                <div class="w-75">
+                  <img
+                    src="Assests/Images/Freelancing-logos.png"
+                    alt=""
+                    class="w-100"
+                  />
+                </div>
+              </div>
+              <!-- Image Section -->
+              <div
+                class="logo-sec-card-image w-25 h-100 mt-4 mt-md-0 text-center"
+              >
+                <img
+                  src="Assests/Images/laptop-vector.png"
+                  alt=""
+                  class="h-75 w-auto laptop-bounce"
+                />
+              </div>
+
+              <div class="Concentric-circle w-100">
+                <img
+                  src="Assests/Icons/Concentric-circle.svg"
+                  alt="Concentric Circle"
+                  id="circle"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div
+              class="logo-sec-card py-5 d-flex flex-column flex-md-row align-items-center h-100"
+            >
+              <!-- Main Content Section -->
+              <div class="w-100 h-100 ms-3">
+                <div class="mb-3 w-50">
+                  <h3 class="text-lg text-white balmond text-capitalize">
+                    See <br />
+                    Testimonials
+                  </h3>
+                </div>
+                <div class="mb-3">
+                  <button class="btn-comp text-sm">
+                    Read All our user cases
+                  </button>
+                </div>
+                <div class="w-75">
+                  <div class="stars lh-0">
+                    <span class="text-lg text-white balmond">4.9</span>
+                    <i class="fa-solid fa-star text-sm text-yellow"></i>
+                    <i class="fa-solid fa-star text-sm text-yellow"></i>
+                    <i class="fa-solid fa-star text-sm text-yellow"></i>
+                    <i class="fa-solid fa-star text-sm text-yellow"></i>
+                    <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Image Section -->
+              <div
+                class="logo-sec-card-image w-25 h-100 mt-4 mt-md-0 text-center"
+              >
+                <img
+                  src="Assests/Images/Peoples.png"
+                  alt=""
+                  class="h-100 w-auto peoples-animation"
+                />
+              </div>
+              <div class="loader-container w-25">
+                <img
+                  src="Assests/Icons/Loader-image.svg"
+                  alt="loader image"
+                  id="loader-image"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <!-- Logo Design Section  -->
 
-  <div class="offers-cards-section">
-    <div class="container">
-      <div class="text-center">
-        <h2 class="text-capitalize text-theme balmond text-lg animated-heading">
-          This is why we are the best
-        </h2>
-        <p class="col-4 mx-auto text-sm text-secondary text-capitalize poppins-regular">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam odit corporis nulla rerum quos iure.
-        </p>
-      </div>
-
-      <div class="row customer-satisfaction-container">
-        <div class="col-12 col-lg-3 ">
-          <div class="customer-satisfaction-box w-100 h-100">
-            <div class="w-100 h-75">
-              <div class="d-flex justify-content-center align-items-center w-100 h-100">
-                <img src="Assests/Icons/satisfaction.svg" alt="" class="w-50 h-50" />
-              </div>
-              <div class="text-center w-100 h-25">
-                <h3 class="text-md text-secondary poppins-bold lh-0">
-                  100% Satisfaction
-                </h3>
-                <span class="text-sm text-primary poppins-regular">Guaranteed</span>
-              </div>
+    <!-- Endorse your business -->
+    <div class="experience-section mt-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Image Section -->
+          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+            <div class="bounce-image be-the-best">
+              <img
+                src="./Assests/Images/Be-The-Best.png"
+                alt="Be The Best Image"
+                class="img-fluid"
+              />
             </div>
           </div>
-        </div>
 
-        <div class="col-12 col-lg-3 ">
-          <div class="customer-satisfaction-box w-100 h-100">
-            <div class="w-100 h-75">
-              <div class="d-flex justify-content-center align-items-center w-100 h-100">
-                <img src="Assests/Icons/customer.svg" alt="" class="w-50 h-50" />
-              </div>
-              <div class="text-center w-100 h-25">
-                <h3 class="text-md text-secondary poppins-bold lh-0">
-                  24/7 Customer
-                </h3>
-                <span class="text-sm text-primary poppins-regular">Support</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-3 ">
-          <div class="customer-satisfaction-box w-100 h-100">
-            <div class="w-100 h-75">
-              <div class="d-flex justify-content-center align-items-center w-100 h-100">
-                <img src="Assests/Icons/ownership.svg" alt="" class="w-50 h-50" />
-              </div>
-              <div class="text-center w-100 h-25">
-                <h3 class="text-md text-secondary poppins-bold lh-0">
-                  100% ownership
-                </h3>
-                <span class="text-sm text-primary poppins-regular">Rights</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-3 ">
-          <div class="customer-satisfaction-box w-100 h-100">
-            <div class="w-100 h-75">
-              <div class="d-flex justify-content-center align-items-center w-100 h-100">
-                <img src="Assests/Icons/moneyback.svg" alt="" class="w-50 h-50" />
-              </div>
-              <div class="text-center w-100 h-25">
-                <h3 class="text-md text-secondary poppins-bold lh-0">
-                  Money back
-                </h3>
-                <span class="text-sm text-primary poppins-regular">Guarante</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-     <div class="row container">
-      <div class="col-12 col-lg-4">
-        <div class="h-100 package-card"  >
-          <div class="h-75 w-100">
-            <div class="w-75 ms-4">
-              <h2 class="text-md text-theme poppins-medium">Basic Branding Design Package</h2>
-            <p class="text-sm text-secondary poppins-regular">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, modi.</p>
-            </div>
-            <ul class="package-list ">
-              <li>2 Set Of Stationary Designs</li>
-              <li>By 1 Experienced Designers</li>
-              <li>Unlimited Revisions</li>
-              <li>Printable Formats</li>
-              <li>24-48 Hours Delivery</li>
-              <li>100% Satisfaction Guarantee</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-     </div>
-    </div>
-  </div>
-</div>
-<!-- End of Web Design Section -->
-
-
-<!-- Endorse your business -->
-<div class="experience-section  mt-5">
-  <div class="container ">
-    <div class="row align-items-center">
-      
-      <!-- Image Section -->
-      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-        <div class="bounce-image be-the-best">
-          <img src="./Assests/Images/Laptop-2.png" alt="Be The Best Image" class="img-fluid" />
-        </div>
-      </div>
-      
-      <!-- Text and Buttons Section -->
-      <div class="col-lg-6 col-md-12 d-flex flex-column align-items-center justify-content-center text-center text-lg-start">
-        <div class="experience-driven-text">
-          <div class="divider-white"></div>
-          <span class="text-uppercase white-color poppins-regular text-sm ls-lg">
-            Endorse your business
-          </span>
-          <h2 class="text-capitalize white-color balmond text-xxl">
-            With influential client Experience driven website
-          </h2>
-          <p class="white-color poppins-regular text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, earum.
-            amet consectetur adipisicing elit. Sequi, earum.
-          </p>
-        </div>
-
-        <!-- Button and Icons Section -->
-        <div class="d-flex flex-column flex-lg-row gap-4 align-items-center mt-4">
-          
-          <!-- Get Started Button -->
-          <div>
-            <button class="btn-comp">Get Started</button>
-          </div>
-          
-          <!-- Live Chat Icon -->
-          <div class="d-flex justify-content-center align-items-center gap-2 white-color">
-            <i class="fa-brands fa-rocketchat text-xl"></i>
-            <div>
-              <h2 class="text-md poppins-regular">Live Chat</h2>
-              <h2 class="text-sm poppins-regular chat-text">
-                Feel Free to chat with us
+          <!-- Text and Buttons Section -->
+          <div
+            class="col-lg-6 col-md-12 d-flex flex-column align-items-center justify-content-center text-center text-lg-start"
+          >
+            <div class="experience-driven-text">
+              <div class="divider-white"></div>
+              <span
+                class="text-uppercase white-color poppins-regular text-sm ls-lg"
+              >
+                Endorse your business
+              </span>
+              <h2 class="text-capitalize white-color balmond text-xxl">
+                With influential client Experience driven website
               </h2>
+              <p class="white-color poppins-regular text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+                earum. amet consectetur adipisicing elit. Sequi, earum.
+              </p>
             </div>
-          </div>
-          
-          <!-- Call Us Icon -->
-          <div class="d-flex justify-content-center align-items-center gap-2 white-color">
-            <i class="fa-solid fa-phone text-xl"></i>
-            <div>
-              <h2 class="text-md poppins-regular">Call or text us</h2>
-              <h2 class="text-sm poppins-regular chat-text">
-                Call Us On +123 456 7890
-              </h2>
+
+            <!-- Button and Icons Section -->
+            <div
+              class="d-flex flex-column flex-lg-row gap-4 align-items-center mt-4"
+            >
+              <!-- Get Started Button -->
+              <button class="btn-comp">
+                <span class="button-content"> Get Started</span>
+              </button>
+
+              <div class="d-flex gap-4">
+                <div
+                  class="d-flex justify-content-center align-items-baseline gap-2"
+                >
+                  <div>
+                    <img
+                      src="Assests/Icons/live-chat svg.svg"
+                      id="header-icon"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6 class="text-md text-white poppins-medium lh-0">
+                      Live Chat
+                    </h6>
+                    <span class="text-sm text-white poppins-regular lh-0"
+                      >Feel Free to chat with us
+                    </span>
+                  </div>
+                </div>
+
+                <div
+                  class="d-flex justify-content-center align-items-baseline gap-2"
+                >
+                  <div>
+                    <img
+                      src="Assests/Icons/call-us.svg"
+                      id="header-icon"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6
+                      class="text-md text-white poppins-medium lh-0 text-capitalize"
+                    >
+                      Call or text us
+                    </h6>
+                    <span
+                      class="text-sm text-white poppins-regular lh-0 text-capitalize"
+                      >Call Us On +123 456 7890
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
     </div>
-  </div>
-</div>
-<!-- Endorse your business -->
+    <!-- Endorse your business -->
 
+    <!-- Web Design Section -->
+    <div class="website-Design-Section">
+      <div class="arrow-2">
+        <img src="Assests/Icons/Vector Smart Object Arrow.svg" alt="Arrow-2" />
+      </div>
 
+      <div class="concentric-square">
+        <img
+          src="Assests/Icons/concentric-squares.svg"
+          alt="concentric-square"
+        />
+      </div>
 
-
-  <!-- Our Work  -->
-  <div>
-    <div class="container">
-      <div class="text-center">
+      <div class="text-center mb-4">
         <div class="divider-black mx-auto"></div>
-        <span class="text-uppercase text-theme poppins-regular text-sm ls-lg">Our work
-        </span>
-        <h2 class="text-capitalize text-theme balmond text-xxl animated-heading">
-          Our seamless logo designing process
+        <span class="text-uppercase text-theme poppins-regular text-sm ls-lg"
+          >Our Work</span
+        >
+        <h2
+          class="text-capitalize text-theme balmond text-xxl animated-heading"
+        >
+          Stunning Custom Web Design Portfolio
         </h2>
-        <span class="text-uppercase text-theme poppins-regular text-sm ls-lg lh-0">You realx while we do all the work.
-          it's this simple
-        </span>
       </div>
-    </div>
-    <div class="container">
-      <div class="row gx-2">
-        <div class="col-12 col-sm-6 col-lg-2 animated-column" id="col1">
-          <div>
-            <div class="text-center" style="position: relative; left: 40px">
-              <span class="text-md text-secondary poppins-medium">Research</span>
-              <p class="text-sm text-theme poppins-regular">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Expedita, doloremque.
-              </p>
-            </div>
-            <div>
-              <img src="Assests/Images/work-1.jpg.png" alt="" class="our-work-image" />
-            </div>
-          </div>
+      <div class="container">
+        <div class="col-10 mx-auto">
+          <ul
+            class="list-unstyled d-flex flex-wrap justify-content-between text-sm text-capitalize poppins-regular text-secondary work-list"
+          >
+            <li>Logo Design</li>
+            <li>Website Design</li>
+            <li>Digital Marketing</li>
+            <li>Mobile Apps</li>
+            <li>Video Animation</li>
+            <li>Marketing Colletral</li>
+          </ul>
         </div>
-      
-        <div class="col-12 col-sm-6 col-lg-2 animated-column" id="col2" style="margin-top: 180px">
-          <div>
-            <div>
-              <img src="Assests/Images/work-2.jpg.png" alt="" class="our-work-image" />
-            </div>
-            <div class="text-center" style="position: relative; left: 40px">
-              <span class="text-md text-secondary poppins-medium">Research</span>
-              <p class="text-sm text-theme poppins-regular">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Expedita, doloremque.
-              </p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-lg-2 animated-column" id="col3">
-          <div>
-            <div class="text-center" style="position: relative; left: 40px">
-              <span class="text-md text-secondary poppins-medium">Research</span>
-              <p class="text-sm text-theme poppins-regular">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Expedita, doloremque.
-              </p>
-            </div>
-            <div>
-              <img src="Assests/Images/work-3.jpg.png" alt="" class="our-work-image" />
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-lg-2 animated-column" id="col4" style="margin-top: 180px">
-          <div>
-            <div>
-              <img src="Assests/Images/work-4.jpg.png" alt="" class="our-work-image" />
-            </div>
-            <div class="text-center" style="position: relative; left: 40px">
-              <span class="text-md text-secondary poppins-medium">Research</span>
-              <p class="text-sm text-theme poppins-regular">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Expedita, doloremque.
-              </p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-lg-2 animated-column" id="col5">
-          <div>
-            <div class="text-center" style="position: relative; left: 40px">
-              <span class="text-md text-secondary poppins-medium">Research</span>
-              <p class="text-sm text-theme poppins-regular">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Expedita, doloremque.
-              </p>
-            </div>
-            <div>
-              <img src="Assests/Images/work-5.jpg.png" alt="" class="our-work-image" />
-            </div>
-          </div>
-        </div>
-      
-        <div class="col-12 col-sm-6 col-lg-2 animated-column" id="col6" style="margin-top: 180px">
-          <div>
-            <div>
-              <img src="Assests/Images/work-6.jpg.png" alt="" class="our-work-image" />
-            </div>
-            <div class="text-center" style="position: relative; left: 40px">
-              <span class="text-md text-secondary poppins-medium">Research</span>
-              <p class="text-sm text-theme poppins-regular">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Expedita, doloremque.
-              </p>
-            </div>
-          </div>
-        </div>
+        <div class="col-12 divider-gray"></div>
       </div>
-      
-      
-    </div>
-  </div>
-  <!-- Our Work  -->
 
-  <!-- Industries -->
-  <div class="industries-section d-flex flex-column justify-content-center align-items-center mt-5">
-    <div class="container max-width text-center">
-      <div class="d-flex flex-column align-items-center">
-        <div class="divider-white"></div>
-        <div class="mt-3">
-          <h3 class="text-uppercase white-color poppins-regular text-sm ls-lg">
-            Industries
-          </h3>
-          <h1 class="text-capitalize white-color balmond text-xxl">
-            Over 200 industries served and growing
-          </h1>
-          <p class="white-color poppins-regular text-sm">
-            Through our dynamic logo design services, we have meritoriously
-            served clients emanating from every industry.
-          </p>
+      <div class="row gx-2 gy-2 mt-4 website-Designs-Cards web-Designs">
+        <!-- Loop through images for cleaner markup -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="website-Designs image-container position-relative h-100">
+            <img
+              src="Assests/Images/Web Post 01.png"
+              alt="Web Post 01"
+              class="hover-image w-100 h-100"
+            />
+            <div class="overlay">Overlay Text</div>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="mt-4 container max-width">
-      <!-- 1st Row -->
-      <div class="owl-carousel owl-theme" id="industries-carousel-1">
-        <div class="tag constr-tag item">
-          <div class="d-flex justify-content-start align-items-center gap-4 ms-2">
-            <div class="constr-icon d-flex justify-content-center align-items-center">
-              <img src="./Assests/Icons/support.svg" width="15" height="15" />
-            </div>
-            <div class="mt-2">
-              <h2 class="text-sm poppins-regular">Construction</h2>
-            </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="website-Designs image-container position-relative h-100">
+            <img
+              src="Assests/Images/Web Post 02.png"
+              alt="Web Post 02"
+              class="hover-image w-100 h-100"
+            />
+            <div class="overlay">Overlay Text</div>
           </div>
         </div>
-        <div class="tag travel-tag item">
-          <div class="d-flex justify-content-start align-items-center gap-4 ms-2">
-            <div class="travel-icon d-flex justify-content-center align-items-center">
-              <img src="./Assests/Icons/Travel.svg" width="15" height="15" />
-            </div>
-            <div class="mt-2">
-              <h2 class="text-sm poppins-regular">Travel Agency</h2>
-            </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="website-Designs image-container position-relative h-100">
+            <img
+              src="Assests/Images/Web Post 03.png"
+              alt="Web Post 03"
+              class="hover-image w-100 h-100"
+            />
+            <div class="overlay">Overlay Text</div>
           </div>
         </div>
-        <div class="tag fitness-tag item">
-          <div class="d-flex justify-content-start align-items-center gap-2 ms-2">
-            <div class="fitness-icon d-flex justify-content-center align-items-center">
-              <img src="./Assests/Icons/gym.svg" width="15" height="15" />
-            </div>
-            <div class="mt-2">
-              <h2 class="text-sm poppins-regular">Fitness</h2>
-            </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="website-Designs image-container position-relative h-100">
+            <img
+              src="Assests/Images/Web Post 04.png"
+              alt="Web Post 04"
+              class="hover-image w-100 h-100"
+            />
+            <div class="overlay">Overlay Text</div>
           </div>
         </div>
-        <div class="tag wed-tag item">
-          <div class="d-flex justify-content-start align-items-center gap-2 ms-2">
-            <div class="wed-icon d-flex justify-content-center align-items-center">
-              <img src="./Assests/Icons/wedding-rings.svg" width="15" height="15" />
-            </div>
-            <div class="mt-2">
-              <h2 class="text-sm poppins-regular">Wedding</h2>
-            </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="website-Designs image-container position-relative h-100">
+            <img
+              src="Assests/Images/Web Post 05.png"
+              alt="Web Post 05"
+              class="hover-image w-100 h-100"
+            />
+            <div class="overlay">Overlay Text</div>
           </div>
         </div>
-        <div class="tag beauty-tag item">
-          <div class="d-flex justify-content-start align-items-center gap-2 ms-2">
-            <div class="beauty-icon d-flex justify-content-center align-items-center">
-              <img src="./Assests/Icons/Beauty.svg" width="15" height="15" />
-            </div>
-            <div class="mt-2">
-              <h2 class="text-sm poppins-regular">Beauty</h2>
-            </div>
+
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="website-Designs image-container position-relative h-100">
+            <img
+              src="Assests/Images/Web Post 06.png"
+              alt="Web Post 06"
+              class="hover-image w-100 h-100"
+            />
+            <div class="overlay">Overlay Text</div>
           </div>
         </div>
       </div>
-      <!-- End 1st Row -->
 
-      <!-- 2nd Row -->
-      <div class="mt-4 owl-carousel owl-theme" id="industries-carousel-2">
-        <div class="tag law-tag item">
-          <div class="d-flex justify-content-start align-items-center gap-2 ms-2">
-            <div class="law-icon d-flex justify-content-center align-items-center">
-              <img src="./Assests/Icons/law.svg" width="15" height="15" />
-            </div>
-            <div class="mt-2">
-              <h2 class="text-sm poppins-regular">Law</h2>
-            </div>
-          </div>
+      <div class="offers-bg d-flex flex-column justify-content-between py-5">
+        <div class="col mx-auto">
+          <button class="btn-comp">
+            <span class="button-content"> Get Started</span>
+          </button>
         </div>
-        <div class="tag salon-tag item">
-          <div class="d-flex justify-content-start align-items-center gap-2 ms-2">
-            <div class="salon-icon d-flex justify-content-center align-items-center">
-              <img src="./Assests/Icons/Saloon.svg" width="15" height="15" />
-            </div>
-            <div class="mt-2">
-              <h2 class="text-sm poppins-regular">Salon</h2>
-            </div>
+
+        <div>
+          <div class="text-center mb-4">
+            <div class="divider-black mx-auto"></div>
+            <span
+              class="text-uppercase text-theme poppins-regular text-sm ls-lg"
+              >Our Work</span
+            >
+            <h2
+              class="text-capitalize text-theme balmond text-xxl animated-heading"
+            >
+              Get a taste of what we do
+            </h2>
+            <p
+              class="col-12 col-md-8 col-lg-4 mx-auto text-secondary text-capitalize poppins-regular"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              odit corporis nulla rerum quos iure.
+            </p>
           </div>
-        </div>
-        <div class="tag spa-tag item">
-          <div class="d-flex justify-content-start align-items-center gap-2 ms-2">
-            <div class="spa-icon d-flex justify-content-center align-items-center">
-              <img src="./Assests/Icons/Spa.svg" width="15" height="15" />
-            </div>
-            <div class="mt-2">
-              <h2 class="text-sm poppins-regular">Spa</h2>
-            </div>
-          </div>
-        </div>
-        <div class="tag interior-tag item">
-          <div class="d-flex justify-content-start align-items-center gap-2 ms-2">
-            <div class="interior-icon d-flex justify-content-center align-items-center">
-              <img src="./Assests/Icons/Interior-Design.svg" width="15" height="15" />
-            </div>
-            <div class="mt-2">
-              <h2 class="text-sm poppins-regular">Interior Design</h2>
-            </div>
-          </div>
-        </div>
-        <div class="tag dental-tag item">
-          <div class="d-flex justify-content-start align-items-center gap-2 ms-2">
-            <div class="dental-icon d-flex justify-content-center align-items-center">
-              <img src="./Assests/Icons/Dental.svg" width="15" height="15" />
-            </div>
-            <div class="mt-2">
-              <h2 class="text-sm poppins-regular">Dental</h2>
+          <div class="container">
+            <div class="col-10 mx-auto">
+              <ul
+                class="list-unstyled d-flex flex-wrap justify-content-between text-sm text-capitalize poppins-regular text-secondary work-list"
+              >
+                <li>Logo Design</li>
+                <li>Website Design</li>
+                <li>Digital Marketing</li>
+                <li>Mobile Apps</li>
+                <li>Video Animation</li>
+                <li>Marketing Colletral</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-      <!-- End 2nd Row -->
 
-      <!-- Button -->
-      <div class="d-flex justify-content-center align-items-center mt-5">
-        <button class="btn-comp">Get Started</button>
-      </div>
-    </div>
-  </div>
-  <!-- Industries -->
+      <div class="offers-cards-section">
+        <div class="container">
+          <div class="text-center">
+            <h2
+              class="text-capitalize text-theme balmond text-lg animated-heading"
+            >
+              This is why we are the best
+            </h2>
+            <p
+              class="col-4 mx-auto text-sm text-secondary text-capitalize poppins-regular"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              odit corporis nulla rerum quos iure.
+            </p>
+          </div>
 
-  <!-- Testimonials Section  -->
-  <div class="testimonials-section">
-    <div class="container text-center">
-      <div class="divider-black mx-auto"></div>
-      <span class="text-md text-black poppins-medium text-uppercase ls-lg">Best Testimonials</span>
-      <h2 class="text-xxl text-theme balmond col-5 mx-auto">
-        Explore Our Clients Says For Our Services
-      </h2>
-    </div>
-    <div class="container">
-      <div class="owl-carousel owl-theme" id="testimonial-carousel">
-        <div class="item">
-          <div class="testimonial-container">
-            <div class="testimonial-content">
-              <span class="text-sm text-black poppins-medium lh-0">Average 5.00 rating</span>
-              <div class="stars lh-0">
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-              </div>
-              <p class="text-md text-black poppins-medium mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Quis ipsum suspendisse tristique gravida. Risus commodo.
-              </p>
-              <div class="author-info mt-4">
-                <h2 class="text-md text-black poppins-bold lh-0">
-                  Jr Walton
-                </h2>
-                <span class="text-sm text-black poppins-regular">UX/UI Specialist For Beuns</span>
+          <div class="row customer-satisfaction-container">
+            <div class="col-12 col-lg-3">
+              <div class="customer-satisfaction-box w-100 h-100">
+                <div class="w-100 h-75">
+                  <div
+                    class="d-flex justify-content-center align-items-center w-100 h-100"
+                  >
+                    <img
+                      src="Assests/Icons/satisfaction.svg"
+                      alt=""
+                      class="w-50 h-50"
+                    />
+                  </div>
+                  <div class="text-center w-100 h-25">
+                    <h3 class="text-md text-secondary poppins-bold lh-0">
+                      100% Satisfaction
+                    </h3>
+                    <span class="text-sm text-primary poppins-regular"
+                      >Guaranteed</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
-            <img src="Assests/Images/testimonial-1.jpg" alt="Profile" class="profile-image" />
-          </div>
-        </div>
 
-        <div class="item">
-          <div class="testimonial-container">
-            <div class="testimonial-content">
-              <span class="text-sm text-black poppins-medium lh-0">Average 5.00 rating</span>
-              <div class="stars lh-0">
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-              </div>
-              <p class="text-md text-black poppins-medium mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Quis ipsum suspendisse tristique gravida. Risus commodo.
-              </p>
-              <div class="author-info mt-4">
-                <h2 class="text-md text-black poppins-bold lh-0">
-                  Jr Walton
-                </h2>
-                <span class="text-sm text-black poppins-regular">UX/UI Specialist For Beuns</span>
+            <div class="col-12 col-lg-3">
+              <div class="customer-satisfaction-box w-100 h-100">
+                <div class="w-100 h-75">
+                  <div
+                    class="d-flex justify-content-center align-items-center w-100 h-100"
+                  >
+                    <img
+                      src="Assests/Icons/customer.svg"
+                      alt=""
+                      class="w-50 h-50"
+                    />
+                  </div>
+                  <div class="text-center w-100 h-25">
+                    <h3 class="text-md text-secondary poppins-bold lh-0">
+                      24/7 Customer
+                    </h3>
+                    <span class="text-sm text-primary poppins-regular"
+                      >Support</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
-            <img src="Assests/Images/testimonial-1.jpg" alt="Profile" class="profile-image" />
-          </div>
-        </div>
 
-        <div class="item">
-          <div class="testimonial-container">
-            <div class="testimonial-content">
-              <span class="text-sm text-black poppins-medium lh-0">Average 5.00 rating</span>
-              <div class="stars lh-0">
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-                <i class="fa-solid fa-star text-sm text-yellow"></i>
-              </div>
-              <p class="text-md text-black poppins-medium mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Quis ipsum suspendisse tristique gravida. Risus commodo.
-              </p>
-              <div class="author-info mt-4">
-                <h2 class="text-md text-black poppins-bold lh-0">
-                  Jr Walton
-                </h2>
-                <span class="text-sm text-black poppins-regular">UX/UI Specialist For Beuns</span>
+            <div class="col-12 col-lg-3">
+              <div class="customer-satisfaction-box w-100 h-100">
+                <div class="w-100 h-75">
+                  <div
+                    class="d-flex justify-content-center align-items-center w-100 h-100"
+                  >
+                    <img
+                      src="Assests/Icons/ownership.svg"
+                      alt=""
+                      class="w-50 h-50"
+                    />
+                  </div>
+                  <div class="text-center w-100 h-25">
+                    <h3 class="text-md text-secondary poppins-bold lh-0">
+                      100% ownership
+                    </h3>
+                    <span class="text-sm text-primary poppins-regular"
+                      >Rights</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
-            <img src="Assests/Images/testimonial-1.jpg" alt="Profile" class="profile-image" />
+
+            <div class="col-12 col-lg-3">
+              <div class="customer-satisfaction-box w-100 h-100">
+                <div class="w-100 h-75">
+                  <div
+                    class="d-flex justify-content-center align-items-center w-100 h-100"
+                  >
+                    <img
+                      src="Assests/Icons/moneyback.svg"
+                      alt=""
+                      class="w-50 h-50"
+                    />
+                  </div>
+                  <div class="text-center w-100 h-25">
+                    <h3 class="text-md text-secondary poppins-bold lh-0">
+                      Money back
+                    </h3>
+                    <span class="text-sm text-primary poppins-regular"
+                      >Guarante</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="custom-nav">
-        <img src="Assests/Icons/Previous-Arrow.svg" class="prev" alt="Previous" />
-        <div class="dots"></div>
-        <img src="Assests/Icons/Next-Arrow.svg" class="next" alt="Next" />
+        <div class="container">
+          <div class="row d-flex justify-content-between">
+            <div class="col-12 col-lg-4">
+              <div class="h-100 package-card py-4">
+                <div class="h-75 w-100">
+                  <div class="w-75 ms-4">
+                    <h2 class="text-md text-theme poppins-medium">
+                      Basic Branding Design Package
+                    </h2>
+                    <p class="text-sm text-secondary poppins-regular">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptatum, modi.
+                    </p>
+                  </div>
+
+                  <div class="d-flex align-items-center ms-4">
+                    <span
+                      class="poppins-bold"
+                      style="font-size: 64px; color: #6a8dc7"
+                      >$99</span
+                    >
+                    <div class="text-md poppins-regular ms-2">
+                      <span class="text-decoration-line-through">$150</span>
+                      <p>Only</p>
+                    </div>
+                  </div>
+
+                  <ul class="package-list ms-4">
+                    <li>2 Set Of Stationary Designs</li>
+                    <li>By 1 Experienced Designer</li>
+                    <li>Unlimited Revisions</li>
+                    <li>Printable Formats</li>
+                    <li>24-48 Hours Delivery</li>
+                    <li>100% Satisfaction Guarantee</li>
+                  </ul>
+
+                  <p class="text-sm text-primary poppins-regular text-center">
+                    Add on: $50 for expedited services
+                  </p>
+
+                  <div
+                    class="ms-3 d-flex justify-content-between gap-5 text-primary text-sm poppins-medium w-75"
+                  >
+                    <span>Speak With Us +123 456 7890</span>
+                    <span>Want To Discuss Live Chat Now!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div class="h-100 package-card py-4">
+                <div class="h-75 w-100">
+                  <div class="w-75 ms-4">
+                    <h2 class="text-md text-theme poppins-medium">
+                      Basic Branding Design Package
+                    </h2>
+                    <p class="text-sm text-secondary poppins-regular">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptatum, modi.
+                    </p>
+                  </div>
+
+                  <div class="d-flex align-items-center ms-4">
+                    <span
+                      class="poppins-bold"
+                      style="font-size: 64px; color: #6a8dc7"
+                      >$99</span
+                    >
+                    <div class="text-md poppins-regular ms-2">
+                      <span class="text-decoration-line-through">$150</span>
+                      <p>Only</p>
+                    </div>
+                  </div>
+
+                  <ul class="package-list ms-4">
+                    <li>2 Set Of Stationary Designs</li>
+                    <li>By 1 Experienced Designer</li>
+                    <li>Unlimited Revisions</li>
+                    <li>Printable Formats</li>
+                    <li>24-48 Hours Delivery</li>
+                    <li>100% Satisfaction Guarantee</li>
+                  </ul>
+
+                  <p class="text-sm text-primary poppins-regular text-center">
+                    Add on: $50 for expedited services
+                  </p>
+
+                  <div
+                    class="ms-3 d-flex justify-content-between gap-5 text-primary text-sm poppins-medium w-75"
+                  >
+                    <span>Speak With Us +123 456 7890</span>
+                    <span>Want To Discuss Live Chat Now!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div class="h-100 package-card py-4">
+                <div class="h-75 w-100">
+                  <div class="w-75 ms-4">
+                    <h2 class="text-md text-theme poppins-medium">
+                      Basic Branding Design Package
+                    </h2>
+                    <p class="text-sm text-secondary poppins-regular">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Voluptatum, modi.
+                    </p>
+                  </div>
+
+                  <div class="d-flex align-items-center ms-4">
+                    <span
+                      class="poppins-bold"
+                      style="font-size: 64px; color: #6a8dc7"
+                      >$99</span
+                    >
+                    <div class="text-md poppins-regular ms-2">
+                      <span class="text-decoration-line-through">$150</span>
+                      <p>Only</p>
+                    </div>
+                  </div>
+
+                  <ul class="package-list ms-4">
+                    <li>2 Set Of Stationary Designs</li>
+                    <li>By 1 Experienced Designer</li>
+                    <li>Unlimited Revisions</li>
+                    <li>Printable Formats</li>
+                    <li>24-48 Hours Delivery</li>
+                    <li>100% Satisfaction Guarantee</li>
+                  </ul>
+
+                  <p class="text-sm text-primary poppins-regular text-center">
+                    Add on: $50 for expedited services
+                  </p>
+
+                  <div
+                    class="ms-3 d-flex justify-content-between gap-5 text-primary text-sm poppins-medium w-75"
+                  >
+                    <span>Speak With Us +123 456 7890</span>
+                    <span>Want To Discuss Live Chat Now!</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- Testimonials Section  -->
+    <!-- End of Web Design Section -->
 
-  <!-- Combo Plan Section  -->
-  <div class="combo-section">
+    <!-- Endorse your business -->
+    <div class="experience-section mt-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Image Section -->
+          <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+            <div class="bounce-image be-the-best">
+              <img
+                src="./Assests/Images/Laptop-2.png"
+                alt="Be The Best Image"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+
+          <!-- Text and Buttons Section -->
+          <div
+            class="col-lg-6 col-md-12 d-flex flex-column align-items-center justify-content-center text-center text-lg-start"
+          >
+            <div class="experience-driven-text">
+              <div class="divider-white"></div>
+              <span
+                class="text-uppercase white-color poppins-regular text-sm ls-lg"
+              >
+                Endorse your business
+              </span>
+              <h2 class="text-capitalize white-color balmond text-xxl">
+                With influential client Experience driven website
+              </h2>
+              <p class="white-color poppins-regular text-sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+                earum. amet consectetur adipisicing elit. Sequi, earum.
+              </p>
+            </div>
+
+            <!-- Button and Icons Section -->
+            <div
+              class="d-flex flex-column flex-lg-row gap-4 align-items-center mt-4"
+            >
+              <!-- Get Started Button -->
+              <div>
+                <button class="btn-comp">
+                  <span class="button-content"> Get Started</span>
+                </button>
+              </div>
+
+              <div class="d-flex gap-4">
+                <div
+                  class="d-flex justify-content-center align-items-baseline gap-2"
+                >
+                  <div>
+                    <img
+                      src="Assests/Icons/live-chat svg.svg"
+                      id="header-icon"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6 class="text-md text-white poppins-medium lh-0">
+                      Live Chat
+                    </h6>
+                    <span class="text-sm text-white poppins-regular lh-0"
+                      >Feel Free to chat with us
+                    </span>
+                  </div>
+                </div>
+
+                <div
+                  class="d-flex justify-content-center align-items-baseline gap-2"
+                >
+                  <div>
+                    <img
+                      src="Assests/Icons/call-us.svg"
+                      id="header-icon"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h6
+                      class="text-md text-white poppins-medium lh-0 text-capitalize"
+                    >
+                      Call or text us
+                    </h6>
+                    <span
+                      class="text-sm text-white poppins-regular lh-0 text-capitalize"
+                      >Call Us On +123 456 7890
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Endorse your business -->
+
+    <!-- Our Work  -->
     <div>
       <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <span class="poppins-medium text-sm text-white text-uppercase">Combo Plan</span>
-            <h2 class="balmond text-lg text-white">
-              Completed Branding Solution
+        <div class="text-center">
+          <div class="divider-black mx-auto"></div>
+          <span class="text-uppercase text-theme poppins-regular text-sm ls-lg"
+            >Our work
+          </span>
+          <h2
+            class="text-capitalize text-theme balmond text-xxl animated-heading"
+          >
+            Our seamless logo designing process
+          </h2>
+          <span
+            class="text-uppercase text-theme poppins-regular text-sm ls-lg lh-0"
+            >You realx while we do all the work. it's this simple
+          </span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row gx-2">
+          <div class="col-12 col-sm-6 col-lg-2 animated-column" id="col1">
+            <div>
+              <div class="text-center" style="position: relative; left: 40px">
+                <span class="text-md text-secondary poppins-medium"
+                  >Research</span
+                >
+                <p class="text-sm text-theme poppins-regular">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Expedita, doloremque.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="Assests/Images/work-1.jpg.png"
+                  alt=""
+                  class="our-work-image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-sm-6 col-lg-2 animated-column"
+            id="col2"
+            style="margin-top: 180px"
+          >
+            <div>
+              <div>
+                <img
+                  src="Assests/Images/work-2.jpg.png"
+                  alt=""
+                  class="our-work-image"
+                />
+              </div>
+              <div class="text-center" style="position: relative; left: 40px">
+                <span class="text-md text-secondary poppins-medium"
+                  >Research</span
+                >
+                <p class="text-sm text-theme poppins-regular">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Expedita, doloremque.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-2 animated-column" id="col3">
+            <div>
+              <div class="text-center" style="position: relative; left: 40px">
+                <span class="text-md text-secondary poppins-medium"
+                  >Research</span
+                >
+                <p class="text-sm text-theme poppins-regular">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Expedita, doloremque.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="Assests/Images/work-3.jpg.png"
+                  alt=""
+                  class="our-work-image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-sm-6 col-lg-2 animated-column"
+            id="col4"
+            style="margin-top: 180px"
+          >
+            <div>
+              <div>
+                <img
+                  src="Assests/Images/work-4.jpg.png"
+                  alt=""
+                  class="our-work-image"
+                />
+              </div>
+              <div class="text-center" style="position: relative; left: 40px">
+                <span class="text-md text-secondary poppins-medium"
+                  >Research</span
+                >
+                <p class="text-sm text-theme poppins-regular">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Expedita, doloremque.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-2 animated-column" id="col5">
+            <div>
+              <div class="text-center" style="position: relative; left: 40px">
+                <span class="text-md text-secondary poppins-medium"
+                  >Research</span
+                >
+                <p class="text-sm text-theme poppins-regular">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Expedita, doloremque.
+                </p>
+              </div>
+              <div>
+                <img
+                  src="Assests/Images/work-5.jpg.png"
+                  alt=""
+                  class="our-work-image"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-sm-6 col-lg-2 animated-column"
+            id="col6"
+            style="margin-top: 180px"
+          >
+            <div>
+              <div>
+                <img
+                  src="Assests/Images/work-6.jpg.png"
+                  alt=""
+                  class="our-work-image"
+                />
+              </div>
+              <div class="text-center" style="position: relative; left: 40px">
+                <span class="text-md text-secondary poppins-medium"
+                  >Research</span
+                >
+                <p class="text-sm text-theme poppins-regular">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Expedita, doloremque.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Our Work  -->
+
+    <!-- Industries -->
+    <div
+      class="industries-section d-flex flex-column justify-content-center align-items-center mt-5"
+    >
+      <div class="container max-width text-center">
+        <div class="d-flex flex-column align-items-center">
+          <div class="divider-white"></div>
+          <div class="mt-3">
+            <h3
+              class="text-uppercase white-color poppins-regular text-sm ls-lg"
+            >
+              Industries
+            </h3>
+            <h1 class="text-capitalize white-color balmond text-xxl">
+              Over 200 industries served and growing
+            </h1>
+            <p class="white-color poppins-regular text-sm">
+              Through our dynamic logo design services, we have meritoriously
+              served clients emanating from every industry.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 container max-width">
+        <!-- 1st Row -->
+        <div class="owl-carousel owl-theme" id="industries-carousel-1">
+          <div class="tag constr-tag item">
+            <div
+              class="d-flex justify-content-start align-items-center gap-4 ms-2"
+            >
+              <div
+                class="constr-icon d-flex justify-content-center align-items-center"
+              >
+                <img src="./Assests/Icons/support.svg" width="15" height="15" />
+              </div>
+              <div class="mt-2">
+                <h2 class="text-sm poppins-regular">Construction</h2>
+              </div>
+            </div>
+          </div>
+          <div class="tag travel-tag item">
+            <div
+              class="d-flex justify-content-start align-items-center gap-4 ms-2"
+            >
+              <div
+                class="travel-icon d-flex justify-content-center align-items-center"
+              >
+                <img src="./Assests/Icons/Travel.svg" width="15" height="15" />
+              </div>
+              <div class="mt-2">
+                <h2 class="text-sm poppins-regular">Travel Agency</h2>
+              </div>
+            </div>
+          </div>
+          <div class="tag fitness-tag item">
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 ms-2"
+            >
+              <div
+                class="fitness-icon d-flex justify-content-center align-items-center"
+              >
+                <img src="./Assests/Icons/gym.svg" width="15" height="15" />
+              </div>
+              <div class="mt-2">
+                <h2 class="text-sm poppins-regular">Fitness</h2>
+              </div>
+            </div>
+          </div>
+          <div class="tag wed-tag item">
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 ms-2"
+            >
+              <div
+                class="wed-icon d-flex justify-content-center align-items-center"
+              >
+                <img
+                  src="./Assests/Icons/wedding-rings.svg"
+                  width="15"
+                  height="15"
+                />
+              </div>
+              <div class="mt-2">
+                <h2 class="text-sm poppins-regular">Wedding</h2>
+              </div>
+            </div>
+          </div>
+          <div class="tag beauty-tag item">
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 ms-2"
+            >
+              <div
+                class="beauty-icon d-flex justify-content-center align-items-center"
+              >
+                <img src="./Assests/Icons/Beauty.svg" width="15" height="15" />
+              </div>
+              <div class="mt-2">
+                <h2 class="text-sm poppins-regular">Beauty</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End 1st Row -->
+
+        <!-- 2nd Row -->
+        <div class="mt-4 owl-carousel owl-theme" id="industries-carousel-2">
+          <div class="tag law-tag item">
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 ms-2"
+            >
+              <div
+                class="law-icon d-flex justify-content-center align-items-center"
+              >
+                <img src="./Assests/Icons/law.svg" width="15" height="15" />
+              </div>
+              <div class="mt-2">
+                <h2 class="text-sm poppins-regular">Law</h2>
+              </div>
+            </div>
+          </div>
+          <div class="tag salon-tag item">
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 ms-2"
+            >
+              <div
+                class="salon-icon d-flex justify-content-center align-items-center"
+              >
+                <img src="./Assests/Icons/Saloon.svg" width="15" height="15" />
+              </div>
+              <div class="mt-2">
+                <h2 class="text-sm poppins-regular">Salon</h2>
+              </div>
+            </div>
+          </div>
+          <div class="tag spa-tag item">
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 ms-2"
+            >
+              <div
+                class="spa-icon d-flex justify-content-center align-items-center"
+              >
+                <img src="./Assests/Icons/Spa.svg" width="15" height="15" />
+              </div>
+              <div class="mt-2">
+                <h2 class="text-sm poppins-regular">Spa</h2>
+              </div>
+            </div>
+          </div>
+          <div class="tag interior-tag item">
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 ms-2"
+            >
+              <div
+                class="interior-icon d-flex justify-content-center align-items-center"
+              >
+                <img
+                  src="./Assests/Icons/Interior-Design.svg"
+                  width="15"
+                  height="15"
+                />
+              </div>
+              <div class="mt-2">
+                <h2 class="text-sm poppins-regular">Interior Design</h2>
+              </div>
+            </div>
+          </div>
+          <div class="tag dental-tag item">
+            <div
+              class="d-flex justify-content-start align-items-center gap-2 ms-2"
+            >
+              <div
+                class="dental-icon d-flex justify-content-center align-items-center"
+              >
+                <img src="./Assests/Icons/Dental.svg" width="15" height="15" />
+              </div>
+              <div class="mt-2">
+                <h2 class="text-sm poppins-regular">Dental</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End 2nd Row -->
+
+        <!-- Button -->
+        <div class="d-flex justify-content-center align-items-center mt-5">
+          <button class="btn-comp">Get Started</button>
+        </div>
+      </div>
+    </div>
+    <!-- Industries -->
+
+    <!-- Testimonials Section  -->
+    <div class="testimonials-section">
+      <div class="container text-center">
+        <div class="divider-black mx-auto"></div>
+        <span class="text-md text-black poppins-medium text-uppercase ls-lg"
+          >Best Testimonials</span
+        >
+        <h2 class="text-xxl text-theme balmond col-5 mx-auto">
+          Explore Our Clients Says For Our Services
+        </h2>
+      </div>
+      <div class="container">
+        <div class="owl-carousel owl-theme" id="testimonial-carousel">
+          <div class="item">
+            <div class="testimonial-container">
+              <div class="testimonial-content">
+                <span class="text-sm text-black poppins-medium lh-0"
+                  >Average 5.00 rating</span
+                >
+                <div class="stars lh-0">
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                </div>
+                <p class="text-md text-black poppins-medium mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Quis ipsum suspendisse tristique gravida. Risus commodo.
+                </p>
+                <div class="author-info mt-4">
+                  <h2 class="text-md text-black poppins-bold lh-0">
+                    Jr Walton
+                  </h2>
+                  <span class="text-sm text-black poppins-regular"
+                    >UX/UI Specialist For Beuns</span
+                  >
+                </div>
+              </div>
+              <img
+                src="Assests/Images/testimonial-1.jpg"
+                alt="Profile"
+                class="profile-image"
+              />
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="testimonial-container">
+              <div class="testimonial-content">
+                <span class="text-sm text-black poppins-medium lh-0"
+                  >Average 5.00 rating</span
+                >
+                <div class="stars lh-0">
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                </div>
+                <p class="text-md text-black poppins-medium mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Quis ipsum suspendisse tristique gravida. Risus commodo.
+                </p>
+                <div class="author-info mt-4">
+                  <h2 class="text-md text-black poppins-bold lh-0">
+                    Jr Walton
+                  </h2>
+                  <span class="text-sm text-black poppins-regular"
+                    >UX/UI Specialist For Beuns</span
+                  >
+                </div>
+              </div>
+              <img
+                src="Assests/Images/testimonial-1.jpg"
+                alt="Profile"
+                class="profile-image"
+              />
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="testimonial-container">
+              <div class="testimonial-content">
+                <span class="text-sm text-black poppins-medium lh-0"
+                  >Average 5.00 rating</span
+                >
+                <div class="stars lh-0">
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                  <i class="fa-solid fa-star text-sm text-yellow"></i>
+                </div>
+                <p class="text-md text-black poppins-medium mt-4">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Quis ipsum suspendisse tristique gravida. Risus commodo.
+                </p>
+                <div class="author-info mt-4">
+                  <h2 class="text-md text-black poppins-bold lh-0">
+                    Jr Walton
+                  </h2>
+                  <span class="text-sm text-black poppins-regular"
+                    >UX/UI Specialist For Beuns</span
+                  >
+                </div>
+              </div>
+              <img
+                src="Assests/Images/testimonial-1.jpg"
+                alt="Profile"
+                class="profile-image"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="custom-nav">
+          <img
+            src="Assests/Icons/Previous-Arrow.svg"
+            class="prev"
+            alt="Previous"
+          />
+          <div class="dots"></div>
+          <img src="Assests/Icons/Next-Arrow.svg" class="next" alt="Next" />
+        </div>
+      </div>
+    </div>
+    <!-- Testimonials Section  -->
+
+    <!-- Combo Plan Section  -->
+    <div class="combo-section">
+      <div>
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <span class="poppins-medium text-sm text-white text-uppercase"
+                >Combo Plan</span
+              >
+              <h2 class="balmond text-lg text-white">
+                Completed Branding Solution
+              </h2>
+              <p
+                class="poppins-regular text-sm text-white col-6 mx-auto text-center"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, voluptatem accusamus a eveniet sed aliquid ipsum ipsa
+                beatae id consequatur?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mt-5">
+          <div class="row">
+            <div class="col-6 col-lg-4">
+              <!-- Logo Design Section -->
+              <div>
+                <h2 class="text-lg text-white balmond">Logo Design</h2>
+                <ul class="list-unstyled text-sm text-white poppins-light">
+                  <li class="mb-2">Unlimited Concepts</li>
+                  <li class="mb-2">Unlimited Revision</li>
+                  <li class="mb-2">6 Dedicated Logo Design</li>
+                  <li class="mb-2">Turnaround 24-48hrs</li>
+                  <li class="mb-2">Copyright Protection of the logo</li>
+                  <li>All Formats Included</li>
+                </ul>
+              </div>
+
+              <!-- Website Design Section -->
+              <div class="mt-5">
+                <h2 class="text-lg text-white balmond">Website Design</h2>
+                <ul class="list-unstyled text-sm text-white poppins-light">
+                  <li class="mb-2">6 Pages Custom Design</li>
+                  <li class="mb-2">5 Stock Photos</li>
+                  <li class="mb-2">Content Management System</li>
+                  <li class="mb-2">(CMS) Integration</li>
+                  <li class="mb-2">Contact Us Form</li>
+                  <li class="mb-2">Search Engine Submission</li>
+                  <li class="mb-2">Cross Browsers Compatibility</li>
+                  <li class="mb-2">10 Email Addresses</li>
+                  <li class="mb-2">W3C Certified HTML</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-4">
+              <!-- Special Features Section -->
+              <div>
+                <h2 class="text-lg text-white balmond">SPECIAL FEATURES</h2>
+                <ul class="list-unstyled text-sm text-white poppins-light">
+                  <li class="mb-2">Free Blog Design</li>
+                  <li class="mb-2">Free Landing Page Design</li>
+                  <li class="mb-2">Unlimited Revisions</li>
+                  <li class="mb-2">100% Satisfaction Guaranteed</li>
+                  <li class="mb-2">24 X 7 Customer Support</li>
+                </ul>
+              </div>
+
+              <!-- Social Media Section -->
+              <div class="mt-5">
+                <h2 class="text-lg text-white balmond">Social Media</h2>
+                <ul class="list-unstyled text-sm text-white poppins-light">
+                  <li class="mb-2">Any 4 of Your Choice</li>
+                  <li class="mb-2">Facebook, LinkedIn, G+, Twitter</li>
+                  <li class="mb-2">YouTube</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-4">
+              <!-- Stationary Design Section -->
+              <div>
+                <h2 class="text-lg text-white balmond">STATIONERY DESIGN</h2>
+                <ul class="list-unstyled text-sm text-white poppins-light">
+                  <li class="mb-2">Business Card Design</li>
+                  <li class="mb-2">Letterhead Design</li>
+                  <li class="mb-2">Envelope Design</li>
+                  <li class="mb-2">Email Signature Design</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mockup-image">
+          <img
+            src="Assests/Images/Mockup.png"
+            alt=""
+            class="h-75 mockup-book"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Combo Plan Section  -->
+
+    <!-- Accordions Sections  -->
+    <div class="row gx-5 justify-content-center align-items-center">
+      <div class="col-12 col-md-4 d-flex justify-content-center mb-4 mb-md-0">
+        <div
+          class="d-flex flex-column justify-content-center gap-5 align-items-end"
+        >
+          <div>
+            <img src="Assests/Images/Laptop.png" alt="" class="img-fluid" />
+          </div>
+          <div>
+            <img
+              src="Assests/Images/Person.png"
+              alt=""
+              class="img-fluid"
+              style="height: 400px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <div class="container">
+          <div class="text-start">
+            <div class="divider-black"></div>
+            <span
+              class="text-uppercase text-theme poppins-regular text-sm ls-lg"
+              >Our frequency & question</span
+            >
+            <h2
+              class="text-capitalize text-theme balmond text-xxl lh-large mt-3"
+            >
+              We provide brilliant ideas frequency & question's
             </h2>
-            <p class="poppins-regular text-sm text-white col-6 mx-auto text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Similique, voluptatem accusamus a eveniet sed aliquid ipsum ipsa
-              beatae id consequatur?
-            </p>
+            <span class="text-capitalize text-theme poppins-regular text-sm"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Pariatur, ullam!</span
+            >
           </div>
         </div>
-      </div>
 
-      <div class="container mt-5">
-        <div class="row">
-          <div class="col-6 col-lg-4">
-            <!-- Logo Design Section -->
-            <div>
-              <h2 class="text-lg text-white balmond">Logo Design</h2>
-              <ul class="list-unstyled text-sm text-white poppins-light">
-                <li class="mb-2">Unlimited Concepts</li>
-                <li class="mb-2">Unlimited Revision</li>
-                <li class="mb-2">6 Dedicated Logo Design</li>
-                <li class="mb-2">Turnaround 24-48hrs</li>
-                <li class="mb-2">Copyright Protection of the logo</li>
-                <li>All Formats Included</li>
-              </ul>
-            </div>
-
-            <!-- Website Design Section -->
-            <div class="mt-5">
-              <h2 class="text-lg text-white balmond">Website Design</h2>
-              <ul class="list-unstyled text-sm text-white poppins-light">
-                <li class="mb-2">6 Pages Custom Design</li>
-                <li class="mb-2">5 Stock Photos</li>
-                <li class="mb-2">Content Management System</li>
-                <li class="mb-2">(CMS) Integration</li>
-                <li class="mb-2">Contact Us Form</li>
-                <li class="mb-2">Search Engine Submission</li>
-                <li class="mb-2">Cross Browsers Compatibility</li>
-                <li class="mb-2">10 Email Addresses</li>
-                <li class="mb-2">W3C Certified HTML</li>
-              </ul>
+        <div class="accordion" id="accordionExample">
+          <!-- Accordion items -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                <span class="text-md text-secondary poppins-regular">
+                  <i class="fa-regular fa-face-smile-wink me-2"></i> What can we
+                  do for you with Figma.
+                </span>
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <p class="text-sm text-black poppins-regular">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                  pariatur suscipit beatae officia obcaecati a.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div class="col-6 col-lg-4">
-            <!-- Special Features Section -->
-            <div>
-              <h2 class="text-lg text-white balmond">SPECIAL FEATURES</h2>
-              <ul class="list-unstyled text-sm text-white poppins-light">
-                <li class="mb-2">Free Blog Design</li>
-                <li class="mb-2">Free Landing Page Design</li>
-                <li class="mb-2">Unlimited Revisions</li>
-                <li class="mb-2">100% Satisfaction Guaranteed</li>
-                <li class="mb-2">24 X 7 Customer Support</li>
-              </ul>
-            </div>
-
-            <!-- Social Media Section -->
-            <div class="mt-5">
-              <h2 class="text-lg text-white balmond">Social Media</h2>
-              <ul class="list-unstyled text-sm text-white poppins-light">
-                <li class="mb-2">Any 4 of Your Choice</li>
-                <li class="mb-2">Facebook, LinkedIn, G+, Twitter</li>
-                <li class="mb-2">YouTube</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-6 col-lg-4">
-            <!-- Stationary Design Section -->
-            <div>
-              <h2 class="text-lg text-white balmond">STATIONERY DESIGN</h2>
-              <ul class="list-unstyled text-sm text-white poppins-light">
-                <li class="mb-2">Business Card Design</li>
-                <li class="mb-2">Letterhead Design</li>
-                <li class="mb-2">Envelope Design</li>
-                <li class="mb-2">Email Signature Design</li>
-              </ul>
+          <!-- Repeat for other accordion items -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                <span class="text-md text-secondary poppins-regular">
+                  <i class="fa-regular fa-face-smile-wink me-2"></i> What can we
+                  do for you with Figma.
+                </span>
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <p class="text-sm text-black poppins-regular">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                  pariatur suscipit beatae officia obcaecati a.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="mockup-image ">
-        <img src="Assests/Images/Mockup.png" alt="" class="h-75 mockup-book" />
-      </div>
-      
-      
-    </div>
-  </div>
-  <!-- Combo Plan Section  -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                <span class="text-md text-secondary poppins-regular">
+                  <i class="fa-regular fa-face-smile-wink me-2"></i> What can we
+                  do for you with Figma.
+                </span>
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <p class="text-sm text-black poppins-regular">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                  pariatur suscipit beatae officia obcaecati a.
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <!-- Accordions Sections  -->
-<div class="row gx-5 justify-content-center align-items-center">
-  <div class="col-12 col-md-4 d-flex justify-content-center mb-4 mb-md-0">
-    <div class="d-flex flex-column justify-content-center gap-5 align-items-end">
-      <div>
-        <img src="Assests/Images/Laptop.png" alt="" class="img-fluid" />
-      </div>
-      <div>
-        <img src="Assests/Images/Person.png" alt="" class="img-fluid" style="height: 400px" />
-      </div>
-    </div>
-  </div>
-
-  <div class="col-12 col-md-4">
-    <div class="container">
-      <div class="text-start">
-        <div class="divider-black"></div>
-        <span class="text-uppercase text-theme poppins-regular text-sm ls-lg">Our frequency & question</span>
-        <h2 class="text-capitalize text-theme balmond text-xxl lh-large mt-3">
-          We provide brilliant ideas frequency & question's
-        </h2>
-        <span class="text-capitalize text-theme poppins-regular text-sm">Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Pariatur, ullam!</span>
-      </div>
-    </div>
-
-    <div class="accordion" id="accordionExample">
-      <!-- Accordion items -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            <span class="text-md text-secondary poppins-regular">
-              <i class="fa-regular fa-face-smile-wink me-2"></i> What can we do for you with Figma.
-            </span>
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p class="text-sm text-black poppins-regular">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio pariatur suscipit beatae officia obcaecati a.
-            </p>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                <span class="text-md text-secondary poppins-regular">
+                  <i class="fa-regular fa-face-smile-wink me-2"></i> What can we
+                  do for you with Figma.
+                </span>
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <p class="text-sm text-black poppins-regular">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                  pariatur suscipit beatae officia obcaecati a.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Repeat for other accordion items -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <span class="text-md text-secondary poppins-regular">
-              <i class="fa-regular fa-face-smile-wink me-2"></i> What can we do for you with Figma.
-            </span>
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p class="text-sm text-black poppins-regular">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio pariatur suscipit beatae officia obcaecati a.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <span class="text-md text-secondary poppins-regular">
-              <i class="fa-regular fa-face-smile-wink me-2"></i> What can we do for you with Figma.
-            </span>
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p class="text-sm text-black poppins-regular">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio pariatur suscipit beatae officia obcaecati a.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            <span class="text-md text-secondary poppins-regular">
-              <i class="fa-regular fa-face-smile-wink me-2"></i> What can we do for you with Figma.
-            </span>
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <p class="text-sm text-black poppins-regular">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio pariatur suscipit beatae officia obcaecati a.
-            </p>
-          </div>
+      <div
+        class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-4 mb-md-0"
+      >
+        <div class="d-flex justify-content-end align-items-center">
+          <img
+            src="Assests/Images/digital-desgion.png"
+            alt=""
+            class="img-fluid"
+          />
         </div>
       </div>
     </div>
-  </div>
+    <!-- Accordions Sections  -->
 
-  <div class="col-12 col-md-4 d-flex justify-content-center align-items-center mb-4 mb-md-0">
-    <div class="d-flex justify-content-end align-items-center">
-      <img src="Assests/Images/digital-desgion.png" alt="" class="img-fluid" />
-    </div>
-  </div>
-</div>
-<!-- Accordions Sections  -->
+    <!-- Footer  -->
+    <footer class="footer-container">
+      <div class="footer">
+        <div class="container">
+          <!-- First row with logo and contact info -->
+          <div class="row justify-content-center d-flex align-items-center">
+            <div class="col-4">
+              <img
+                src="Assests/Images/TecHaute-White-logo.png"
+                alt="footer-logo"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-8 d-flex justify-content-between">
+              <div>
+                <span class="text-white"
+                  ><i class="fa-solid fa-phone"></i> Toll Free: 1-866-292-8272
+                </span>
+              </div>
+              <div>
+                <span class="text-white"
+                  ><i class="fa-solid fa-envelope"></i> Email:
+                  support@example.com</span
+                >
+              </div>
+              <div>
+                <span class="text-white"
+                  ><i class="fa-solid fa-map-marker-alt"></i> Address: 123 Main
+                  St, City</span
+                >
+              </div>
+            </div>
+          </div>
 
+          <!-- Second row with links -->
+          <div class="row gx-7 justify-content-center mt-5">
+            <div class="col-md-2 col-sm-6">
+              <h2 class="text-md poppins-medium text-white mb-5">About</h2>
+              <ul
+                class="text-sm poppins-regular text-white list-unstyled list-spaced"
+              >
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Reviews</li>
+                <li>Contact Us</li>
+                <li>Refund and Dispute</li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-6">
+              <h2 class="text-md poppins-medium text-white mb-5">
+                Other Services
+              </h2>
+              <ul
+                class="text-sm poppins-regular text-white list-unstyled list-spaced"
+              >
+                <li>Animated Logo Design</li>
+                <li>Stationery Design</li>
+                <li>Video Animations</li>
+                <li>Mobile Applications</li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-6">
+              <h2 class="text-md poppins-medium text-white mb-5">
+                Branding Design
+              </h2>
+              <ul
+                class="text-sm poppins-regular text-white list-unstyled list-spaced"
+              >
+                <li>Branding Portfolio</li>
+                <li>Branding Packages</li>
+                <li>Branding Reviews</li>
+                <li>Branding FAQs</li>
+                <li>Branding Guide</li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-6">
+              <h2 class="text-md poppins-medium text-white mb-5">
+                Logo Design
+              </h2>
+              <ul
+                class="text-sm poppins-regular text-white list-unstyled list-spaced"
+              >
+                <li>Logo Portfolio</li>
+                <li>Logo Packages</li>
+                <li>Logo Reviews</li>
+                <li>Logo FAQs</li>
+                <li>Logo Guide</li>
+              </ul>
+            </div>
+            <div class="col-md-2 col-sm-6">
+              <h2 class="text-md poppins-medium text-white mb-5">
+                Website Design
+              </h2>
+              <ul
+                class="text-sm poppins-regular text-white list-unstyled list-spaced"
+              >
+                <li>Website Portfolio</li>
+                <li>Website Packages</li>
+                <li>Website Reviews</li>
+                <li>Website FAQs</li>
+                <li>Website Guide</li>
+              </ul>
+            </div>
+          </div>
 
-  <div class="curved-border"></div>
+          <!-- Third row with policies and payment -->
+          <div class="row justify-content-center gx-5 mt-5">
+            <div
+              class="col-md-6 d-flex justify-content-center text-white spaced-text text-decoration-none"
+            >
+              <a href="#" class="text-white me-4 text-decoration-none"
+                >Privacy Policy</a
+              >
+              <a href="#" class="text-white me-4 text-decoration-none"
+                >Cookies Policy</a
+              >
+              <a href="#" class="text-white text-decoration-none"
+                >Spam Policy</a
+              >
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <img
+                    src="Assests/Icons/Payment-Methods.svg"
+                    alt="Payment Methods"
+                    class="img-fluid"
+                  />
+                </div>
+                <div>
+                  <a href="#" class="text-decoration-none text-white"
+                    >© 2024, All Rights Reserved</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer  -->
 
+    <div class="curved-border"></div>
 
-  <!-- <button class="animated-button">
+    <!-- <button class="animated-button">
     <span class="text">Modern Button</span>
     <svg viewBox="0 0 24 24" class="arr" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -1288,35 +2132,25 @@
     <span class="circle"></span>
   </button> -->
 
-
-  <!-- <div class="divider-white"></div>
+    <!-- <div class="divider-white"></div>
     <div class="divider-black"></div>
 
     <button class="btn-comp">Get Started</button> -->
 
-  <!-- Booststrap Js  -->
-  <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Booststrap Js  -->
+    <script src="Bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Jquery  -->
-  <script src="js/jquery.min.js"></script>
+    <!-- Jquery  -->
+    <script src="js/jquery.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.3/locomotive-scroll.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/locomotive-scroll/4.1.3/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 
-  <!-- Custom Js  -->
-  <script src="js/index.js"></script>
+    <!-- Custom Js  -->
+    <script src="js/index.js"></script>
 
-
-  <!-- Owl Carousel Js  -->
-  <script src="owl-carousel/js/owl.carousel.min.js"></script>
-
-
-
-
-
-
-
-</body>
-
+    <!-- Owl Carousel Js  -->
+    <script src="owl-carousel/js/owl.carousel.min.js"></script>
+  </body>
 </html>
