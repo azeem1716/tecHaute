@@ -8,6 +8,72 @@ document.getElementById("check").addEventListener("change", function() {
 });
 
 
+$(document).ready(function(){
+  // Initialize Owl Carousel
+  $('#websites-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+
+  // Remove inline styles applied by Owl Carousel after initialization
+  $('.owl-carousel .owl-item img').each(function() {
+    $(this).removeAttr('style');  // Remove inline styles like width and height
+  });
+});
+
+
+$(document).ready(function() {
+  $("#package-cards-carousel").owlCarousel({
+    items: 3, 
+    loop: true, 
+    margin: 10, 
+    dots: true, 
+    autoplay: true, 
+    autoplayTimeout: 3000,
+    autoplaySpeed: 2000, 
+    nav: true, 
+    navSpeed: 500, 
+    responsive: {
+      0: {
+        items: 1 
+      },
+      600: {
+        items: 2 
+      },
+      1000: {
+        items: 3 
+    }
+  }
+  });
+
+  // Hook up custom navigation buttons
+  $('.package-prev').click(function() {
+    $('#package-cards-carousel').trigger('prev.owl.carousel', [1000]); 
+  });
+
+  $('.package-next').click(function() {
+    $('#package-cards-carousel').trigger('next.owl.carousel', [1000]); 
+  });
+});
+
+
+
+
 
 
 $(document).ready(function() {
@@ -158,6 +224,22 @@ $(document).ready(function() {
 
 $(document).ready(function() {
 
+  // Animation for the triangle using Anime.js
+anime({
+  targets: '.triangle',
+  translateY: [
+    { value: -30, duration: 500, easing: 'easeInOutSine' },
+    { value: 0, duration: 500, easing: 'easeInOutSine' }
+  ],
+  rotate: {
+    value: '1turn', // Rotate 360 degrees
+    duration: 2000,
+    easing: 'easeInOutSine'
+  },
+  loop: true // Repeat the animation
+});
+
+
   anime({
     targets: '#header-icon',
     rotate: [
@@ -178,7 +260,7 @@ $(document).ready(function() {
 
   
   anime({
-    targets: '.box',
+    targets: ['.box','.threeD-square img'],
     rotate: {
       value: 360,
       duration: 2000,
@@ -321,24 +403,40 @@ $(document).ready(function() {
     direction: 'alternate' // Alternate between stretching and shrinking
   });
   
+  anime({
+    targets: ['.concentric-square img', '.concentric-square-container'], // Combine both targets
+    rotate: {
+      value: '1turn',
+      duration: 3000,
+      easing: 'linear'
+    },
+    scale: [
+      { value: 1.2, duration: 1000, easing: 'easeInOutSine' },
+      { value: 1, duration: 1000, easing: 'easeInOutSine' }
+    ],
+    opacity: [
+      { value: 0.7, duration: 1000, easing: 'easeInOutSine' },
+      { value: 1, duration: 1000, easing: 'easeInOutSine' }
+    ],
+    loop: true
+  });
+  
 
   anime({
-    targets: '.concentric-square img',
+    targets: '.Concentric-circle-2',
     rotate: {
       value: '1turn', // Rotate a full turn
       duration: 3000, // Duration of the rotation
-      easing: 'linear' // Linear easing for continuous rotation
+      easing: 'linear', // Linear easing for continuous rotation
     },
     scale: [
       { value: 1.2, duration: 1000, easing: 'easeInOutSine' }, // Scale up
       { value: 1, duration: 1000, easing: 'easeInOutSine' }    // Scale back down
     ],
-    opacity: [
-      { value: 0.7, duration: 1000, easing: 'easeInOutSine' }, // Fade to 70%
-      { value: 1, duration: 1000, easing: 'easeInOutSine' }     // Fade back to full opacity
-    ],
     loop: true // Repeat the animation indefinitely
   });
+
+  
 
   
   function getRandomPosition(max) {
@@ -351,7 +449,7 @@ $(document).ready(function() {
   
   function animateArrow() {
     anime({
-      targets: '.arrow-2 img',
+      targets: ['.arrow-2 img','.arrow-3 img',],
       translateX: getRandomPosition(600), // Horizontal movement remains large
       translateY: getRandomPosition(100, true), // Decreased vertical range to -50 to 50
       duration: 2000, // Duration of the animation
@@ -376,38 +474,56 @@ $(document).ready(function() {
 $(document).ready(function() {
   gsap.registerPlugin(ScrollTrigger);
 
+
+
+
 // GSAP 3D twirl effect on mouse move for multiple package cards
 const cards = document.querySelectorAll('.package-card');
 
 cards.forEach(card => {
+
+  card.style.backgroundColor = '#edf1f8';  
+  card.style.transition = 'background 1s ease-in-out';
+
   card.addEventListener('mousemove', (e) => {
     const { clientX, clientY, target } = e;
     const { left, top, width, height } = target.getBoundingClientRect();
     
-    const x = (clientX - left) / width - 0.5; // Normalized X coordinate
-    const y = (clientY - top) / height - 0.5; // Normalized Y coordinate
+    const x = (clientX - left) / width - 0.5; 
+    const y = (clientY - top) / height - 0.5; 
 
-    // Adjust the strength of the effect by multiplying the x and y values
-    const strength = 10; // Adjust this value to decrease the effect
-    gsap.to(target, {
+   
+    const strength = 10; 
+    gsap.to(card, {
       rotationY: x * strength,
       rotationX: -y * strength,
       transformPerspective: 800,
-      duration: 0.5, // Duration for the animation
+      duration: 0.5, 
       ease: "power2.out"
     });
   });
 
-  // Reset the rotation on mouse leave
+  
+  card.addEventListener('mouseenter', () => {
+    gsap.to(card, {
+      background: 'radial-gradient(circle, #ffffff, #abbaab)', 
+      duration: 0.5,
+      ease: "power2.out"
+    });
+  });
+
+  
   card.addEventListener('mouseleave', () => {
     gsap.to(card, {
       rotationY: 0,
       rotationX: 0,
+      background: '#edf1f8', 
       duration: 0.5,
       ease: "power2.out"
     });
   });
 });
+
 
 
 // Select all headings with the class 'animated-heading'
