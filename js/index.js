@@ -112,12 +112,18 @@ $(document).ready(function() {
       autoHeight: true,
       nav: false,
       dots: false,
-      autoplay: false,
+      autoplay: true,
+      autoplaySpeed:2000,
       responsive: {
           0: { items: 1 },
           768: { items: 1 },
           1024: { items: 2 }
-      }
+      },
+
+       onInitialized: function(event) {
+      // Add a custom class to all owl-item elements for this carousel
+      $('#testimonial-carousel .owl-item').addClass('testimonial-owl-item');
+    }
   });
 
   $('.custom-nav .next').click(function() {
@@ -127,6 +133,8 @@ $(document).ready(function() {
   $('.custom-nav .prev').click(function() {
       owl.trigger('prev.owl.carousel');
   });
+
+  
 
   owl.on('initialized.owl.carousel', function(event) {
       var itemCount = event.item.count;
@@ -470,84 +478,73 @@ anime({
 
 
 // GSAP ANIMATIONS 
-
 $(document).ready(function() {
   gsap.registerPlugin(ScrollTrigger);
 
+  // GSAP 3D twirl effect on mouse move for multiple package cards
+  const cards = document.querySelectorAll('.package-card');
 
+  cards.forEach(card => {
+    card.style.backgroundColor = '#edf1f8';  
+    card.style.transition = 'background 1s ease-in-out';
 
+    card.addEventListener('mousemove', (e) => {
+      const { clientX, clientY, target } = e;
+      const { left, top, width, height } = target.getBoundingClientRect();
+      
+      const x = (clientX - left) / width - 0.5; 
+      const y = (clientY - top) / height - 0.5; 
 
-// GSAP 3D twirl effect on mouse move for multiple package cards
-const cards = document.querySelectorAll('.package-card');
+      const strength = 10; 
+      gsap.to(card, {
+        rotationY: x * strength,
+        rotationX: -y * strength,
+        transformPerspective: 800,
+        duration: 0.5, 
+        ease: "power2.out"
+      });
+    });
 
-cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, {
+        background: 'radial-gradient(circle, #ffffff, #abbaab)', 
+        duration: 0.5,
+        ease: "power2.out"
+      });
+    });
 
-  card.style.backgroundColor = '#edf1f8';  
-  card.style.transition = 'background 1s ease-in-out';
-
-  card.addEventListener('mousemove', (e) => {
-    const { clientX, clientY, target } = e;
-    const { left, top, width, height } = target.getBoundingClientRect();
-    
-    const x = (clientX - left) / width - 0.5; 
-    const y = (clientY - top) / height - 0.5; 
-
-   
-    const strength = 10; 
-    gsap.to(card, {
-      rotationY: x * strength,
-      rotationX: -y * strength,
-      transformPerspective: 800,
-      duration: 0.5, 
-      ease: "power2.out"
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, {
+        rotationY: 0,
+        rotationX: 0,
+        background: '#edf1f8', 
+        duration: 0.5,
+        ease: "power2.out"
+      });
     });
   });
 
-  
-  card.addEventListener('mouseenter', () => {
-    gsap.to(card, {
-      background: 'radial-gradient(circle, #ffffff, #abbaab)', 
-      duration: 0.5,
-      ease: "power2.out"
+  // Scroll-triggered animations for headings
+  const headings = document.querySelectorAll('.animated-heading');
+
+  headings.forEach((heading) => {
+    gsap.from(heading, {
+      scrollTrigger: {
+        trigger: heading, 
+        start: 'top 95%', 
+        end: 'bottom 20%', 
+        scrub: 0.5, // Smooth animation
+        toggleActions: 'play reverse play reverse'
+      },
+      opacity: 0, 
+      y: 30, 
+      duration: 1.5,
+      ease: 'power2.inOut' 
     });
   });
 
-  
-  card.addEventListener('mouseleave', () => {
-    gsap.to(card, {
-      rotationY: 0,
-      rotationX: 0,
-      background: '#edf1f8', 
-      duration: 0.5,
-      ease: "power2.out"
-    });
-  });
-});
-
-
-
-// Select all headings with the class 'animated-heading'
-const headings = document.querySelectorAll('.animated-heading');
-
-// Create a ScrollTrigger for each heading
-headings.forEach((heading) => {
-  gsap.from(heading, {
-    scrollTrigger: {
-      trigger: heading, 
-      start: 'top 95%', 
-      end: 'bottom 20%', 
-      scrub: 0.5, // Scrub for 0.5 seconds for smoother follow
-      toggleActions: 'play reverse play reverse' 
-    },
-    opacity: 0, 
-    y: 30, 
-    duration: 1.5, // Increase duration for a smoother effect
-    ease: 'power2.inOut' // Use a smoother easing function
-  });
-});
-
+  // Animation for logos section
   const boxes = gsap.utils.toArray('.logos-box');
-
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.logo-section',
@@ -567,200 +564,243 @@ headings.forEach((heading) => {
         duration: 1, 
         ease: "circ.out",
         delay: index * 0.1 
+      },
+      "<");
+  });
+
+  // Customer satisfaction section animations
+  const satisfactionBoxes = gsap.utils.toArray('.customer-satisfaction-box');
+
+  const satisfactionTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.customer-satisfaction-container',
+      start: 'top 90%', 
+      end: 'bottom 70%', 
+      scrub: 0.2, 
+      toggleActions: 'play none none reverse',
+      ease: "power2.out"
+    }
+  });
+
+  satisfactionBoxes.forEach((box, index) => {
+    satisfactionTl.fromTo(box, 
+      { y: 50, opacity: 0 },
+      { 
+        y: 0, 
+        opacity: 1, 
+        duration: 1.2, 
+        ease: "back.out(1.7)",
+        delay: index * 0.3 
       }, 
       "<");
   });
 
+  // Animation for logo cards
+  const logoCards = gsap.utils.toArray('.logo-sec-card');
+
+  const logoCardTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.logo-cards-section',
+      start: 'top 60%',
+      end: 'bottom 30%',
+      scrub: 1, 
+      toggleActions: 'play none none reverse'
+    }
+  });
+
+  logoCards.forEach((card, index) => {
+    const direction = index % 2 === 0 ? -100 : 100; 
+    logoCardTl.fromTo(card, 
+      { x: direction, opacity: 0 }, 
+      { 
+        x: 0, 
+        opacity: 1, 
+        duration: 1.5, 
+        ease: "expo.out", 
+        delay: index * 0.2 
+      }, 
+      "<"); 
+  });
 
 
-// Create the ScrollTrigger
-// ScrollTrigger.create({
-//   trigger: ".animated-heading", 
-//   start: "top 80%", 
-//   end: "bottom 10%", 
-//   onEnter: () => {
-//     // The Anime.js animation runs immediately when the heading enters the viewport
-//     anime.timeline({
-//       loop: false // Disable looping
-//     })
-//     .add({
-//       targets: '.animated-heading .letter', 
-//       translateY: [50, 0], 
-//       opacity: [0, 1], 
-//       duration: 1000, 
-//       elasticity: 400, 
-//       easing: 'easeOutElastic(1, .7)', 
-//       delay: anime.stagger(50) 
-      
-//     });
-//   },
-//   once: false 
-
-
-  
-// });
-
-   // Animation for the customer satisfaction section
-const satisfactionBoxes = gsap.utils.toArray('.customer-satisfaction-box');
-
-const satisfactionTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.customer-satisfaction-container',
-    start: 'top 80%', 
-    end: 'bottom 80%',
-    scrub: 0.5, // Smoother scrubbing (lower values = smoother)
-    toggleActions: 'play none none reverse',
-    ease: "power2.out" // Add easing for smoothness
-  }
-});
-
-satisfactionBoxes.forEach((box, index) => {
-  satisfactionTl.fromTo(box, 
-    { y: 50, opacity: 0 },
-    { 
-      y: 0, 
-      opacity: 1, 
-      duration: 1.2, 
-      ease: "back.out(1.7)",
-      delay: index * 0.3 
-    }, 
-    "<");
-});
-
-
-/// Animation for logo cards
-const logoCards = gsap.utils.toArray('.logo-sec-card');
-
-const logoCardTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.logo-cards-section',
-    start: 'top 60%',
-    end: 'bottom 30%',
-    scrub: 1, 
-    toggleActions: 'play none none reverse'
-  }
-});
-
-logoCards.forEach((card, index) => {
-  const direction = index % 2 === 0 ? -100 : 100; 
-
-  logoCardTl.fromTo(card, 
-    { x: direction, opacity: 0 }, 
-    { 
-      x: 0, 
-      opacity: 1, 
-      duration: 1.5, 
-      ease: "expo.out", 
-      delay: index * 0.2 
-    }, 
-    "<"); 
-});
-
-
-
-// Select all web design cards
+// Web design card animations
 const designCards = gsap.utils.toArray('.website-Designs');
 
-// Create timeline for scroll-triggered animations
 const designCardTl = gsap.timeline({
   scrollTrigger: {
     trigger: '.website-Designs-Cards',
     start: 'top 75%', 
-    end: 'bottom 25%', 
-    scrub: 1, 
-    toggleActions: 'play none none reverse'
+    end: 'bottom 0%', // Increase the distance to make it scroll over a longer area
+    scrub: 2, // Adjusting scrub value for smoother and slower scrolling
+    toggleActions: 'play none none reverse',
+    invalidateOnRefresh: true // Ensures recalculation when the window resizes
   }
 });
 
-// Animate each card with a staggered effect
+// Animate each card with a staggered slide effect
 designCards.forEach((card, index) => {
+  const direction = index % 2 === 0 ? -150 : 150; // Slide from left if index is even, from right if odd
+
   designCardTl.fromTo(card, 
-    { scale: 0.8, opacity: 0, y: 20 }, 
     { 
-      scale: 1, 
-      opacity: 1, 
-      duration: 0.8, 
-      ease: "power2.out", 
-      delay: index * 0.1,
-      y: 0 
+      x: direction, // Start further left (-150) or right (150)
+      opacity: 0 // Start invisible
     }, 
-    "<"); 
-
-
-
-   
-const columns = gsap.utils.toArray('.animated-column');
-
-columns.forEach((col, index) => {
-  const direction = index % 2 === 0 ? 'bottom' : 'top'; // Alternates direction
-  const offset = index % 2 === 0 ? 100 : -100; // Positive for bottom, negative for top
-
-  gsap.fromTo(col, 
-    {
-      y: offset,
-      opacity: 0,
+    { 
+      x: 0, // Slide to the original position
+      opacity: 1, // Fade in
+      ease: "expo.out", // Use a smoother easing function for fluid animation
     }, 
-    {
-      y: 0,
-      opacity: 1,
-      duration: 1, // Increased duration for smoother animation
-      ease: 'power4.out', // Smoother easing function
-      scrollTrigger: {
-        trigger: col,
-        start: 'top 75%', // Adjust based on your layout
-        toggleActions: 'play none none reverse',
-        stagger: {
-          amount: 0.3, // Increased stagger delay for smoother effect
-          from: "start", // Stagger from the start
-        },
-      },
-    }
+    index * 0.3  // Stagger timing for smoother animation (delays based on index)
   );
 });
 
-});
+  
+  // Column animations
+  const columns = gsap.utils.toArray('.animated-column');
 
+  columns.forEach((col, index) => {
+    const offset = index % 2 === 0 ? 100 : -100; 
+    gsap.fromTo(col, 
+      { y: offset, opacity: 0 }, 
+      { 
+        y: 0, 
+        opacity: 1,
+        duration: 1,
+        ease: 'power4.out',
+        scrollTrigger: {
+          trigger: col,
+          start: 'top 75%', 
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
+  });
 
+  // Experience-driven text and icon animations
+  const firstDiv = document.querySelector('.experience-driven-text');
+  const secondDiv = document.querySelector('.experience-driven-icons');
 
+  gsap.from(firstDiv, {
+    scrollTrigger: {
+      trigger: firstDiv,
+      start: 'top 80%', 
+      toggleActions: 'play none none reverse',
+    },
+    x: 100, 
+    opacity: 0, 
+    duration: 1, 
+    ease: 'power2.out',
+  });
 
-
-// Select the divs to animate
-const firstDiv = document.querySelector('.experience-driven-text');
-const secondDiv = document.querySelector('.experience-driven-icons');
-
-// Create animations for the first div
-gsap.from(firstDiv, {
-  scrollTrigger: {
-    trigger: firstDiv,
-    start: 'top 80%', // Start when the top of the first div is at 80% of the viewport
-    toggleActions: 'play none none reverse',
-  },
-  x: 100, // Start from 100px to the right
-  opacity: 0, // Start invisible
-  duration: 1, // Duration of the animation
-  ease: 'power2.out', // Easing function
-});
-
-// Create animations for the second div with a staggered delay
-gsap.from(secondDiv, {
-  scrollTrigger: {
-    trigger: secondDiv,
-    start: 'top 80%', // Start when the top of the second div is at 80% of the viewport
-    toggleActions: 'play none none reverse',
-  },
-  x: 100, // Start from 100px to the right
-  opacity: 0, // Start invisible
-  duration: 1, // Duration of the animation
-  ease: 'power2.out', // Easing function
-  delay: 0.5, // Delay the animation slightly for the second div
-});
-
-
+  gsap.from(secondDiv, {
+    scrollTrigger: {
+      trigger: secondDiv,
+      start: 'top 80%', 
+      toggleActions: 'play none none reverse',
+    },
+    x: 100, 
+    opacity: 0, 
+    duration: 1, 
+    ease: 'power2.out',
+    delay: 0.5,
+  });
 
 });
 
 
 // GSAP ANIMATIONS 
+
+$(document).ready(function() {
+  // Initially, hide all tab content except the first one
+  $('.tab-content-section').hide(); // Hide all content sections
+  $('.tab-content-section:first').show().addClass('active-tab'); // Show the first content section by default
+  $('ul li:first').addClass('active'); // Set the first tab as active
+
+  // When a tab is clicked
+  $('ul li').click(function() {
+     // Remove active class from all tabs
+     $('ul li').removeClass('active');
+     // Add active class to the clicked tab
+     $(this).addClass('active');
+
+     // Hide all content sections
+     $('.tab-content-section').hide().removeClass('active-tab');
+
+     // Get the target content section based on the clicked tab's data-target attribute
+     var target = $(this).data('target');
+     
+     // Show the selected content and add the active class
+     $(target).fadeIn().addClass('active-tab');
+
+     // Refresh ScrollTrigger after showing the new tab content
+     gsap.delayedCall(0.1, function() {
+       ScrollTrigger.refresh(); // Recalculate the ScrollTrigger elements
+     });
+  });
+
+
+
+  
+function animateCardsInTab(tabSelector) {
+  // Select all design cards in the currently visible tab
+  const designCards = gsap.utils.toArray(`${tabSelector} .website-Designs`);
+
+  // Create the timeline for the visible tab content
+  const designCardTl = gsap.timeline({
+    scrollTrigger: {
+      trigger: tabSelector, // Use the currently visible tab as the trigger
+      start: 'top 75%', 
+      end: 'bottom 0%', 
+      scrub: 2,
+      toggleActions: 'play none none reverse',
+      invalidateOnRefresh: true
+    }
+  });
+
+  // Animate each card within the visible tab
+  designCards.forEach((card, index) => {
+    const direction = index % 2 === 0 ? -150 : 150; // Slide from left if index is even, from right if odd
+
+    designCardTl.fromTo(card, 
+      { 
+        x: direction, // Start further left (-150) or right (150)
+        opacity: 0 // Start invisible
+      }, 
+      { 
+        x: 0, // Slide to the original position
+        opacity: 1, // Fade in
+        ease: "expo.out",
+      }, 
+      index * 0.3  // Stagger timing for smoother animation (delays based on index)
+    );
+  });
+}
+
+// Call the animation function when the page loads for the first tab
+animateCardsInTab('#logo-design');
+
+// Update the animation for the selected tab when switching tabs
+$('ul li').click(function() {
+  var target = $(this).data('target');
+  
+  // Ensure the new tab's content gets the animation
+  animateCardsInTab(target);
+  
+  // Refresh ScrollTrigger after showing the new tab content
+  gsap.delayedCall(0.1, function() {
+    ScrollTrigger.refresh(); // Recalculate the ScrollTrigger elements
+  });
+});
+
+});
+
+
+
+
+
+
+
 
 
 

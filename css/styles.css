@@ -772,7 +772,7 @@ transition: box-shadow 0.3s ease;
    position: absolute;
    bottom: -70px;
    left: 20px;
-    z-index: -1;
+    z-index: -1 !important;
   }
 
   .loader-container{
@@ -1682,3 +1682,31 @@ width: 100%;
 .btn-comp:active {
   transform: scale(0.95);
 } */
+
+
+
+/* ===Tabs === */
+.tab-content-section {
+  display: none; /* Hide all tab contents */
+}
+
+.active-tab {
+  display: block; /* Show only the active tab */
+}
+
+ul li.active {
+  font-weight: bold;
+  border-bottom: 3px solid var(--theme-color); /* Optional: highlight active tab */
+}
+
+/* ===Tabs === */
+
+
+.testimonial-owl-item{
+  display: flex !important;
+    justify-content: center !important;
+    width: 643px !important;
+    margin-right: 10px !important;
+    align-items: center !important;
+    min-height: 500px !important;
+}
