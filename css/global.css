@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "Balmond";
+    src: url('../Assests/Fonts/Balmond.ttf');
+}
+
+:root{
+    --theme-color:#110953;
+    --primary-color : #091929;
+    --secondary-color: #313341;
+    --white-color: #ffffff;
+    --green-color:#56ae77;
+    --blue-varient-1: #2d2288;
+    --yellow : #ffc107 ;
+}
+
+
+
+
+/* ========== COLORS ========== */
+.primary-color{
+    color: var(--primary-color);
+}
+.secondary-color{
+    color: var(--secondary-color);
+}
+
+.white-color{
+    color: var(--white-color);
+}
+.theme-color{
+    color: var(--theme-color);
+}
+.green-color{
+    color: var(--green-color);
+}
+.blue-1{
+    color: var(--blue-varient-1);
+}
+
+/* ========== COLORS ========== */
+
+
+/* ========== Text Color Classes ========== */
+
+.text-black {
+    color: var(--primary-color)!important;
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.text-white {
+    color: var(--white-color);
+}
+
+.text-theme {
+    color: var(--theme-color);
+}
+
+.text-green {
+    color: var(--green-color);
+}
+
+.text-blue-1 {
+    color: var(--blue-varient-1);
+}
+
+.text-yellow{
+    color: var(--yellow);
+}
+
+/* ========== Text Color Classes ========== */
+
+
+/* ========== FONT FAMILIES ========== */
+
+/* Balmond Font Family */
+.balmond {
+    font-family: "Balmond";
+}
+
+/* Poppins Thin (100) */
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Poppins Thin Italic (100) */
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* Poppins Extra Light (200) */
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Poppins Extra Light Italic (200) */
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* Poppins Light (300) */
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Poppins Light Italic (300) */
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Poppins Regular (400) */
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Poppins Regular Italic (400) */
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Poppins Medium (500) */
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Poppins Medium Italic (500) */
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Poppins SemiBold (600) */
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Poppins SemiBold Italic (600) */
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Poppins Bold (700) */
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Poppins Bold Italic (700) */
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Poppins Extra Bold (800) */
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Poppins Extra Bold Italic (800) */
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* Poppins Black (900) */
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Poppins Black Italic (900) */
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* ========== END FONT FAMILIES ========== */
+
+
+
+/* ========== FONT SIZES ========== */
+
+.text-xxl {
+    font-size: 40px;
+}
+
+.text-xl {
+    font-size: 36px;
+}
+
+.text-lg {
+    font-size: 28px;
+}
+
+.text-md {
+    font-size: 18px;
+}
+
+.text-sm {
+    font-size: 12px;
+}
+
+/* ========== END FONT SIZES ========== */
+
+
+/* ========== LINE HEIGHTS ========== */
+
+.lh-xl {
+    line-height: 32px;
+}
+
+.lh-large {
+    line-height: 30px !important;
+}
+
+.lh-sm {
+    line-height: 12px;
+}
+
+.lh-0 {
+    line-height: 0px !important;
+}
+
+/* ========== END LINE HEIGHTS ========== */
+
+
+/* ========== LETTER SPACING ========== */
+
+.ls-lg {
+    letter-spacing: 4px;
+}
+
+/* ========== END LETTER SPACING ========== */
+
+
+
+

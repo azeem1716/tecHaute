@@ -163,33 +163,43 @@ $(document).ready(function() {
 
 
 
-
 $(document).ready(function() {
   $('#industries-carousel-1').owlCarousel({
-    loop: true,                      
-    autoplay: true,                 
-    autoplayTimeout: 1000,             
-    autoplaySpeed: 5000,            
-    slideTransition: 'linear',     
-    margin: 10,                    
-    autoWidth: true,            
-    dots: false,                   
-    nav: false,                  
-    center: true,                   
+    loop: true,
+    autoplay: true,
+    // autoplayTimeout: 1,             // Very short timeout for continuous motion
+    autoplaySpeed: 3000,
+    smartSpeed: 6000,        // Speed of the transition
+    slideTransition: 'linear',      // Continuous linear transition
+    margin: 10,
+    autoWidth: true,
+    dots: false,
+    nav: false,
+    center: true,
     responsive: {
       0: {
-        items: 2,                   
+        items: 2,
       },
       600: {
-        items: 3,                   
+        items: 3,
       },
       1024: {
-        items: 6,               
+        items: 6,
       },
     },
-    autoplayHoverPause: false,       
-    smartSpeed: 5000,                
+    autoplayHoverPause: false,
+
+   
+    // smartSpeed: 5000,               // Match speed with autoplaySpeed for smoothness
   });
+
+  jQuery("#industries-carousel-1").trigger("play.owl.autoplay", [2000]);
+
+  function setSpeed() {
+    jQuery("industries-carousel-1").trigger("play.owl.autoplay", [6000]);
+  }
+
+  setTimeout(setSpeed, 1000);
 });
 
 
@@ -199,30 +209,41 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('#industries-carousel-2').owlCarousel({
     rtl:true,
-    loop: true,                      
-    autoplay: true,                 
-    autoplayTimeout: 1000,             
-    autoplaySpeed: 5000,            
-    slideTransition: 'linear',     
-    margin: 10,                    
-    autoWidth: true,            
-    dots: false,                   
-    nav: false,                  
-    center: true,                   
+    loop: true,
+    autoplay: true,
+    // autoplayTimeout: 1,             // Very short timeout for continuous motion
+    autoplaySpeed: 3000,
+    smartSpeed: 6000,        // Speed of the transition
+    slideTransition: 'linear',      // Continuous linear transition
+    margin: 10,
+    autoWidth: true,
+    dots: false,
+    nav: false,
+    center: true,
     responsive: {
       0: {
-        items: 2,                   
+        items: 2,
       },
       600: {
-        items: 3,                   
+        items: 3,
       },
       1024: {
-        items: 6,               
+        items: 6,
       },
     },
-    autoplayHoverPause: false,       
-    smartSpeed: 5000,                
+    autoplayHoverPause: false,
+
+   
+    // smartSpeed: 5000,               // Match speed with autoplaySpeed for smoothness
   });
+
+  jQuery("#industries-carousel-2").trigger("play.owl.autoplay", [2000]);
+
+  function setSpeed() {
+    jQuery("#industries-carousel-2").trigger("play.owl.autoplay", [6000]);
+  }
+
+  setTimeout(setSpeed, 1000);
 });
 
 
@@ -468,7 +489,13 @@ anime({
   
   // Start the animation
   animateArrow();
-  
+  anime({
+    targets: '.About-Image',
+    rotateY: [30, -30], // Rotate between 30 and -30 degrees
+    duration: 3000, // Duration of the animation in milliseconds
+    easing: 'easeInOutQuad', // Easing function for smooth animation
+    loop: true // Loop the animation
+});
 
 
 });
