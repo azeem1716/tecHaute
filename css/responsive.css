@@ -1,0 +1,33 @@
+
+@media (max-width:768px) {
+    .our-work-image {
+        width: 50%;
+        margin-left: 80px;
+      }
+
+      .our-work-text{
+        position: relative;
+        left:40px;
+      }
+
+      
+.column-margin{
+    margin-top: 160px !important;
+  }
+}
+
+@media (max-width:576px)  {
+         
+.column-margin{
+    margin-top: 144px !important;
+  }
+    .our-work-image {
+        width: 50%;
+        margin-left: 32px;
+      }
+    .our-work-text{
+        left:0px !important;
+      }
+
+  
+}

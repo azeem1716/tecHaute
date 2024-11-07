@@ -32,116 +32,129 @@
 
     <!-- ========== GSAP ScrollTrigger ========== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+ <!-- ========== GSAP ========== -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
-    <!-- ========== GSAP ========== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+ <link
+   rel="stylesheet"
+   href="https://unpkg.com/swiper/swiper-bundle.min.css"
+ />
   </head>
   <body>
-    <!-- ==========  Header for Desktop ========== -->
-    <header class="desktop-header">
-      <div
-        class="d-none d-lg-flex justify-content-between align-items-center container my-4"
-      >
-        <div class="d-flex gap-4 text-white">
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-google"></i>
-          <i class="fa-brands fa-pinterest-p"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-solid fa-wifi"></i>
+   <!-- ==========  Header for Desktop ========== -->
+   <header class="desktop-header">
+    <div
+      class="d-none d-lg-flex justify-content-between align-items-center container my-4"
+    >
+      <div class="d-flex gap-4 text-white">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-google"></i>
+        <i class="fa-brands fa-pinterest-p"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+
+      <div class="d-flex gap-4">
+        <div class="d-flex justify-content-center align-items-baseline gap-2">
+          <div>
+            <img
+              src="Assests/Icons/live-chat svg.svg"
+              id="header-icon"
+              alt=""
+            />
+          </div>
+          <div>
+            <h6 class="text-md text-white poppins-medium lh-0">Live Chat</h6>
+            <span class="text-sm text-white poppins-regular lh-0"
+              >Feel Free to chat with us
+            </span>
+          </div>
         </div>
 
-        <div class="d-flex gap-4">
-          <div class="d-flex justify-content-center align-items-baseline gap-2">
-            <div>
-              <img
-                src="Assests/Icons/live-chat svg.svg"
-                id="header-icon"
-                alt=""
-              />
-            </div>
-            <div>
-              <h6 class="text-md text-white poppins-medium lh-0">Live Chat</h6>
-              <span class="text-sm text-white poppins-regular lh-0"
-                >Feel Free to chat with us
-              </span>
-            </div>
+        <div class="d-flex justify-content-center align-items-baseline gap-2">
+          <div>
+            <img src="Assests/Icons/call-us.svg" id="header-icon" alt="" />
           </div>
-
-          <div class="d-flex justify-content-center align-items-baseline gap-2">
-            <div>
-              <img src="Assests/Icons/call-us.svg" id="header-icon" alt="" />
-            </div>
-            <div>
-              <h6
-                class="text-md text-white poppins-medium lh-0 text-capitalize"
-              >
-                Call or text us
-              </h6>
-              <span
-                class="text-sm text-white poppins-regular lh-0 text-capitalize"
-                >Call Us On +123 456 7890
-              </span>
-            </div>
+          <div>
+            <h6
+              class="text-md text-white poppins-medium lh-0 text-capitalize"
+            >
+              Call or text us
+            </h6>
+            <span
+              class="text-sm text-white poppins-regular lh-0 text-capitalize"
+              >Call Us On +123 456 7890
+            </span>
           </div>
         </div>
       </div>
+    </div>
 
+    <div
+      class="header-container d-none d-lg-flex align-items-center container rounded-3"
+    >
       <div
-        class="header-container d-none d-lg-flex align-items-center container rounded-3"
+        class="container d-flex justify-content-between align-items-center"
       >
-        <div
-          class="container d-flex justify-content-between align-items-center"
-        >
-          <!-- Logo -->
-          <div class="logo">
-            <a href="#">
-              <img
-                src="Assests/Icons/techaute_logo.svg"
-                alt="Logo"
-                class="img-fluid"
-                style="max-height: 50px"
-              />
-            </a>
-          </div>
-
-          <!-- Navigation Links -->
-          <nav class="navigation d-flex justify-content-center">
-            <ul class="nav-list d-flex list-unstyled m-0">
-              <li class="nav-item mx-4">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-divider">|</li>
-              <li class="nav-item mx-4">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-divider">|</li>
-              <li class="nav-item mx-4">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-divider">|</li>
-              <li class="nav-item mx-4">
-                <a class="nav-link" href="#">Combo Packages</a>
-              </li>
-              <li class="nav-divider">|</li>
-              <li class="nav-item mx-4">
-                <a class="nav-link" href="#">Reviews</a>
-              </li>
-              <li class="nav-divider">|</li>
-              <li class="nav-item mx-4">
-                <a class="nav-link" href="contactus.html">Contact</a>
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Button at the end -->
-          <button class="btn-comp">
-            <span class="button-content"> Get Started</span>
-          </button>
+        <!-- Logo -->
+        <div class="logo">
+          <a href="#">
+            <img
+              src="Assests/Icons/techaute_logo.svg"
+              alt="Logo"
+              class="img-fluid"
+              style="max-height: 50px"
+            />
+          </a>
         </div>
+
+        <!-- Navigation Links -->
+        <nav class="navigation d-flex justify-content-center">
+          <ul class="nav-list d-flex list-unstyled m-0">
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-divider">|</li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-divider">|</li>
+            <li class="nav-item custom-dropdown mx-4" id="servicesDropdownContainer">
+              <a class="nav-link" href="#" id="servicesDropdown">Services <i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown-menu custom-menu" id="customDropdownMenu">
+                <li><a class="dropdown-item" href="logo.html">Logo Design</a></li>
+                <li><a class="dropdown-item" href="website.html">Website Development</a></li>
+                <li><a class="dropdown-item" href="#">Branding</a></li>
+                <li><a class="dropdown-item" href="#">Ecommerce Solution</a></li>
+                <li><a class="dropdown-item" href="#">Mobile App</a></li>
+              </ul>
+            </li>
+            
+            
+            <li class="nav-divider">|</li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">Combo Packages</a>
+            </li>
+            <li class="nav-divider">|</li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">Reviews</a>
+            </li>
+            <li class="nav-divider">|</li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="contactus.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Button at the end -->
+        <button class="btn-comp">
+          <span class="button-content"> Get Started</span>
+        </button>
       </div>
-    </header>
-    <!-- ==========  Header for Desktop ========== -->
+    </div>
+  </header>
+  <!-- ==========  Header for Desktop ========== -->
 
     <!-- ==========  Header for Mobile ========== -->
     <header class="mobile-header">
@@ -202,7 +215,7 @@
     <div>
       <div class="container">
         <div class="row d-flex flex-column flex-lg-row align-items-stretch">
-          <div class="col-12 col-lg-6">
+          <div class="col-12 col-lg-6 overflow-hidden">
             <div>
               <div>
                 <img
@@ -301,12 +314,10 @@
     <!-- ========== About Us Section ========== -->
 
     <!-- ========== Services Carousel ========== -->
-    <div
-      class="text-carousel d-flex justify-content-center align-items-center white-color balmond mt-5"
-    >
-      <div class="services-swiper">
-        <div class="owl-carousel owl-theme" id="services-carousel">
-          <div class="item">
+    <div class="  text-carousel d-flex justify-content-center align-items-center white-color balmond mt-5" id="services-carousel">
+      <div class="services-swiper swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
             <div class="d-flex align-items-center gap-5">
               <div class="circle-icon"></div>
               <div>
@@ -314,8 +325,8 @@
               </div>
             </div>
           </div>
-
-          <div class="item">
+    
+          <div class="swiper-slide">
             <div class="d-flex align-items-center gap-5">
               <div class="circle-icon"></div>
               <div>
@@ -323,8 +334,8 @@
               </div>
             </div>
           </div>
-
-          <div class="item">
+    
+          <div class="swiper-slide">
             <div class="d-flex align-items-center gap-5">
               <div class="circle-icon"></div>
               <div>
@@ -332,8 +343,8 @@
               </div>
             </div>
           </div>
-
-          <div class="item">
+    
+          <div class="swiper-slide">
             <div class="d-flex align-items-center gap-5">
               <div class="circle-icon"></div>
               <div>
@@ -341,8 +352,8 @@
               </div>
             </div>
           </div>
-
-          <div class="item">
+    
+          <div class="swiper-slide">
             <div class="d-flex align-items-center gap-5">
               <div class="circle-icon"></div>
               <div>
@@ -350,8 +361,8 @@
               </div>
             </div>
           </div>
-
-          <div class="item">
+    
+          <div class="swiper-slide">
             <div class="d-flex align-items-center gap-5">
               <div class="circle-icon"></div>
               <div>
@@ -359,8 +370,8 @@
               </div>
             </div>
           </div>
-
-          <div class="item">
+    
+          <div class="swiper-slide">
             <div class="d-flex align-items-center gap-5">
               <div class="circle-icon"></div>
               <div>
@@ -370,8 +381,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- ========== Services Carousel ========== -->
+        </div>
+        <!-- ========== Services Carousel ========== -->
 
     <!-- ========== Logo Design Section ========== -->
     <div class="mt-5 py-5 position-relative logo-main overflow-hidden">
@@ -1352,5 +1363,9 @@
 
     <!-- ========== Owl Carousel JS ========== -->
     <script src="owl-carousel/js/owl.carousel.min.js"></script>
+
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   </body>
 </html>

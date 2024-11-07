@@ -37,213 +37,270 @@ $(document).ready(function(){
 });
 
 
+// $(document).ready(function() {
+//   $("#package-cards-carousel").owlCarousel({
+//     items: 3, 
+//     loop: true, 
+//     margin: 10, 
+//     dots: true, 
+//     autoplay: false, 
+//     autoplayTimeout: 3000,
+//     autoplaySpeed: 2000, 
+//     nav: true, 
+//     navSpeed: 500, 
+//     responsive: {
+//       0: {
+//         items: 1 
+//       },
+//       600: {
+//         items: 2 
+//       },
+//       1000: {
+//         items: 3 
+//     }
+//   }
+//   });
+
+//   // Hook up custom navigation buttons
+//   $('.package-prev').click(function() {
+//     $('#package-cards-carousel').trigger('prev.owl.carousel', [1000]); 
+//   });
+
+//   $('.package-next').click(function() {
+//     $('#package-cards-carousel').trigger('next.owl.carousel', [1000]); 
+//   });
+// });
+
+// // $(document).ready(function(){
+// //   $("#logo-carousel").owlCarousel({
+// //     loop: true,
+// //     margin: 10,
+// //     autoplay: false,
+// //     autoplayTimeout: 3000,
+// //     autoplayHoverPause: true,
+// //     animateOut: 'slideOutUp', // Use slide animations for vertical effect
+// //     animateIn: 'slideInDown',
+// //     items: 2, // Show one item at a time for vertical scroll
+// //     nav: false,
+// //     dots: false
+// //   });
+// // });
+
+
+
+
 $(document).ready(function() {
-  $("#package-cards-carousel").owlCarousel({
-    items: 3, 
-    loop: true, 
-    margin: 10, 
-    dots: true, 
-    autoplay: true, 
-    autoplayTimeout: 3000,
-    autoplaySpeed: 2000, 
-    nav: true, 
-    navSpeed: 500, 
-    responsive: {
-      0: {
-        items: 1 
+  var swiper = new Swiper('.services-swiper', {
+    loop: true, // Enable infinite looping
+    freeMode: true, // Enable free mode for continuous movement
+    speed: 3000, // Adjust speed to control continuous scroll speed
+    autoplay: {
+      delay: 0, // Removes delay between transitions
+      disableOnInteraction: false // Keep autoplay running even after interaction
+    },
+    slidesPerView: 4, // Number of logos visible at once
+    spaceBetween: 10, // Space between logos
+    allowTouchMove: false, // Disable user control for a smoother continuous effect
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10
       },
-      600: {
-        items: 2 
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 10
       },
-      1000: {
-        items: 3 
-    }
-  }
-  });
-
-  // Hook up custom navigation buttons
-  $('.package-prev').click(function() {
-    $('#package-cards-carousel').trigger('prev.owl.carousel', [1000]); 
-  });
-
-  $('.package-next').click(function() {
-    $('#package-cards-carousel').trigger('next.owl.carousel', [1000]); 
-  });
-});
-
-
-
-
-
-
-$(document).ready(function() {
-  $('#services-carousel').owlCarousel({
-    loop: true,                      
-    autoplay: true,                 
-    autoplayTimeout: 1000,             
-    autoplaySpeed: 5000,            
-    slideTransition: 'linear',     
-    margin: 10,                    
-    autoWidth: true,            
-    dots: false,                   
-    nav: false,                  
-    center: true,                   
-    responsive: {
-      0: {
-        items: 2,                   
-      },
-      600: {
-        items: 3,                   
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15
       },
       1024: {
-        items: 4,               
-      },
-    },
-    autoplayHoverPause: false,       
-    smartSpeed: 5000,                
-  });
-});
-$(document).ready(function() {
-  var owl = $('#testimonial-carousel');
-
-  owl.owlCarousel({
-      loop: true,
-      margin: 10,
-      autoHeight: true,
-      nav: false,
-      dots: false,
-      autoplay: true,
-      autoplaySpeed:2000,
-      responsive: {
-          0: { items: 1 },
-          768: { items: 1 },
-          1024: { items: 2 }
-      },
-
-       onInitialized: function(event) {
-      // Add a custom class to all owl-item elements for this carousel
-      $('#testimonial-carousel .owl-item').addClass('testimonial-owl-item');
+        slidesPerView: 4,
+        spaceBetween: 20
+      }
     }
   });
-
-  $('.custom-nav .next').click(function() {
-      owl.trigger('next.owl.carousel');
-  });
-
-  $('.custom-nav .prev').click(function() {
-      owl.trigger('prev.owl.carousel');
-  });
+});
 
   
-
-  owl.on('initialized.owl.carousel', function(event) {
-      var itemCount = event.item.count;
-      var dotsContainer = $('.custom-nav .dots');
-      dotsContainer.empty(); // Clear existing dots
-
-      for (var i = 0; i < itemCount; i++) {
-          dotsContainer.append('<span data-index="' + i + '"></span>');
+$(document).ready(function () {
+  // Initialize Swiper
+  var swiper = new Swiper('#testimonial-carousel', {
+    loop: true,
+    autoHeight: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.custom-nav .next',
+      prevEl: '.custom-nav .prev',
+    },
+    // Configure breakpoints for responsive behavior
+    breakpoints: {
+      // When the window width is >= 480px
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+      // When the window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 15
+      },
+      // When the window width is >= 1024px
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 20
       }
-
-      dotsContainer.find('span').eq(0).addClass('active');
+    },
+    on: {
+      // Reattach custom navigation after breakpoint change
+      breakpoint: function () {
+        initCustomNav();
+      }
+    }
   });
 
-  owl.on('changed.owl.carousel', function(event) {
-      var currentIndex = event.item.index;
-      $('.custom-nav .dots span').removeClass('active');
-      $('.custom-nav .dots span').eq(currentIndex).addClass('active');
-  });
-
-  $('.custom-nav .dots').on('click', 'span', function() {
+  // Function to initialize custom navigation for dots
+  function initCustomNav() {
+    $('.custom-nav .dots').off('click').on('click', 'span', function () {
       var index = $(this).data('index');
-      owl.trigger('to.owl.carousel', [index, 300]);
+      swiper.slideToLoop(index);
+    });
+  }
+
+  // Initial call to custom navigation setup
+  initCustomNav();
+});
+
+
+
+$(document).ready(function() {
+  var imageCarousel = new Swiper('.image-carousel-1', {
+    loop: true,
+    speed: 3000,
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false 
+    },
+    slidesPerView: 4, 
+    spaceBetween: 10,
+    allowTouchMove: false,  // Disable touch for smoother autoplay
+    breakpoints: {
+      // When window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+      // When window width is >= 480px
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      // When window width is >= 768px
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15
+      },
+      // When window width is >= 1024px
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      }
+    }
+  });
+});
+
+
+$(document).ready(function() {
+  var imageCarousel = new Swiper('.image-carousel-2', {
+    loop: true,
+    speed: 3000,
+    autoplay: {
+      delay: 0,                       // No delay for continuous scrolling effect
+      disableOnInteraction: false,    // Keep autoplay running even after interaction
+      reverseDirection: true          // Reverse autoplay direction for right-to-left effect
+    },
+    slidesPerView: 4, 
+    spaceBetween: 10,
+    allowTouchMove: false,  // Disable touch for smoother autoplay
+ 
+    breakpoints: {
+      // When window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+      // When window width is >= 480px
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 10
+      },
+      // When window width is >= 768px
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 15
+      },
+      // When window width is >= 1024px
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20
+      }
+    }
   });
 });
 
 
 
-
 $(document).ready(function() {
-  $('#industries-carousel-1').owlCarousel({
-    loop: true,
-    autoplay: true,
-    // autoplayTimeout: 1,             // Very short timeout for continuous motion
-    autoplaySpeed: 3000,
-    smartSpeed: 6000,        // Speed of the transition
-    slideTransition: 'linear',      // Continuous linear transition
-    margin: 10,
-    autoWidth: true,
-    dots: false,
-    nav: false,
-    center: true,
-    responsive: {
-      0: {
-        items: 2,
+  var swiper1 = new Swiper('#swiper-container-1', {
+      direction: 'vertical', // Set carousel direction to vertical
+      loop: true, // Enable infinite looping
+      freeMode: true, // Enable free mode for continuous movement
+      speed: 3000, // Adjust speed to control continuous scroll speed
+      autoplay: {
+          delay: 0, // Removes delay between transitions
+          disableOnInteraction: false // Keep autoplay running even after interaction
       },
-      600: {
-        items: 3,
-      },
-      1024: {
-        items: 6,
-      },
-    },
-    autoplayHoverPause: false,
 
-   
-    // smartSpeed: 5000,               // Match speed with autoplaySpeed for smoothness
+      slidesPerView: 4, // Number of logos visible at once
+      spaceBetween: 10, // Space between logos
+      allowTouchMove: false // Disable user control for a smoother continuous effect
   });
 
-  jQuery("#industries-carousel-1").trigger("play.owl.autoplay", [2000]);
-
-  function setSpeed() {
-    jQuery("industries-carousel-1").trigger("play.owl.autoplay", [6000]);
+// Carousel moving top-to-bottom
+var swiper2 = new Swiper('#swiper-container-2', {
+  direction: 'vertical',
+  loop: true,
+  autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      reverseDirection: true // Set to true for top-to-bottom effect
+  },
+  speed: 3000,
+  slidesPerView: 4,
+  spaceBetween: 10,
+  allowTouchMove: false,
+  on: {
+      init: function () {
+          this.slideTo(0); // Start from the first slide
+      }
   }
-
-  setTimeout(setSpeed, 1000);
 });
 
 
-
-
-
-$(document).ready(function() {
-  $('#industries-carousel-2').owlCarousel({
-    rtl:true,
-    loop: true,
-    autoplay: true,
-    // autoplayTimeout: 1,             // Very short timeout for continuous motion
-    autoplaySpeed: 3000,
-    smartSpeed: 6000,        // Speed of the transition
-    slideTransition: 'linear',      // Continuous linear transition
-    margin: 10,
-    autoWidth: true,
-    dots: false,
-    nav: false,
-    center: true,
-    responsive: {
-      0: {
-        items: 2,
+  var swiper3 = new Swiper('#swiper-container-3', {
+      direction: 'vertical', // Set carousel direction to vertical
+      loop: true, // Enable infinite looping
+      freeMode: true, // Enable free mode for continuous movement
+      speed: 3000, // Adjust speed to control continuous scroll speed
+      autoplay: {
+          delay: 0, // Removes delay between transitions
+          disableOnInteraction: false // Keep autoplay running even after interaction
       },
-      600: {
-        items: 3,
-      },
-      1024: {
-        items: 6,
-      },
-    },
-    autoplayHoverPause: false,
-
-   
-    // smartSpeed: 5000,               // Match speed with autoplaySpeed for smoothness
+      slidesPerView: 4, // Number of logos visible at once
+      spaceBetween: 10, // Space between logos
+      allowTouchMove: false // Disable user control for a smoother continuous effect
   });
-
-  jQuery("#industries-carousel-2").trigger("play.owl.autoplay", [2000]);
-
-  function setSpeed() {
-    jQuery("#industries-carousel-2").trigger("play.owl.autoplay", [6000]);
-  }
-
-  setTimeout(setSpeed, 1000);
 });
 
 
@@ -491,12 +548,13 @@ anime({
   animateArrow();
   anime({
     targets: '.About-Image',
-    rotateY: [30, -30], // Rotate between 30 and -30 degrees
-    duration: 3000, // Duration of the animation in milliseconds
-    easing: 'easeInOutQuad', // Easing function for smooth animation
-    loop: true // Loop the animation
+    translateX: [-20, 20], // Moves the image back and forth horizontally
+    scale: [1, 1.05], // Gentle scaling to give a breathing effect
+    duration: 3000, // Duration of the animation cycle
+    easing: 'easeInOutQuad', // Smooth easing for a natural effect
+    direction: 'alternate', // Alternates between forward and backward
+    loop: true // Loops the animation indefinitely
 });
-
 
 });
 // ANIME JS ANIMATIONS 
@@ -508,48 +566,58 @@ anime({
 $(document).ready(function() {
   gsap.registerPlugin(ScrollTrigger);
 
-  // GSAP 3D twirl effect on mouse move for multiple package cards
-  const cards = document.querySelectorAll('.package-card');
+ // GSAP 3D twirl effect on mouse move for multiple package cards
+const cards = document.querySelectorAll('.package-card');
 
-  cards.forEach(card => {
-    card.style.backgroundColor = '#edf1f8';  
-    card.style.transition = 'background 1s ease-in-out';
+cards.forEach(card => {
+  // Initial styles for the card
+  card.style.backgroundColor = '#edf1f8';  
+  card.style.transition = 'background 1s ease-in-out';
 
-    card.addEventListener('mousemove', (e) => {
-      const { clientX, clientY, target } = e;
-      const { left, top, width, height } = target.getBoundingClientRect();
-      
-      const x = (clientX - left) / width - 0.5; 
-      const y = (clientY - top) / height - 0.5; 
+  // Mousemove event for 3D effect
+  card.addEventListener('mousemove', (e) => {
+    const { clientX, clientY, target } = e;
+    const { left, top, width, height } = target.getBoundingClientRect();
 
-      const strength = 10; 
-      gsap.to(card, {
-        rotationY: x * strength,
-        rotationX: -y * strength,
-        transformPerspective: 800,
-        duration: 0.5, 
-        ease: "power2.out"
-      });
-    });
+    const x = (clientX - left) / width - 0.5; 
+    const y = (clientY - top) / height - 0.5; 
 
-    card.addEventListener('mouseenter', () => {
-      gsap.to(card, {
-        background: 'radial-gradient(circle, #ffffff, #abbaab)', 
-        duration: 0.5,
-        ease: "power2.out"
-      });
-    });
-
-    card.addEventListener('mouseleave', () => {
-      gsap.to(card, {
-        rotationY: 0,
-        rotationX: 0,
-        background: '#edf1f8', 
-        duration: 0.5,
-        ease: "power2.out"
-      });
+    const strength = 10; 
+    gsap.to(card, {
+      rotationY: x * strength,
+      rotationX: -y * strength,
+      transformPerspective: 800,
+      duration: 0.5, 
+      ease: "power2.out"
     });
   });
+
+  // Mouseenter event for background change
+  card.addEventListener('mouseenter', () => {
+    gsap.to(card, {
+      background: 'radial-gradient(circle, #ffffff, #abbaab)', 
+      duration: 0.5,
+      ease: "power2.out"
+    });
+  });
+
+  // Mouseleave event to reset the card to its initial position and background
+  card.addEventListener('mouseleave', () => {
+    gsap.to(card, {
+      rotationY: 0,
+      rotationX: 0,
+      transformPerspective: 800,
+      duration: 0.5, // Smooth reset for rotation
+      ease: "power2.out"
+    });
+    gsap.to(card, {
+      background: '#edf1f8',
+      duration: 0.1, // Quick reset for background color
+      ease: "power2.out"
+    });
+  });
+});
+
 
   // Scroll-triggered animations for headings
   const headings = document.querySelectorAll('.animated-heading');
@@ -651,36 +719,36 @@ $(document).ready(function() {
 
 
 // Web design card animations
-const designCards = gsap.utils.toArray('.website-Designs');
+// const designCards = gsap.utils.toArray('.website-Designs');
 
-const designCardTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.website-Designs-Cards',
-    start: 'top 75%', 
-    end: 'bottom 0%', // Increase the distance to make it scroll over a longer area
-    scrub: 2, // Adjusting scrub value for smoother and slower scrolling
-    toggleActions: 'play none none reverse',
-    invalidateOnRefresh: true // Ensures recalculation when the window resizes
-  }
-});
+// const designCardTl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: '.website-Designs-Cards',
+//     start: 'top 75%', 
+//     end: 'bottom 0%', // Increase the distance to make it scroll over a longer area
+//     scrub: 2, // Adjusting scrub value for smoother and slower scrolling
+//     toggleActions: 'play none none reverse',
+//     invalidateOnRefresh: true // Ensures recalculation when the window resizes
+//   }
+// });
 
-// Animate each card with a staggered slide effect
-designCards.forEach((card, index) => {
-  const direction = index % 2 === 0 ? -150 : 150; // Slide from left if index is even, from right if odd
+// // Animate each card with a staggered slide effect
+// designCards.forEach((card, index) => {
+//   const direction = index % 2 === 0 ? -150 : 150; // Slide from left if index is even, from right if odd
 
-  designCardTl.fromTo(card, 
-    { 
-      x: direction, // Start further left (-150) or right (150)
-      opacity: 0 // Start invisible
-    }, 
-    { 
-      x: 0, // Slide to the original position
-      opacity: 1, // Fade in
-      ease: "expo.out", // Use a smoother easing function for fluid animation
-    }, 
-    index * 0.3  // Stagger timing for smoother animation (delays based on index)
-  );
-});
+//   designCardTl.fromTo(card, 
+//     { 
+//       x: direction, // Start further left (-150) or right (150)
+//       opacity: 0 // Start invisible
+//     }, 
+//     { 
+//       x: 0, // Slide to the original position
+//       opacity: 1, // Fade in
+//       ease: "expo.out", // Use a smoother easing function for fluid animation
+//     }, 
+//     index * 0.3  // Stagger timing for smoother animation (delays based on index)
+//   );
+// });
 
   
   // Column animations
@@ -733,6 +801,24 @@ designCards.forEach((card, index) => {
     delay: 0.5,
   });
 
+// GSAP animation script
+gsap.from(".first-col", {
+  duration: 1.5,       // Shorter duration for a smoother feel
+  x: -150,             // Increased distance for a more dynamic entry
+  opacity: 0,
+  ease: "power2.out",  // Softer easing for a smoother animation
+  stagger: 0.2,        // Reduced stagger for a continuous flow
+});
+
+gsap.from(".second-col", {
+  duration: 1.5,       // Match duration for both columns
+  x: 150,              // Mirror distance from the opposite side
+  opacity: 0,
+  ease: "power2.out",  // Consistent easing
+  delay: 0.2,          // Slight delay for a natural entry sequence
+});
+
+
 });
 
 
@@ -769,62 +855,73 @@ $(document).ready(function() {
 
 
   
-function animateCardsInTab(tabSelector) {
-  // Select all design cards in the currently visible tab
-  const designCards = gsap.utils.toArray(`${tabSelector} .website-Designs`);
+// function animateCardsInTab(tabSelector) {
+//   // Select all design cards in the currently visible tab
+//   const designCards = gsap.utils.toArray(`${tabSelector} .website-Designs`);
 
-  // Create the timeline for the visible tab content
-  const designCardTl = gsap.timeline({
-    scrollTrigger: {
-      trigger: tabSelector, // Use the currently visible tab as the trigger
-      start: 'top 75%', 
-      end: 'bottom 0%', 
-      scrub: 2,
-      toggleActions: 'play none none reverse',
-      invalidateOnRefresh: true
+//   // Create the timeline for the visible tab content
+//   const designCardTl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: tabSelector, // Use the currently visible tab as the trigger
+//       start: 'top 75%', 
+//       end: 'bottom 0%', 
+//       scrub: 2,
+//       toggleActions: 'play none none reverse',
+//       invalidateOnRefresh: true
+//     }
+//   });
+
+//   // Animate each card within the visible tab
+//   designCards.forEach((card, index) => {
+//     const direction = index % 2 === 0 ? -150 : 150; // Slide from left if index is even, from right if odd
+
+//     designCardTl.fromTo(card, 
+//       { 
+//         x: direction, // Start further left (-150) or right (150)
+//         opacity: 0 // Start invisible
+//       }, 
+//       { 
+//         x: 0, // Slide to the original position
+//         opacity: 1, // Fade in
+//         ease: "expo.out",
+//       }, 
+//       index * 0.3  // Stagger timing for smoother animation (delays based on index)
+//     );
+//   });
+// }
+
+// // Call the animation function when the page loads for the first tab
+// animateCardsInTab('#logo-design');
+
+// // Update the animation for the selected tab when switching tabs
+// $('ul li').click(function() {
+//   var target = $(this).data('target');
+  
+//   // Ensure the new tab's content gets the animation
+//   animateCardsInTab(target);
+  
+//   // Refresh ScrollTrigger after showing the new tab content
+//   gsap.delayedCall(0.1, function() {
+//     ScrollTrigger.refresh(); // Recalculate the ScrollTrigger elements
+//   });
+// });
+
+});
+
+
+
+
+$(document).ready(function() {
+  // Show and keep dropdown open when hovering over the container
+  $('#servicesDropdownContainer').hover(
+    function() {
+      $('#customDropdownMenu').stop(true, true).slideDown(200); // Show dropdown with slide-down effect
+    },
+    function() {
+      $('#customDropdownMenu').stop(true, true).slideUp(200); // Hide dropdown with slide-up effect
     }
-  });
-
-  // Animate each card within the visible tab
-  designCards.forEach((card, index) => {
-    const direction = index % 2 === 0 ? -150 : 150; // Slide from left if index is even, from right if odd
-
-    designCardTl.fromTo(card, 
-      { 
-        x: direction, // Start further left (-150) or right (150)
-        opacity: 0 // Start invisible
-      }, 
-      { 
-        x: 0, // Slide to the original position
-        opacity: 1, // Fade in
-        ease: "expo.out",
-      }, 
-      index * 0.3  // Stagger timing for smoother animation (delays based on index)
-    );
-  });
-}
-
-// Call the animation function when the page loads for the first tab
-animateCardsInTab('#logo-design');
-
-// Update the animation for the selected tab when switching tabs
-$('ul li').click(function() {
-  var target = $(this).data('target');
-  
-  // Ensure the new tab's content gets the animation
-  animateCardsInTab(target);
-  
-  // Refresh ScrollTrigger after showing the new tab content
-  gsap.delayedCall(0.1, function() {
-    ScrollTrigger.refresh(); // Recalculate the ScrollTrigger elements
-  });
+  );
 });
-
-});
-
-
-
-
 
 
 

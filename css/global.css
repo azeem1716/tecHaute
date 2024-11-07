@@ -15,6 +15,9 @@
     --yellow : #ffc107 ;
 }
 
+body{
+    overflow-x: hidden;
+}
 
 
 
@@ -265,7 +268,5 @@
 }
 
 /* ========== END LETTER SPACING ========== */
-
-
 
 

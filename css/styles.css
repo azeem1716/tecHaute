@@ -113,6 +113,39 @@
   animation: none;
 }
 
+
+
+.custom-dropdown .custom-menu {
+  display: none; 
+  position: absolute;
+  background-color: #f8f9fa;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  border-radius: 4px;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.custom-dropdown .custom-menu .dropdown-item {
+  padding: 8px 20px;
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.custom-dropdown .custom-menu .dropdown-item:hover {
+  background-color: #e9ecef;
+  color: #000;
+}
+
+.custom-dropdown .dropdown-divider {
+  margin: 0.5rem 0;
+  border-color: #e9ecef;
+}
+
+
+
+
 /* ========== Mobile Header ========== */
 .mobile-header {
   position: fixed;
@@ -363,10 +396,23 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 /* ========== Hero Section Ends ========== */
 
 /* ========== Services ========== */
+
+/* Override unwanted styles */
+#services-carousel .swiper-container {
+  margin-top: 15px;
+  height: auto !important; /* Remove fixed height */
+  overflow: hidden !important; /* Reset overflow */
+  transform: none !important; /* Remove any transformation */
+  transform-origin: center !important;  /* Reset transform-origin if needed */
+  translate: none !important; /* Remove any translation */
+}
+
 .services-swiper {
   width: screen;
   overflow: hidden;
 }
+
+
 
 .text-carousel {
   width: screen;
@@ -429,7 +475,7 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 }
 
 .logos-box:hover img {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .logos-box:hover {
@@ -446,7 +492,7 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 
 .logos-box:hover div span {
   font-weight: bold;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 
 .logo-sec-card {
@@ -463,6 +509,7 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 }
 
 .box {
+  z-index: -1;
   position: absolute;
   top: 60%;
   width: 100px;
@@ -507,14 +554,14 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 
 .Concentric-circle {
   position: absolute;
-  bottom: -70px;
-  left: 20px;
+  bottom: -60px;
+  left: 50px;
   z-index: -1 !important;
 }
 
 .loader-container {
   position: absolute;
-  bottom: -70px;
+  bottom: -50px;
   right: 0;
   z-index: -1;
 }
@@ -555,6 +602,10 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
   background-position: center;
   width: screen;
   min-height: 600px;
+}
+
+.industries-image{
+  width: 250px;
 }
 
 .tag {
@@ -678,10 +729,31 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 
 
 
-#industries-carousel-2 .owl-item{
-  text-align: right;
 
+#industries-carousel-1 .swiper-container {
+  height: auto !important; /* Remove fixed height */
+  overflow: hidden !important; /* Reset overflow */
+  transform: none !important; /* Remove any transformation */
+  transform-origin: center !important;  /* Reset transform-origin if needed */
+  translate: none !important; /* Remove any translation */
 }
+
+
+
+
+/* Override unwanted styles */
+#industries-carousel-2 .swiper-container {
+  margin-top: 15px;
+  height: auto !important; /* Remove fixed height */
+  overflow: hidden !important; /* Reset overflow */
+  transform: none !important; /* Remove any transformation */
+  transform-origin: center !important;  /* Reset transform-origin if needed */
+  translate: none !important; /* Remove any translation */
+}
+
+
+
+
 
 /* ========== END Industries Section ========== */
 
@@ -747,9 +819,12 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 
 
 .custom-nav {
+  position: absolute;
+  bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 99;
     /* margin-top: 20px; */
 }
 
@@ -779,7 +854,13 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
     background-color: blue; /* Color for active dot */
 }
 
-
+#testimonial-carousel{
+  position: relative;
+  min-height: 500px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
 
 
 .testimonial-container {
@@ -788,13 +869,14 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
     border: 2px solid #e0e0e0; /* Light gray border */
     border-radius: 20px; /* Smooth rounded corners */
     padding: 20px;
-    max-width: 600px;
+    /* max-width: 600px; */
     margin: 0 auto; /* Center the container */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional shadow */
+   
   
 }
 
-
+/* 
 .testimonial-owl-item{
   display: flex !important;
     justify-content: center !important;
@@ -802,14 +884,12 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
     margin-right: 10px !important;
     align-items: center !important;
     min-height: 420px !important;
-}
+} */
 
 .profile-image {
     position: absolute !important; /* Absolute positioning to overlap the container */
     top: -80px !important; /* Position it slightly outside the container */
     right: 30px; /* Adjust distance from right */
-    width: 80px; /* Adjust the size of the image */
-    height: 80px;
     border-radius: 50%; /* Make the image circular */
     border: 4px solid white; /* White border around the image */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional shadow for the image */
@@ -820,9 +900,16 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 .our-work-image {
   width: 100%;
 }
-
+.our-work-text{
+  position: relative;
+  left:50px;
+}
 .our-work-main {
   position: relative;
+}
+
+.column-margin{
+  margin-top: 180px !important;
 }
 
 .concentric-square-container {
@@ -1020,6 +1107,7 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 
 .customer-satisfaction-box:hover h3,
 .customer-satisfaction-box:hover span {
+  position: relative;
   transform: translateY(-5px); 
   color: white !important; 
 }
@@ -1234,6 +1322,21 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 /* ========== END Scrollbar Styling and Button Styles ========== */
 
 
+/* ========== Form Section Styles ========== */
+
+.form-section{
+  background-image: url('../Assests/Images/Form-Bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 600px;
+}
+
+
+/* ========== Form Section Styles Ends ========== */
+
+
+
 
 /* ========== Animated Button and Column Styles ========== */
 .animated-column {
@@ -1340,99 +1443,41 @@ ul li.active {
 
 /* ========== END Tabs ========== */
 
+/* ========== LOGO Page Css Starts ========== */
 
-
-
-
-
-/* 
-
-.btn-comp,
-.btn-comp *,
-.btn-comp:after,
-.btn-comp:before {
-  border: 0 solid;
-  box-sizing: border-box;
+.swiper{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.swiper-container {
+  height: 500px; /* Adjust height as needed */
+  overflow: hidden; /* Prevent overflow */
+  transform: rotate(25deg);
+  transform-origin: top; /* Set the origin of the transformation to the top */
+  transform: translateY(100px) rotate(25deg); /* Translate from the top */
 }
 
-.btn-comp {
-  -webkit-tap-highlight-color: transparent;
-  background: linear-gradient(to left,  #2667d2,#6a8dc7);
-  color: #fff;
-  cursor: pointer;
-  font-family: "Poppins", sans-serif;
-  font-size: 12px;
- 
-  line-height: 1.5;
-  text-transform: uppercase;
-  border-radius: 99rem;
-  border: none;
-  padding: 0.8rem 3rem;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 0 2px #6a8dc7;
+
+
+.swiper-container .swiper-slide {
+  height: auto; /* Allows slides to adjust based on content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.btn-comp span {
-  display: grid;
-  inset: 0;
-  place-items: center;
-  position: absolute;
-  transition: opacity 0.2s ease;
+
+.logo-carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px; /* Adjust logo container height */
+  width: 150px;
 }
 
-.btn-comp .text {
-  z-index: 1;
-  transition: opacity 0.3s ease;
+.logo-carousel-container img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.btn-comp .marquee {
-  --spacing: 7em;
-  --start: 0em;
-  --end: 10em;
-  -webkit-animation: marquee 1s linear infinite;
-  animation: marquee 1s linear infinite;
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;
-  opacity: 0;
-  position: relative;
-  text-shadow: #fff var(--spacing) 0, #fff calc(var(--spacing) * -1) 0,
-    #fff calc(var(--spacing) * -2) 0;
-}
-
-.btn-comp:hover .marquee {
-  -webkit-animation-play-state: running;
-  animation-play-state: running;
-  opacity: 1;
-}
-
-.btn-comp:hover .text {
-  opacity: 0;
-}
-
-@-webkit-keyframes marquee {
-  0% {
-    transform: translateX(var(--start));
-  }
-
-  100% {
-    transform: translateX(var(--end));
-  }
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(var(--start));
-  }
-
-  100% {
-    transform: translateX(var(--end));
-  }
-}
-
-.btn-comp:active {
-  transform: scale(0.95);
-} */
-
-
+/* ========== LOGO Page Css Ends ========== */
