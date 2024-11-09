@@ -116,7 +116,7 @@
           <nav class="navigation d-flex justify-content-center">
             <ul class="nav-list d-flex list-unstyled m-0">
               <li class="nav-item mx-4">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="index.html">Home</a>
               </li>
               <li class="nav-divider">|</li>
               <li class="nav-item mx-4">
@@ -145,7 +145,7 @@
                   <li>
                     <a class="dropdown-item" href="#">Ecommerce Solution</a>
                   </li>
-                  <li><a class="dropdown-item" href="#">Mobile App</a></li>
+                  <li><a class="dropdown-item" href="mobile-app.html">Mobile App</a></li>
                 </ul>
               </li>
 
@@ -191,47 +191,99 @@
     <nav class="side-menu" id="side-menu">
       <ul>
         <li class="d-flex justify-content-between">
-          <a href="#"><span class="icon-about">About </span> </a>
-          <span><i class="fa-solid fa-info text-white"></i></span>
+          <a href="#"><span class="icon-about">About</span></a>
         </li>
-
-        <li class="d-flex justify-content-between">
-          <a href="#"><span class="icon-services">Services</span> </a>
-          <img
-            src="Assests/Icons/Animation - 1727225774085.gif"
-            alt=""
-            height="40px"
-          />
-          <!-- <span><i class="fa-solid fa-gear text-white"></i></span> -->
+    
+        <li class="">
+         <div class="d-flex justify-content-between">
+          <a href="#"><span class="icon-services">Services</span></a>
+          <span class="toggle-submenu"><i class="fa-solid fa-chevron-down text-white"></i></span> <!-- Icon for submenu toggle -->
+         </div>
+          <ul class="submenu poppins-regular">
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Digital Marketing</a></li>
+            <li><a href="#">SEO Services</a></li>
+          </ul>
         </li>
-
+        
+        
+    
         <li class="d-flex justify-content-between">
-          <a href="#"><span class="icon-combo">Combo Packages</span> </a>
-          <span><i class="fa-solid fa-boxes-packing text-white"></i></span>
+          <a href="#"><span class="icon-combo">Combo Packages</span></a>
         </li>
-
+    
         <li class="d-flex justify-content-between">
-          <a href="#"><span class="icon-reviews">Reviews</span> </a>
-          <span><i class="fa-solid fa-comments text-white"></i></span>
+          <a href="#"><span class="icon-reviews">Reviews</span></a>
         </li>
-
+    
         <li class="d-flex justify-content-between">
-          <a href="#"><span class="icon-contact">Contact </span> </a>
-          <span><i class="fa-solid fa-phone-volume text-white"></i></span>
+          <a href="#"><span class="icon-contact">Contact</span></a>
         </li>
       </ul>
     </nav>
+    
     <!-- ========== Header for Mobile ========== -->
 
     <div id="movingElement"></div>
 
     <!-- ========== Hero Section ========== -->
-    <div
-      class="hero-section d-flex flex-column justify-content-center align-items-center gap-5"
-    >
+    <div class="hero-section d-flex flex-column justify-content-center align-items-center gap-5">
       <div class="container d-flex justify-content-center align-items-center">
+        <div class="col-4 d-none d-lg-flex justify-content-center align-items-center gap-4">
+
+        <div id="website-carousel-1" class="swiper-container">
+  <div class="swiper-wrapper">
+    <!-- Slide 1 -->
+    <div class="swiper-slide">
+      <div class="webiste-carousel-img">
+      <img src="Assests/Images/Web-Design-1.png" alt="Image 1 Description" />
+     </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="swiper-slide">
+      <div class="webiste-carousel-img">
+        <img src="Assests/Images/Web-Design-2.png" alt="Image 2 Description" />
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="swiper-slide">
+      <div class="webiste-carousel-img">
+        <img src="Assests/Images/Web-Design-3.png" alt="Image 3 Description" />
+
+      </div>
+    </div>
+ <!-- Slide 4 -->
+    <div class="swiper-slide">
+      <div class="webiste-carousel-img">
+        <img src="Assests/Images/Web-Design-4.png" alt="Image 3 Description" />
+
+      </div>
+    </div>
+
+ <!-- Slide 5 -->
+    <div class="swiper-slide">
+      <div class="webiste-carousel-img">
+        <img src="Assests/Images/Web-Design-5.png" alt="Image 3 Description" />
+
+      </div>
+    </div>
+ <!-- Slide 6 -->
+
+    <div class="swiper-slide">
+      <div class="webiste-carousel-img">
+        <img src="Assests/Images/Web-Design-6.png" alt="Image 3 Description" />
+
+      </div>
+    </div>
+    <!-- Add more slides as needed -->
+  </div>
+</div>
+
+      </div>
+
         <div
-          class="d-flex flex-column justify-content-center align-items-center"
+          class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-center"
         >
           <div class="divider-white"></div>
           <div class="hero-text text-center mt-3">
@@ -282,25 +334,61 @@
             </div>
           </div>
         </div>
+        <div class="col-4 d-none d-lg-flex justify-content-center align-items-center gap-4">
+         
+          <div id="website-carousel-2" class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="webiste-carousel-img">
+                <img src="Assests/Images/Logo-1.png" alt="Image 1 Description" />
+               </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="webiste-carousel-img">
+                  <img src="Assests/Images/Logo-2.png" alt="Image 2 Description" />
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="webiste-carousel-img">
+                  <img src="Assests/Images/Logo-3.png" alt="Image 3 Description" />
+          
+                </div>
+              </div>
+              <!-- Slide 4 -->
+          
+              <div class="swiper-slide">
+                <div class="webiste-carousel-img">
+                  <img src="Assests/Images/Logo-4.png" alt="Image 3 Description" />
+          
+                </div>
+              </div>
+          
+              <!-- Slide 5 -->
+          
+              <div class="swiper-slide">
+                <div class="webiste-carousel-img">
+                  <img src="Assests/Images/Logo-5.png" alt="Image 3 Description" />
+          
+                </div>
+              </div>
+              <!-- Slide 6 -->
+          
+              <div class="swiper-slide">
+                <div class="webiste-carousel-img">
+                  <img src="Assests/Images/Logo-6.png" alt="Image 3 Description" />
+          
+                </div>
+              </div>
+              <!-- Add more slides as needed -->
+            </div>
+          </div>
+      </div>
       </div>
 
-      <!-- <div id="websites-carousel" class="owl-carousel owl-theme mt-5">
-        <div class="item">
-            <div class="w-100">
-                <img src="Assests/Images/Website-1.png" alt="" class="w-50">
-            </div>
-        </div>
-        <div class="item">
-            <div class="w-100">
-                <img src="Assests/Images/Website-1.png" alt="" class="w-50">
-            </div>
-        </div>
-        <div class="item">
-            <div class="w-100">
-                <img src="Assests/Images/Website-1.png" alt="" class="w-50">
-            </div>
-        </div>
-    </div> -->
+      
     </div>
     <!-- ========== Hero Section ========== -->
 
@@ -376,7 +464,7 @@
     <!-- ========== Services Carousel ========== -->
 
     <!-- ========== Logo Design Section ========== -->
-    <div class="mt-5 position-relative logo-main overflow-hidden py-5">
+    <div class="mt-5 py-5 position-relative logo-main overflow-hidden">
       <div class="arrow">
         <img src="Assests/Icons/Vector Smart Object Arrow.svg" alt="Arrow" />
       </div>
@@ -402,245 +490,468 @@
       </div>
       <div class="container">
         <div class="col-10 mx-auto">
-          <ul
-            class="list-unstyled d-flex flex-wrap justify-content-between text-sm text-capitalize poppins-regular text-secondary work-list"
-          >
-            <li>Logo Design</li>
-            <li>Website Design</li>
-            <li>Digital Marketing</li>
-            <li>Mobile Apps</li>
-            <li>Video Animation</li>
-            <li>Marketing Colletral</li>
-          </ul>
+            <ul id="logo-Tab" class="list-unstyled d-flex flex-wrap justify-content-between text-sm text-capitalize poppins-regular text-secondary ">
+                <li data-target="#logo" class="active">Logo Design</li>
+                <li data-target="#website">Website Design</li>
+                <li data-target="#digital">Digital Marketing</li>
+                <li data-target="#mobile">Mobile Apps</li>
+                <li data-target="#video">Video Animation</li>
+                <li data-target="#marketing">Marketing Collateral</li>
+            </ul>
         </div>
         <div class="col-12 divider-gray"></div>
       </div>
 
       <div>
         <div class="container mt-5 logo-section">
-          <div class="row gy-4">
-            <!-- Column for extra small to medium screens (col-12 for xs, col-6 for sm, col-3 for md and up) -->
-            <div
-              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
-            >
-              <div
-                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
-              >
-                <div class="icon-wrapper">
-                  <img src="Assests/Icons/3d-modeling.svg" alt="" />
+            <div class="tab-content">
+                <div id="logo" class="row gy-4 logo-tab-content">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div class="icon-wrapper">
+                                <img src="Assests/Icons/3d-modeling.svg" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Iconic Logo</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/pencil.svg" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Typographic Logo</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/vector.svg" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Illustrative Logo</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/2d logo.svg" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>2D Logo</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/leaf.svg" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Animated Logo</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/pyramid.svg" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>3D Logo</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/Wordmark.svg" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Wordmark Logo</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/colour.svg" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Emblem Logo</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <span>Iconic Logo</span>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
-            >
-              <div
-                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
-              >
-                <div>
-                  <img src="Assests/Icons/pencil.svg" alt="" />
+                <div id="website" class="row gy-4 justify-content-center logo-tab-content">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div class="icon-wrapper">
+                                <img src="Assests/Icons/online-data.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Static website   </span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/data.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>B2B Portal
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/dashboard.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>B2C Portal
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/shopping.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Ecommerce Website
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/website.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Web Portals</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/app-development.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Web Development</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                  
                 </div>
-                <div>
-                  <span>Typographic Logo</span>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
-            >
-              <div
-                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
-              >
-                <div>
-                  <img src="Assests/Icons/vector.svg" alt="" />
-                </div>
-                <div>
-                  <span>Illustrative Logo</span>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
-            >
-              <div
-                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
-              >
-                <div>
-                  <img src="Assests/Icons/2d logo.svg" alt="" />
+                <div id="digital" class="row gy-4 justify-content-center logo-tab-content ">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div class="icon-wrapper">
+                                <img src="Assests/Icons/seo.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>SEO</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/social-media.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>SMM</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/pay-per-click.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>PPC</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/email-marketing.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Email Marketing</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/ads.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Advertising</span>
+                            </div>
+                        </div>
+                    </div>
+            
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/planning.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>ORM</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                  <span>2D Logo</span>
-                </div>
-              </div>
-            </div>
+                
 
-            <div
-              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
-            >
-              <div
-                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
-              >
-                <div>
-                  <img src="Assests/Icons/leaf.svg" alt="" />
+                <div id="mobile" class="row gy-4 justify-content-center logo-tab-content">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div class="icon-wrapper">
+                                <img src="Assests/Icons/Hybrid-app.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Hybrid App</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/user-interface.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Native Apps</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/android.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Android App</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/app-store.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>IOS App</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/atom.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>React Native App</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/flutter-brands-solid.svg" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Flutter App</span>
+                            </div>
+                        </div>
+                    </div>
+                
                 </div>
-                <div>
-                  <span>Animated Logo</span>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
-            >
-              <div
-                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
-              >
-                <div>
-                  <img src="Assests/Icons/pyramid.svg" alt="" />
+                <div id="video" class="row gy-4 justify-content-center logo-tab-content">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div class="icon-wrapper">
+                                <img src="Assests/Icons/motion-graphic.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>2D Animation</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/3d-movie.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>3D Animation</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/pen-tool.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Illustration</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/typography.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Logo Animation</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/video-advertising.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Whiteboard Animation</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/online-class.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Explainer Video</span>
+                            </div>
+                        </div>
+                    </div>
+            
                 </div>
-                <div>
-                  <span>3D Logo</span>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
-            >
-              <div
-                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
-              >
-                <div>
-                  <img src="Assests/Icons/Wordmark.svg" alt="" />
+                <div id="marketing" class="row gy-4 justify-content-center logo-tab-content">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div class="icon-wrapper">
+                                <img src="Assests/Icons/roll-up.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Banner Design</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/letter.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Letter Head </span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/business-card.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Business Card</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/magazine.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Magazine</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/leaflet.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Brouchere</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
+                        <div class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box">
+                            <div>
+                                <img src="Assests/Icons/stationary.png" alt="" class="logo-tab-icon" />
+                            </div>
+                            <div>
+                                <span>Stationary</span>
+                            </div>
+                        </div>
+                    </div>
+            
                 </div>
-                <div>
-                  <span>Wordmark Logo</span>
-                </div>
-              </div>
             </div>
-
-            <div
-              class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center"
-            >
-              <div
-                class="w-100 h-100 py-4 d-flex flex-column justify-content-center align-items-center logos-box"
-              >
-                <div>
-                  <img src="Assests/Icons/colour.svg" alt="" />
-                </div>
-                <div>
-                  <span>Emblem Logo</span>
-                </div>
-              </div>
-            </div>
-          </div>
+       
         </div>
       </div>
 
       <div class="box">
         <img src="Assests/Icons/Vector Smart Object.svg" alt="" />
-      </div>
-
-      <div class="container py-5 logo-cards-section">
-        <div class="row g-4 d-flex justify-content-center">
-          <div class="col-12 col-md-6 position-relative">
-            <div class="Concentric-circle w-100">
-              <img
-                src="Assests/Icons/Concentric-circle.svg"
-                alt="Concentric Circle"
-                id="circle"
-              />
-            </div>
-            <div
-              class="logo-sec-card py-5 d-flex flex-column flex-md-row align-items-center h-100"
-            >
-              <!-- Main Content Section -->
-              <div class="w-100 h-100 ms-3">
-                <div class="mb-3 w-50">
-                  <h3 class="text-lg text-white balmond text-capitalize">
-                    Trusted By 50+ Companies
-                  </h3>
-                </div>
-                <div class="mb-3">
-                  <button class="btn-comp text-sm">
-                    Read All our user cases
-                  </button>
-                </div>
-                <div class="w-75">
-                  <img
-                    src="Assests/Images/Freelancing-logos.png"
-                    alt=""
-                    class="w-100"
-                  />
-                </div>
-              </div>
-              <!-- Image Section -->
-              <div
-                class="logo-sec-card-image w-25 h-100 mt-4 mt-md-0 text-center"
-              >
-                <img
-                  src="Assests/Images/laptop-vector.png"
-                  alt=""
-                  class="h-75 w-auto laptop-bounce"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6 position-relative">
-            <div class="loader-container w-25">
-              <img
-                src="Assests/Icons/Loader-image.svg"
-                alt="loader image"
-                id="loader-image"
-              />
-            </div>
-            <div
-              class="logo-sec-card py-5 d-flex flex-column flex-md-row align-items-center h-100"
-            >
-              <!-- Main Content Section -->
-              <div class="w-100 h-100 ms-3">
-                <div class="mb-3 w-50">
-                  <h3 class="text-lg text-white balmond text-capitalize">
-                    See <br />
-                    Testimonials
-                  </h3>
-                </div>
-                <div class="mb-3">
-                  <button class="btn-comp text-sm">
-                    Read All our user cases
-                  </button>
-                </div>
-                <div class="w-75">
-                  <div class="stars lh-0">
-                    <span class="text-lg text-white balmond">4.9</span>
-                    <i class="fa-solid fa-star text-sm text-yellow"></i>
-                    <i class="fa-solid fa-star text-sm text-yellow"></i>
-                    <i class="fa-solid fa-star text-sm text-yellow"></i>
-                    <i class="fa-solid fa-star text-sm text-yellow"></i>
-                    <i class="fa-solid fa-star text-sm text-yellow"></i>
-                  </div>
-                </div>
-              </div>
-              <!-- Image Section -->
-              <div
-                class="logo-sec-card-image w-25 h-100 mt-4 mt-md-0 text-center"
-              >
-                <img
-                  src="Assests/Images/Peoples.png"
-                  alt=""
-                  class="h-100 w-auto peoples-animation"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <!-- ========== Logo Design Section ========== -->
@@ -740,849 +1051,849 @@
     </div>
     <!-- ========== Endorse Your Business ========== -->
 
-    <!-- ========== Web Design Section ========== -->
-    <div class="website-Design-Section">
+     <!-- ========== Web Design Section ========== -->
+     <div class="website-Design-Section">
       <div class="arrow-2">
-        <img src="Assests/Icons/Vector Smart Object Arrow.svg" alt="Arrow-2" />
+          <img src="Assests/Icons/Vector Smart Object Arrow.svg" alt="Arrow-2" />
       </div>
 
       <div class="concentric-square">
-        <img
-          src="Assests/Icons/concentric-squares.svg"
-          alt="concentric-square"
-        />
+          <img src="Assests/Icons/concentric-squares.svg" alt="concentric-square" />
       </div>
 
       <div class="text-center mb-4">
-        <div class="divider-black mx-auto"></div>
-        <span class="text-uppercase text-theme poppins-regular text-sm ls-lg"
-          >Our Work</span
-        >
-        <h2
-          class="text-capitalize text-theme balmond text-xxl animated-heading"
-        >
-          Stunning Custom Web Design Portfolio
-        </h2>
+          <div class="divider-black mx-auto"></div>
+          <span class="text-uppercase text-theme poppins-regular text-sm ls-lg">Our Work</span>
+          <h2 class="text-capitalize text-theme balmond text-xxl animated-heading">
+              Stunning Custom Web Design Portfolio
+          </h2>
       </div>
 
       <div class="container">
-        <div class="col-10 mx-auto">
-          <ul
-            class="list-unstyled d-flex flex-wrap justify-content-between text-sm text-capitalize poppins-regular text-secondary work-list"
-          >
-            <li data-target="#logo-design" class="active">Logo Design</li>
-            <li data-target="#website-design">Website Design</li>
-            <li data-target="#digital-marketing">Digital Marketing</li>
-            <li data-target="#mobile-apps">Mobile Apps</li>
-            <li data-target="#video-animation">Video Animation</li>
-            <li data-target="#marketing-colletral">Marketing Collateral</li>
-          </ul>
-        </div>
-        <div class="col-12 divider-gray"></div>
+          <div class="col-10 mx-auto">
+              <ul id="Portfolio-Tab"
+                  class="list-unstyled d-flex flex-wrap justify-content-between text-sm text-capitalize poppins-regular text-secondary ">
+                  <li data-target="#website-design"  class="active">Website Design</li>
+                  <li data-target="#logo-design">Logo Design</li>
+                  <li data-target="#mobile-apps">Mobile Apps</li>
+                  <li data-target="#digital-marketing">Digital Marketing</li>
+                  <li data-target="#video-animation">Video Animation</li>
+                  <li data-target="#marketing-colletral">Marketing Collateral</li>
+              </ul>
+          </div>
+          <div class="col-12 divider-gray"></div>
       </div>
 
       <div class="tab-content">
-        <div
-          id="logo-design"
-          class="row gx-2 gy-2 mt-4 website-Designs-Cards web-Designs tab-content-section"
-        >
+
+        <div id="website-design" class="row gx-2 gy-2 mt-4 website-Designs-Cards web-Designs tab-content-section">
           <!-- Loop through images for cleaner markup -->
           <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 01.png"
-                alt="Web Post 01"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
+              <div class="website-Designs image-container position-relative h-100">
+                  <img src="Assests/Images/Web Post 01.png" alt="Web Post 01" class="hover-image w-100 h-100" />
+                  <div class="overlay">Overlay Text</div>
+              </div>
           </div>
 
           <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 02.png"
-                alt="Web Post 02"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
+              <div class="website-Designs image-container position-relative h-100">
+                  <img src="Assests/Images/Web Post 02.png" alt="Web Post 02" class="hover-image w-100 h-100" />
+                  <div class="overlay">Overlay Text</div>
+              </div>
           </div>
 
           <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 03.png"
-                alt="Web Post 03"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
+              <div class="website-Designs image-container position-relative h-100">
+                  <img src="Assests/Images/Web Post 03.png" alt="Web Post 03" class="hover-image w-100 h-100" />
+                  <div class="overlay">Overlay Text</div>
+              </div>
           </div>
 
           <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 04.png"
-                alt="Web Post 04"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
+              <div class="website-Designs image-container position-relative h-100">
+                  <img src="Assests/Images/Web Post 04.png" alt="Web Post 04" class="hover-image w-100 h-100" />
+                  <div class="overlay">Overlay Text</div>
+              </div>
           </div>
 
           <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 05.png"
-                alt="Web Post 05"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
+              <div class="website-Designs image-container position-relative h-100">
+                  <img src="Assests/Images/Web Post 05.png" alt="Web Post 05" class="hover-image w-100 h-100" />
+                  <div class="overlay">Overlay Text</div>
+              </div>
           </div>
 
           <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 06.png"
-                alt="Web Post 06"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
+              <div class="website-Designs image-container position-relative h-100">
+                  <img src="Assests/Images/Web Post 06.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                  <div class="overlay">Overlay Text</div>
+              </div>
           </div>
-        </div>
+      </div>
 
-        <div
-          id="website-design"
-          class="row gx-2 gy-2 mt-4 website-Designs-Cards web-Designs tab-content-section"
-        >
-          <!-- Loop through images for cleaner markup -->
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 01.png"
-                alt="Web Post 01"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
+          <div id="mobile-apps" class="row gx-2 gy-2 mt-4 website-Designs-Cards web-Designs tab-content-section">
 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 02.png"
-                alt="Web Post 02"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
+              <!-- Loop through images for cleaner markup -->
+              <div class="col-12 col-sm-6 col-md-4">    
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Mobile-App-1.png" alt="Web Post 01" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 03.png"
-                alt="Web Post 03"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Mobile-App-2.png" alt="Web Post 02" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 04.png"
-                alt="Web Post 04"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Mobile-App-3.png" alt="Web Post 03" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 05.png"
-                alt="Web Post 05"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Mobile-App-4.png" alt="Web Post 04" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Mobile-App-5.png" alt="Web Post 05" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Mobile-App-6.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Mobile-App-7.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Mobile-App-8.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Mobile-App-9.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
           </div>
 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 06.png"
-                alt="Web Post 06"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
-        </div>
+          <div id="logo-design" class="row gx-2 gy-2 mt-4 website-Designs-Cards web-Designs tab-content-section">
+              <!-- Loop through images for cleaner markup -->
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Logo-1.png" alt="Web Post 01" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
 
-        <div
-          id="digital-marketing"
-          class="row gx-2 gy-2 mt-4 website-Designs-Cards web-Designs tab-content-section"
-        >
-          <!-- Loop through images for cleaner markup -->
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 01.png"
-                alt="Web Post 01"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Logo-2.png" alt="Web Post 02" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 02.png"
-                alt="Web Post 02"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Logo-3.png" alt="Web Post 03" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 03.png"
-                alt="Web Post 03"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Logo-4.png" alt="Web Post 04" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 04.png"
-                alt="Web Post 04"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Logo-5.png" alt="Web Post 05" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Logo-6.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Logo-7.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Logo-8.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-4">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Logo-9.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
           </div>
 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 05.png"
-                alt="Web Post 05"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
+
+         
+
+          <div id="digital-marketing" class="row gx-2 gy-2 mt-4 website-Designs-Cards web-Designs tab-content-section">
+              <!-- Loop through images for cleaner markup -->
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-1.png" alt="Web Post 01" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-2.png" alt="Web Post 02" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-3.png" alt="Web Post 03" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-4.png" alt="Web Post 04" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-5.png" alt="Web Post 05" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-6.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-7.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-8.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-9.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-10.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-11.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-12.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
           </div>
 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 06.png"
-                alt="Web Post 06"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
-        </div>
+          <div id="video-animation" class="row gx-2 gy-2 mt-4 website-Designs-Cards web-Designs tab-content-section">
+              <!-- Loop through images for cleaner markup -->
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-1.png" alt="Web Post 01" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
 
-        <div
-          id="mobile-apps"
-          class="row gx-2 gy-2 mt-4 website-Designs-Cards web-Designs tab-content-section"
-        >
-          <!-- Loop through images for cleaner markup -->
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 01.png"
-                alt="Web Post 01"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-2.png" alt="Web Post 02" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-3.png" alt="Web Post 03" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-4.png" alt="Web Post 04" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-5.png" alt="Web Post 05" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-6.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-7.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-8.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-9.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-10.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-11.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-12.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
           </div>
 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 02.png"
-                alt="Web Post 02"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
+          <div id="marketing-colletral" class="row gx-2 gy-2 mt-4 website-Designs-Cards web-Designs tab-content-section">
+              <!-- Loop through images for cleaner markup -->
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-1.png" alt="Web Post 01" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-2.png" alt="Web Post 02" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-3.png" alt="Web Post 03" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-4.png" alt="Web Post 04" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-5.png" alt="Web Post 05" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-6.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-7.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-8.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-9.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-10.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-11.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-md-3">
+                  <div class="website-Designs image-container position-relative h-100">
+                      <img src="Assests/Images/Branding-12.png" alt="Web Post 06" class="hover-image w-100 h-100" />
+                      <div class="overlay">Overlay Text</div>
+                  </div>
+              </div>
+
           </div>
 
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 03.png"
-                alt="Web Post 03"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 04.png"
-                alt="Web Post 04"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 05.png"
-                alt="Web Post 05"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-md-4">
-            <div
-              class="website-Designs image-container position-relative h-100"
-            >
-              <img
-                src="Assests/Images/Web Post 06.png"
-                alt="Web Post 06"
-                class="hover-image w-100 h-100"
-              />
-              <div class="overlay">Overlay Text</div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div class="offers-bg d-flex flex-column justify-content-between py-5">
-        <div class="Concentric-circle-2-container">
-          <img
-            src="Assests/Icons/Concentric-circle-2.svg"
-            alt="Concentric-circle-2"
-            class="Concentric-circle-2"
-          />
-        </div>
-
-        <div class="threeD-square">
-          <img src="Assests/Icons/3d-Square.svg" alt="3d-square" />
-        </div>
-
-        <div class="col mx-auto">
-          <button class="btn-comp">
-            <span class="button-content"> Get Started</span>
-          </button>
-        </div>
-        <div>
-          <div class="text-center mb-4">
-            <div class="divider-black mx-auto"></div>
-            <span
-              class="text-uppercase text-theme poppins-regular text-sm ls-lg"
-              >Our Work</span
-            >
-            <h2
-              class="text-capitalize text-theme balmond text-xxl animated-heading"
-            >
-              Get a taste of what we do
-            </h2>
-            <p
-              class="col-12 col-md-8 col-lg-4 mx-auto text-secondary text-capitalize poppins-regular"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              odit corporis nulla rerum quos iure.
-            </p>
+          <div class="Concentric-circle-2-container">
+              <img src="Assests/Icons/Concentric-circle-2.svg" alt="Concentric-circle-2" class="Concentric-circle-2">
           </div>
-          <div class="container">
-            <div class="col-10 mx-auto">
-              <ul
-                class="list-unstyled d-flex flex-wrap justify-content-between text-sm text-capitalize poppins-regular text-secondary work-list"
-              >
-                <li>Logo Design</li>
-                <li>Website Design</li>
-                <li>Digital Marketing</li>
-                <li>Mobile Apps</li>
-                <li>Video Animation</li>
-                <li>Marketing Colletral</li>
-              </ul>
-            </div>
+
+          <div class="threeD-square">
+              <img src="Assests/Icons/3d-Square.svg" alt="3d-square" />
           </div>
-        </div>
+
+          <div class="col mx-auto">
+              <button class="btn-comp">
+                  <span class="button-content"> Get Started</span>
+              </button>
+          </div>
+          <div>
+              <div class="text-center mb-4">
+                  <div class="divider-black mx-auto"></div>
+                  <span class="text-uppercase text-theme poppins-regular text-sm ls-lg">Our Work</span>
+                  <h2 class="text-capitalize text-theme balmond text-xxl animated-heading"> Get a taste of what we do
+                  </h2>
+                  <p class="col-12 col-md-8 col-lg-4 mx-auto text-secondary text-capitalize poppins-regular"> Lorem ipsum
+                      dolor sit amet consectetur adipisicing elit. Ullam odit corporis nulla rerum quos iure. </p>
+              </div>
+              <div class="container">
+                  <div class="col-10 mx-auto">
+                      <ul id="Packages-Tab"
+                          class="list-unstyled d-flex flex-wrap justify-content-between text-sm text-capitalize poppins-regular text-secondary ">
+                          <li data-target="#logo-design" class="active">Logo Design</li>
+                          <li data-target="#website-design">Website Design</li>
+                          <li data-target="#digital-marketing">Digital Marketing</li>
+                          <li data-target="#mobile-apps">Mobile Apps</li>
+                          <li data-target="#video-animation">Video Animation</li>
+                          <li data-target="#marketing-colletral">Marketing Collateral</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
       </div>
 
       <div class="offers-cards-section">
-        <div class="py-5">
-          <div class="container">
-            <div class="row g-4">
-              <div class="col-md-6 col-lg-4 package-card-col">
-                <div class="h-100 package-card py-4">
-                  <div class="h-75 w-100">
-                    <div class="w-75 ms-4">
-                      <h2 class="text-lg text-theme poppins-bold">
-                        Basic Branding Design Package
-                      </h2>
-                      <p class="text-sm text-secondary poppins-regular">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Voluptatum, modi.
-                      </p>
-                    </div>
-                    <div class="d-flex align-items-center ms-4">
-                      <span
-                        class="poppins-bold"
-                        style="font-size: 64px; color: #6a8dc7"
-                        >$99</span
-                      >
-                      <div class="text-md poppins-regular ms-2">
-                        <span class="text-decoration-line-through">$150</span>
-                        <p>Only</p>
-                      </div>
-                    </div>
-                    <ul class="package-list ms-4 overflow-y-auto">
-                      <li>2 Set Of Stationary Designs</li>
-                      <li>By 1 Experienced Designer</li>
-                      <li>Unlimited Revisions</li>
-                      <li>Printable Formats</li>
-                      <li>24-48 Hours Delivery</li>
-                      <li>100% Satisfaction Guarantee</li>
-                    </ul>
-                    <p class="text-sm text-primary poppins-regular text-center">
-                      Add on: $50 for expedited services
-                    </p>
-                    <div
-                      class="d-flex justify-content-center gap-5 text-primary text-sm poppins-medium w-100 gap-4 mb-5"
-                    >
-                      <span class="col-3">Speak With Us +123 456 7890</span>
-                      <span class="col-3">Want To Discuss Live Chat Now!</span>
-                    </div>
-                  </div>
-                  <div class="buy-now-btn">
-                    <button class="half-circle-btn">Buy Now</button>
-                  </div>
-                </div>
-              </div>
 
-              <!-- Repeat the package card for other packages -->
-              <div class="col-md-6 col-lg-4 package-card-col">
-                <div class="h-100 package-card py-4">
-                  <div class="h-75 w-100">
-                    <div class="w-75 ms-4">
-                      <h2 class="text-lg text-theme poppins-bold">
-                        Basic Branding Design Package
-                      </h2>
-                      <p class="text-sm text-secondary poppins-regular">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Voluptatum, modi.
-                      </p>
-                    </div>
-                    <div class="d-flex align-items-center ms-4">
-                      <span
-                        class="poppins-bold"
-                        style="font-size: 64px; color: #6a8dc7"
-                        >$99</span
-                      >
-                      <div class="text-md poppins-regular ms-2">
-                        <span class="text-decoration-line-through">$150</span>
-                        <p>Only</p>
-                      </div>
-                    </div>
-                    <ul class="package-list ms-4 overflow-y-auto">
-                      <li>2 Set Of Stationary Designs</li>
-                      <li>By 1 Experienced Designer</li>
-                      <li>Unlimited Revisions</li>
-                      <li>Printable Formats</li>
-                      <li>24-48 Hours Delivery</li>
-                      <li>100% Satisfaction Guarantee</li>
-                    </ul>
-                    <p class="text-sm text-primary poppins-regular text-center">
-                      Add on: $50 for expedited services
-                    </p>
-                    <div
-                      class="d-flex justify-content-center gap-5 text-primary text-sm poppins-medium w-100 gap-4 mb-5"
-                    >
-                      <span class="col-3">Speak With Us +123 456 7890</span>
-                      <span class="col-3">Want To Discuss Live Chat Now!</span>
-                    </div>
-                  </div>
-                  <div class="buy-now-btn">
-                    <button class="half-circle-btn">Buy Now</button>
-                  </div>
-                </div>
-              </div>
+          <div class="py-5">
 
-              <div class="col-md-6 col-lg-4 package-card-col">
-                <div class="h-100 package-card py-4">
-                  <div class="h-75 w-100">
-                    <div class="w-75 ms-4">
-                      <h2 class="text-lg text-theme poppins-bold">
-                        Basic Branding Design Package
-                      </h2>
-                      <p class="text-sm text-secondary poppins-regular">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Voluptatum, modi.
-                      </p>
-                    </div>
-                    <div class="d-flex align-items-center ms-4">
-                      <span
-                        class="poppins-bold"
-                        style="font-size: 64px; color: #6a8dc7"
-                        >$99</span
-                      >
-                      <div class="text-md poppins-regular ms-2">
-                        <span class="text-decoration-line-through">$150</span>
-                        <p>Only</p>
-                      </div>
-                    </div>
-                    <ul class="package-list ms-4 overflow-y-auto">
-                      <li>2 Set Of Stationary Designs</li>
-                      <li>By 1 Experienced Designer</li>
-                      <li>Unlimited Revisions</li>
-                      <li>Printable Formats</li>
-                      <li>24-48 Hours Delivery</li>
-                      <li>100% Satisfaction Guarantee</li>
-                    </ul>
-                    <p class="text-sm text-primary poppins-regular text-center">
-                      Add on: $50 for expedited services
-                    </p>
-                    <div
-                      class="d-flex justify-content-center gap-5 text-primary text-sm poppins-medium w-100 gap-4 mb-5"
-                    >
-                      <span class="col-3">Speak With Us +123 456 7890</span>
-                      <span class="col-3">Want To Discuss Live Chat Now!</span>
-                    </div>
-                  </div>
-                  <div class="buy-now-btn">
-                    <button class="half-circle-btn">Buy Now</button>
-                  </div>
-                </div>
-              </div>
 
-              <div class="col-md-6 col-lg-4 package-card-col">
-                <div class="h-100 package-card py-4">
-                  <div class="h-75 w-100">
-                    <div class="w-75 ms-4">
-                      <h2 class="text-lg text-theme poppins-bold">
-                        Basic Branding Design Package
-                      </h2>
-                      <p class="text-sm text-secondary poppins-regular">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Voluptatum, modi.
-                      </p>
-                    </div>
-                    <div class="d-flex align-items-center ms-4">
-                      <span
-                        class="poppins-bold"
-                        style="font-size: 64px; color: #6a8dc7"
-                        >$99</span
-                      >
-                      <div class="text-md poppins-regular ms-2">
-                        <span class="text-decoration-line-through">$150</span>
-                        <p>Only</p>
+              <div class="container">
+                  <div class="row g-4">
+                      <div class="col-md-4 package-card-col">
+                          <div class="h-100 package-card py-4">
+                              <div class="h-75 w-100">
+                                  <div class="w-75 ms-4">
+                                      <h2 class="text-lg text-theme poppins-bold"> Basic Branding Design Package </h2>
+                                      <p class="text-sm text-secondary poppins-regular"> Lorem ipsum dolor sit amet,
+                                          consectetur adipisicing elit. Voluptatum, modi. </p>
+                                  </div>
+                                  <div class="d-flex align-items-center ms-4">
+                                      <span class="poppins-bold" style="font-size: 64px; color: #6a8dc7">$99</span>
+                                      <div class="text-md poppins-regular ms-2">
+                                          <span class="text-decoration-line-through">$150</span>
+                                          <p>Only</p>
+                                      </div>
+                                  </div>
+                                  <ul class="package-list ms-4 overflow-y-auto">
+                                      <li>2 Set Of Stationary Designs</li>
+                                      <li>By 1 Experienced Designer</li>
+                                      <li>Unlimited Revisions</li>
+                                      <li>Printable Formats</li>
+                                      <li>24-48 Hours Delivery</li>
+                                      <li>100% Satisfaction Guarantee</li>
+                                  </ul>
+                                  <p class="text-sm text-primary poppins-regular text-center"> Add on: $50 for expedited
+                                      services </p>
+                                  <div
+                                      class="d-flex justify-content-center gap-5 text-primary text-sm poppins-medium w-100 gap-4 mb-5">
+                                      <span class="col-3">Speak With Us +123 456 7890</span>
+                                      <span class="col-3">Want To Discuss Live Chat Now!</span>
+                                  </div>
+                              </div>
+                              <div class="buy-now-btn">
+                                  <button class="half-circle-btn">Buy Now</button>
+                              </div>
+                          </div>
                       </div>
-                    </div>
-                    <ul class="package-list ms-4 overflow-y-auto">
-                      <li>2 Set Of Stationary Designs</li>
-                      <li>By 1 Experienced Designer</li>
-                      <li>Unlimited Revisions</li>
-                      <li>Printable Formats</li>
-                      <li>24-48 Hours Delivery</li>
-                      <li>100% Satisfaction Guarantee</li>
-                    </ul>
-                    <p class="text-sm text-primary poppins-regular text-center">
-                      Add on: $50 for expedited services
-                    </p>
-                    <div
-                      class="d-flex justify-content-center gap-5 text-primary text-sm poppins-medium w-100 gap-4 mb-5"
-                    >
-                      <span class="col-3">Speak With Us +123 456 7890</span>
-                      <span class="col-3">Want To Discuss Live Chat Now!</span>
-                    </div>
-                  </div>
-                  <div class="buy-now-btn">
-                    <button class="half-circle-btn">Buy Now</button>
-                  </div>
-                </div>
-              </div>
 
-              <!-- Repeat the package card for other packages -->
-              <div class="col-md-6 col-lg-4 package-card-col">
-                <div class="h-100 package-card py-4">
-                  <div class="h-75 w-100">
-                    <div class="w-75 ms-4">
-                      <h2 class="text-lg text-theme poppins-bold">
-                        Basic Branding Design Package
-                      </h2>
-                      <p class="text-sm text-secondary poppins-regular">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Voluptatum, modi.
-                      </p>
-                    </div>
-                    <div class="d-flex align-items-center ms-4">
-                      <span
-                        class="poppins-bold"
-                        style="font-size: 64px; color: #6a8dc7"
-                        >$99</span
-                      >
-                      <div class="text-md poppins-regular ms-2">
-                        <span class="text-decoration-line-through">$150</span>
-                        <p>Only</p>
+                      <!-- Repeat the package card for other packages -->
+                      <div class="col-md-4 package-card-col">
+                          <div class="h-100 package-card py-4">
+                              <div class="h-75 w-100">
+                                  <div class="w-75 ms-4">
+                                      <h2 class="text-lg text-theme poppins-bold"> Basic Branding Design Package </h2>
+                                      <p class="text-sm text-secondary poppins-regular"> Lorem ipsum dolor sit amet,
+                                          consectetur adipisicing elit. Voluptatum, modi. </p>
+                                  </div>
+                                  <div class="d-flex align-items-center ms-4">
+                                      <span class="poppins-bold" style="font-size: 64px; color: #6a8dc7">$99</span>
+                                      <div class="text-md poppins-regular ms-2">
+                                          <span class="text-decoration-line-through">$150</span>
+                                          <p>Only</p>
+                                      </div>
+                                  </div>
+                                  <ul class="package-list ms-4 overflow-y-auto">
+                                      <li>2 Set Of Stationary Designs</li>
+                                      <li>By 1 Experienced Designer</li>
+                                      <li>Unlimited Revisions</li>
+                                      <li>Printable Formats</li>
+                                      <li>24-48 Hours Delivery</li>
+                                      <li>100% Satisfaction Guarantee</li>
+                                  </ul>
+                                  <p class="text-sm text-primary poppins-regular text-center"> Add on: $50 for expedited
+                                      services </p>
+                                  <div
+                                      class="d-flex justify-content-center gap-5 text-primary text-sm poppins-medium w-100 gap-4 mb-5">
+                                      <span class="col-3">Speak With Us +123 456 7890</span>
+                                      <span class="col-3">Want To Discuss Live Chat Now!</span>
+                                  </div>
+                              </div>
+                              <div class="buy-now-btn">
+                                  <button class="half-circle-btn">Buy Now</button>
+                              </div>
+                          </div>
                       </div>
-                    </div>
-                    <ul class="package-list ms-4 overflow-y-auto">
-                      <li>2 Set Of Stationary Designs</li>
-                      <li>By 1 Experienced Designer</li>
-                      <li>Unlimited Revisions</li>
-                      <li>Printable Formats</li>
-                      <li>24-48 Hours Delivery</li>
-                      <li>100% Satisfaction Guarantee</li>
-                    </ul>
-                    <p class="text-sm text-primary poppins-regular text-center">
-                      Add on: $50 for expedited services
-                    </p>
-                    <div
-                      class="d-flex justify-content-center gap-5 text-primary text-sm poppins-medium w-100 gap-4 mb-5"
-                    >
-                      <span class="col-3">Speak With Us +123 456 7890</span>
-                      <span class="col-3">Want To Discuss Live Chat Now!</span>
-                    </div>
-                  </div>
-                  <div class="buy-now-btn">
-                    <button class="half-circle-btn">Buy Now</button>
-                  </div>
-                </div>
-              </div>
 
-              <div class="col-md-6 col-lg-4 package-card-col">
-                <div class="h-100 package-card py-4">
-                  <div class="h-75 w-100">
-                    <div class="w-75 ms-4">
-                      <h2 class="text-lg text-theme poppins-bold">
-                        Basic Branding Design Package
-                      </h2>
-                      <p class="text-sm text-secondary poppins-regular">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Voluptatum, modi.
-                      </p>
-                    </div>
-                    <div class="d-flex align-items-center ms-4">
-                      <span
-                        class="poppins-bold"
-                        style="font-size: 64px; color: #6a8dc7"
-                        >$99</span
-                      >
-                      <div class="text-md poppins-regular ms-2">
-                        <span class="text-decoration-line-through">$150</span>
-                        <p>Only</p>
+                      <div class="col-md-4 package-card-col">
+                          <div class="h-100 package-card py-4">
+                              <div class="h-75 w-100">
+                                  <div class="w-75 ms-4">
+                                      <h2 class="text-lg text-theme poppins-bold"> Basic Branding Design Package </h2>
+                                      <p class="text-sm text-secondary poppins-regular"> Lorem ipsum dolor sit amet,
+                                          consectetur adipisicing elit. Voluptatum, modi. </p>
+                                  </div>
+                                  <div class="d-flex align-items-center ms-4">
+                                      <span class="poppins-bold" style="font-size: 64px; color: #6a8dc7">$99</span>
+                                      <div class="text-md poppins-regular ms-2">
+                                          <span class="text-decoration-line-through">$150</span>
+                                          <p>Only</p>
+                                      </div>
+                                  </div>
+                                  <ul class="package-list ms-4 overflow-y-auto">
+                                      <li>2 Set Of Stationary Designs</li>
+                                      <li>By 1 Experienced Designer</li>
+                                      <li>Unlimited Revisions</li>
+                                      <li>Printable Formats</li>
+                                      <li>24-48 Hours Delivery</li>
+                                      <li>100% Satisfaction Guarantee</li>
+                                  </ul>
+                                  <p class="text-sm text-primary poppins-regular text-center"> Add on: $50 for expedited
+                                      services </p>
+                                  <div
+                                      class="d-flex justify-content-center gap-5 text-primary text-sm poppins-medium w-100 gap-4 mb-5">
+                                      <span class="col-3">Speak With Us +123 456 7890</span>
+                                      <span class="col-3">Want To Discuss Live Chat Now!</span>
+                                  </div>
+                              </div>
+                              <div class="buy-now-btn">
+                                  <button class="half-circle-btn">Buy Now</button>
+                              </div>
+                          </div>
                       </div>
-                    </div>
-                    <ul class="package-list ms-4 overflow-y-auto">
-                      <li>2 Set Of Stationary Designs</li>
-                      <li>By 1 Experienced Designer</li>
-                      <li>Unlimited Revisions</li>
-                      <li>Printable Formats</li>
-                      <li>24-48 Hours Delivery</li>
-                      <li>100% Satisfaction Guarantee</li>
-                    </ul>
-                    <p class="text-sm text-primary poppins-regular text-center">
-                      Add on: $50 for expedited services
-                    </p>
-                    <div
-                      class="d-flex justify-content-center gap-5 text-primary text-sm poppins-medium w-100 gap-4 mb-5"
-                    >
-                      <span class="col-3">Speak With Us +123 456 7890</span>
-                      <span class="col-3">Want To Discuss Live Chat Now!</span>
-                    </div>
-                  </div>
-                  <div class="buy-now-btn">
-                    <button class="half-circle-btn">Buy Now</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="container py-5 customer-satisfaction-main">
-          <div class="triangle-container">
-            <img src="Assests/Icons/Triangle.svg" alt="" class="triangle" />
-          </div>
-          <div class="text-center">
-            <h2
-              class="text-capitalize text-theme balmond text-lg animated-heading"
-            >
-              This is why we are the best
-            </h2>
-            <p
-              class="col-12 col-md-4 mx-auto text-sm text-secondary text-capitalize poppins-regular"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              odit corporis nulla rerum quos iure.
-            </p>
+                      <div class="col-md-4 package-card-col">
+                          <div class="h-100 package-card py-4">
+                              <div class="h-75 w-100">
+                                  <div class="w-75 ms-4">
+                                      <h2 class="text-lg text-theme poppins-bold"> Basic Branding Design Package </h2>
+                                      <p class="text-sm text-secondary poppins-regular"> Lorem ipsum dolor sit amet,
+                                          consectetur adipisicing elit. Voluptatum, modi. </p>
+                                  </div>
+                                  <div class="d-flex align-items-center ms-4">
+                                      <span class="poppins-bold" style="font-size: 64px; color: #6a8dc7">$99</span>
+                                      <div class="text-md poppins-regular ms-2">
+                                          <span class="text-decoration-line-through">$150</span>
+                                          <p>Only</p>
+                                      </div>
+                                  </div>
+                                  <ul class="package-list ms-4 overflow-y-auto">
+                                      <li>2 Set Of Stationary Designs</li>
+                                      <li>By 1 Experienced Designer</li>
+                                      <li>Unlimited Revisions</li>
+                                      <li>Printable Formats</li>
+                                      <li>24-48 Hours Delivery</li>
+                                      <li>100% Satisfaction Guarantee</li>
+                                  </ul>
+                                  <p class="text-sm text-primary poppins-regular text-center"> Add on: $50 for expedited
+                                      services </p>
+                                  <div
+                                      class="d-flex justify-content-center gap-5 text-primary text-sm poppins-medium w-100 gap-4 mb-5">
+                                      <span class="col-3">Speak With Us +123 456 7890</span>
+                                      <span class="col-3">Want To Discuss Live Chat Now!</span>
+                                  </div>
+                              </div>
+                              <div class="buy-now-btn">
+                                  <button class="half-circle-btn">Buy Now</button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <!-- Repeat the package card for other packages -->
+                      <div class="col-md-4 package-card-col">
+                          <div class="h-100 package-card py-4">
+                              <div class="h-75 w-100">
+                                  <div class="w-75 ms-4">
+                                      <h2 class="text-lg text-theme poppins-bold"> Basic Branding Design Package </h2>
+                                      <p class="text-sm text-secondary poppins-regular"> Lorem ipsum dolor sit amet,
+                                          consectetur adipisicing elit. Voluptatum, modi. </p>
+                                  </div>
+                                  <div class="d-flex align-items-center ms-4">
+                                      <span class="poppins-bold" style="font-size: 64px; color: #6a8dc7">$99</span>
+                                      <div class="text-md poppins-regular ms-2">
+                                          <span class="text-decoration-line-through">$150</span>
+                                          <p>Only</p>
+                                      </div>
+                                  </div>
+                                  <ul class="package-list ms-4 overflow-y-auto">
+                                      <li>2 Set Of Stationary Designs</li>
+                                      <li>By 1 Experienced Designer</li>
+                                      <li>Unlimited Revisions</li>
+                                      <li>Printable Formats</li>
+                                      <li>24-48 Hours Delivery</li>
+                                      <li>100% Satisfaction Guarantee</li>
+                                  </ul>
+                                  <p class="text-sm text-primary poppins-regular text-center"> Add on: $50 for expedited
+                                      services </p>
+                                  <div
+                                      class="d-flex justify-content-center gap-5 text-primary text-sm poppins-medium w-100 gap-4 mb-5">
+                                      <span class="col-3">Speak With Us +123 456 7890</span>
+                                      <span class="col-3">Want To Discuss Live Chat Now!</span>
+                                  </div>
+                              </div>
+                              <div class="buy-now-btn">
+                                  <button class="half-circle-btn">Buy Now</button>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-md-4 package-card-col">
+                          <div class="h-100 package-card py-4">
+                              <div class="h-75 w-100">
+                                  <div class="w-75 ms-4">
+                                      <h2 class="text-lg text-theme poppins-bold"> Basic Branding Design Package </h2>
+                                      <p class="text-sm text-secondary poppins-regular"> Lorem ipsum dolor sit amet,
+                                          consectetur adipisicing elit. Voluptatum, modi. </p>
+                                  </div>
+                                  <div class="d-flex align-items-center ms-4">
+                                      <span class="poppins-bold" style="font-size: 64px; color: #6a8dc7">$99</span>
+                                      <div class="text-md poppins-regular ms-2">
+                                          <span class="text-decoration-line-through">$150</span>
+                                          <p>Only</p>
+                                      </div>
+                                  </div>
+                                  <ul class="package-list ms-4 overflow-y-auto">
+                                      <li>2 Set Of Stationary Designs</li>
+                                      <li>By 1 Experienced Designer</li>
+                                      <li>Unlimited Revisions</li>
+                                      <li>Printable Formats</li>
+                                      <li>24-48 Hours Delivery</li>
+                                      <li>100% Satisfaction Guarantee</li>
+                                  </ul>
+                                  <p class="text-sm text-primary poppins-regular text-center"> Add on: $50 for expedited
+                                      services </p>
+                                  <div
+                                      class="d-flex justify-content-center gap-5 text-primary text-sm poppins-medium w-100 gap-4 mb-5">
+                                      <span class="col-3">Speak With Us +123 456 7890</span>
+                                      <span class="col-3">Want To Discuss Live Chat Now!</span>
+                                  </div>
+                              </div>
+                              <div class="buy-now-btn">
+                                  <button class="half-circle-btn">Buy Now</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
 
-          <div class="row g-4 customer-satisfaction-container">
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="customer-satisfaction-box w-100 h-100">
-                <div class="w-100 h-75">
-                  <div
-                    class="d-flex justify-content-center align-items-center w-100 h-100"
-                  >
-                    <img
-                      src="Assests/Icons/satisfaction.svg"
-                      alt=""
-                      class="w-50 h-50"
-                    />
-                  </div>
-                  <div class="text-center w-100 h-25">
-                    <h3 class="text-md text-secondary poppins-bold lh-0">
-                      100% Satisfaction
-                    </h3>
-                    <span class="text-sm text-primary poppins-regular"
-                      >Guaranteed</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="customer-satisfaction-box w-100 h-100">
-                <div class="w-100 h-75">
-                  <div
-                    class="d-flex justify-content-center align-items-center w-100 h-100"
-                  >
-                    <img
-                      src="Assests/Icons/customer.svg"
-                      alt=""
-                      class="w-50 h-50"
-                    />
-                  </div>
-                  <div class="text-center w-100 h-25">
-                    <h3 class="text-md text-secondary poppins-bold lh-0">
-                      24/7 Customer
-                    </h3>
-                    <span class="text-sm text-primary poppins-regular"
-                      >Support</span
-                    >
-                  </div>
-                </div>
+          <div class="container py-5 customer-satisfaction-main">
+              <div class="triangle-container">
+                  <img src="Assests/Icons/Triangle.svg" alt="" class="triangle">
               </div>
-            </div>
+              <div class="text-center">
+                  <h2 class="text-capitalize text-theme balmond text-lg animated-heading">
+                      This is why we are the best
+                  </h2>
+                  <p class="col-4 mx-auto text-sm text-secondary text-capitalize poppins-regular">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                      odit corporis nulla rerum quos iure.
+                  </p>
+              </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="customer-satisfaction-box w-100 h-100">
-                <div class="w-100 h-75">
-                  <div
-                    class="d-flex justify-content-center align-items-center w-100 h-100"
-                  >
-                    <img
-                      src="Assests/Icons/ownership.svg"
-                      alt=""
-                      class="w-50 h-50"
-                    />
+              <div class="row customer-satisfaction-container">
+                  <div class="col-12 col-lg-3">
+                      <div class="customer-satisfaction-box w-100 h-100">
+                          <div class="w-100 h-75">
+                              <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                                  <img src="Assests/Icons/satisfaction.svg" alt="" class="w-50 h-50" />
+                              </div>
+                              <div class="text-center w-100 h-25">
+                                  <h3 class="text-md text-secondary poppins-bold lh-0">
+                                      100% Satisfaction
+                                  </h3>
+                                  <span class="text-sm text-primary poppins-regular">Guaranteed</span>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-                  <div class="text-center w-100 h-25">
-                    <h3 class="text-md text-secondary poppins-bold lh-0">
-                      100% ownership
-                    </h3>
-                    <span class="text-sm text-primary poppins-regular"
-                      >Rights</span
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
-              <div class="customer-satisfaction-box w-100 h-100">
-                <div class="w-100 h-75">
-                  <div
-                    class="d-flex justify-content-center align-items-center w-100 h-100"
-                  >
-                    <img
-                      src="Assests/Icons/moneyback.svg"
-                      alt=""
-                      class="w-50 h-50"
-                    />
+                  <div class="col-12 col-lg-3">
+                      <div class="customer-satisfaction-box w-100 h-100">
+                          <div class="w-100 h-75">
+                              <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                                  <img src="Assests/Icons/customer.svg" alt="" class="w-50 h-50" />
+                              </div>
+                              <div class="text-center w-100 h-25">
+                                  <h3 class="text-md text-secondary poppins-bold lh-0">
+                                      24/7 Customer
+                                  </h3>
+                                  <span class="text-sm text-primary poppins-regular">Support</span>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-                  <div class="text-center w-100 h-25">
-                    <h3 class="text-md text-secondary poppins-bold lh-0">
-                      Money back
-                    </h3>
-                    <span class="text-sm text-primary poppins-regular"
-                      >Guarante</span
-                    >
+
+                  <div class="col-12 col-lg-3">
+                      <div class="customer-satisfaction-box w-100 h-100">
+                          <div class="w-100 h-75">
+                              <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                                  <img src="Assests/Icons/ownership.svg" alt="" class="w-50 h-50" />
+                              </div>
+                              <div class="text-center w-100 h-25">
+                                  <h3 class="text-md text-secondary poppins-bold lh-0">
+                                      100% ownership
+                                  </h3>
+                                  <span class="text-sm text-primary poppins-regular">Rights</span>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-                </div>
+
+                  <div class="col-12 col-lg-3">
+                      <div class="customer-satisfaction-box w-100 h-100">
+                          <div class="w-100 h-75">
+                              <div class="d-flex justify-content-center align-items-center w-100 h-100">
+                                  <img src="Assests/Icons/moneyback.svg" alt="" class="w-50 h-50" />
+                              </div>
+                              <div class="text-center w-100 h-25">
+                                  <h3 class="text-md text-secondary poppins-bold lh-0">
+                                      Money back
+                                  </h3>
+                                  <span class="text-sm text-primary poppins-regular">Guarante</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
+
       </div>
     </div>
-    <!-- ========== Web Design Section ========== -->
+  <!-- ========== Web Design Section ========== -->   
 
     <!-- Endorse your business -->
     <div class="experience-section mt-5">
@@ -2684,37 +2995,100 @@
 
       <!-- ========== Form ========== -->
 
-      <div class="form-section d-flex justify-content-center align-items-center">
-        <div class="row container">
-          <div class="col-6">
+      <div class="form-section d-flex justify-content-center align-items-center  ">
+        <div class="row container d-flex align-items-center">
+          <div class="col-12 col-lg-6 ">
             <div>
-              <h2  class="text-capitalize text-white balmond text-xxl animated-heading">Solutions That Make The World Revolves</h2>
-              <p class="text-sm poppins-medium text-white">
-                Our team of experts focus on client and customer satisfaction as the ultimate goal for our projects. This is one of the many reasons why our work is globally acclaimed and recognized.</p>
+              <h2 class="text-capitalize text-white balmond text-xxl animated-heading">Solutions That Make The World Revolves
+              </h2>
+              <p class="text-sm poppins-light text-white">
+                Our team of experts focus on client and customer satisfaction as the ultimate goal for our projects. This is one
+                of the many reasons why our work is globally acclaimed and recognized.</p>
             </div>
-
+          
             <div>
-              <h2  class="text-capitalize text-white balmond text-xxl ">Flexible</h2>
-              <p class="text-sm poppins-medium text-white ms-5">
-                Our team of experts focus on client and customer satisfaction as the ultimate goal for our projects. This is one of the many reasons why our work is globally acclaimed and recognized.</p>
+              <h2 class="text-capitalize text-white balmond text-lg">
+                Flexible <i class="fa-solid fa-caret-right align-middle"></i>
+              </h2>
+              <p class="text-sm poppins-light text-white ms-5">
+                Through animation, brands can have content be as simple or complex as they wish. Animation can be customized to
+                meet the needs of a particular video's budget range.</p>
             </div>
-
+          
             <div>
-              <h2  class="text-capitalize text-white balmond text-xxl ">Flexible</h2>
-              <p class="text-sm poppins-medium text-white ms-5">
-                Our team of experts focus on client and customer satisfaction as the ultimate goal for our projects. This is one of the many reasons why our work is globally acclaimed and recognized.</p>
+              <h2 class="text-capitalize text-white balmond text-lg ">Extend Existing Marketing <i
+                  class="fa-solid fa-caret-right align-middle "></i></h2>
+              <p class="text-sm poppins-light text-white ms-5">
+                One of the advantages of using animation is the ability to draw inspiration directly from a brand's image and use
+                actual color schemes, logos, etc. within the video.</p>
             </div>
-
+          
             <div>
-              <h2  class="text-capitalize text-white balmond text-xxl ">Flexible</h2>
-              <p class="text-sm poppins-medium text-white ms-5">
-                Our team of experts focus on client and customer satisfaction as the ultimate goal for our projects. This is one of the many reasons why our work is globally acclaimed and recognized.</p>
+              <h2 class="text-capitalize text-white balmond text-lg ">Final Thoughts <i
+                  class="fa-solid fa-caret-right align-middle"></i></h2>
+              <p class="text-sm poppins-light text-white ms-5">
+                It offers the ability to simplify messages while also staying true to a company's brand. With YouTube, Instagram,
+                Vine, Pinterest, Vimeo and many other platforms catering to branded video content, businesses can use animation to
+                create a unique user experience.</p>
             </div>
+          
+          
+          
+          </div>
 
-
-            <div class="col-6">
-
+          <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+          
+            <div class="form-container-before">
+              <div class="form-container d-flex flex-column justify-content-center align-items-center  p-4">
+                <h2 class="text-capitalize text-theme balmond text-lg animated-heading">Make Great Videos That Perform</h2>
+                <form action="" class="mt-4">
+          
+                  <div class="input-container mb-3">
+                    <label class="input-label">
+                      <span class="icon"></span>
+                      Your Name
+                      <span class="icon"></span>
+                    </label>
+                    <input type="text" class="styled-input" placeholder="Robert Junior">
+                  </div>
+          
+                  <div class="input-container mb-3">
+                    <label class="input-label">
+                      <span class="icon"></span>
+                      Email Address
+                      <span class="icon"></span>
+                    </label>
+                    <input type="email" class="styled-input" placeholder="info@example.com">
+                  </div>
+          
+          
+                  <div class="input-container mb-3">
+                    <label class="input-label">
+                      <span class="icon"></span>
+                      Phone Number
+                      <span class="icon"></span>
+                    </label>
+                    <input type="number" class="styled-input" placeholder="+ 123 456 789">
+                  </div>
+          
+          
+                  <div class="input-container mb-3">
+                    <label class="input-label">
+                      <span class="icon"></span>
+                      Your Message
+                      <span class="icon"></span>
+                    </label>
+                    <input type="textarea" class="styled-input text-area" placeholder="Type Your Message">
+                  </div>
+          
+                  <div class="text-center">
+                    <button class="form-btn text-sm poppins-regular py-3 px-3">Submit Form</button>
+          
+                  </div>
+                </form>
+              </div>
             </div>
+          
           </div>
         </div>
       </div>
@@ -2887,6 +3261,8 @@
     <script src="owl-carousel/js/owl.carousel.min.js"></script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   
+    
 
   </body>
 </html>

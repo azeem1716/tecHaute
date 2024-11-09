@@ -3,10 +3,26 @@ document.getElementById("check").addEventListener("change", function() {
   if (this.checked) {
       sideMenu.style.left = "0"; // Open menu (slide in)
   } else {
-      sideMenu.style.left = "-300px"; // Close menu (slide out)
+      sideMenu.style.left = "-100%"; // Close menu (slide out)
   }
 });
 
+$(document).ready(function() {
+  $('.toggle-submenu').on('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    $(this).closest('li').find('.submenu').toggle(); // Toggle the display of the corresponding submenu
+  });
+});
+
+$(document).ready(function() {
+  $('.nav-link').on('click', function() {
+      // Remove active class from all nav links
+      $('.nav-link').removeClass('active');
+      
+      // Add active class to the clicked link
+      $(this).addClass('active');
+  });
+});
 
 $(document).ready(function(){
   // Initialize Owl Carousel
@@ -303,6 +319,39 @@ var swiper2 = new Swiper('#swiper-container-2', {
   });
 });
 
+
+
+$(document).ready(function () {
+  var swiper1 = new Swiper("#website-carousel-1", {
+    direction: 'vertical',
+    freeMode: true,
+    loop: true,
+    loopedSlides: 3,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: false
+    },
+    speed: 3000,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    allowTouchMove: false
+  });
+
+  var swiper2 = new Swiper("#website-carousel-2", {
+    direction: 'vertical',
+    loop: true,
+    loopedSlides: 3,
+    speed: 3000,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: false,
+      reverseDirection: true
+    },
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    allowTouchMove: false
+  });
+});
 
 
 
@@ -828,12 +877,12 @@ $(document).ready(function() {
   // Initially, hide all tab content except the first one
   $('.tab-content-section').hide(); // Hide all content sections
   $('.tab-content-section:first').show().addClass('active-tab'); // Show the first content section by default
-  $('ul li:first').addClass('active'); // Set the first tab as active
+  $('#Portfolio-Tab li:first').addClass('active'); // Set the first tab as active
 
   // When a tab is clicked
-  $('ul li').click(function() {
+  $('#Portfolio-Tab li').click(function() {
      // Remove active class from all tabs
-     $('ul li').removeClass('active');
+     $('#Portfolio-Tab li').removeClass('active');
      // Add active class to the clicked tab
      $(this).addClass('active');
 
@@ -908,6 +957,39 @@ $(document).ready(function() {
 
 });
 
+
+
+$(document).ready(function() {
+  // Initially, hide all tab content except the first one
+  $('.logo-tab-content').hide(); // Hide all content sections
+  $('.logo-tab-content:first').show().addClass('active-tab'); // Show the first content section by default
+  $('#logo-Tab li:first').addClass('active'); // Set the first tab as active
+
+  // When a tab is clicked
+  $('#logo-Tab li').click(function() {
+     // Remove active class from all tabs
+     $('#logo-Tab li').removeClass('active');
+     // Add active class to the clicked tab
+     $(this).addClass('active');
+
+     // Hide all content sections
+     $('.logo-tab-content').hide().removeClass('active-tab');
+
+     // Get the target content section based on the clicked tab's data-target attribute
+     var target = $(this).data('target');
+     
+     // Show the selected content and add the active class
+     $(target).fadeIn().addClass('active-tab');
+
+     // Refresh ScrollTrigger after showing the new tab content
+     gsap.delayedCall(0.1, function() {
+       ScrollTrigger.refresh(); // Recalculate the ScrollTrigger elements
+     });
+  });
+
+
+
+});
 
 
 

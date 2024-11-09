@@ -65,6 +65,7 @@
 }
 
 /* ========== Nav styling ========== */
+
 .nav-list {
   display: flex;
   align-items: center;
@@ -113,7 +114,10 @@
   animation: none;
 }
 
-
+.nav-link.active {
+    border-bottom: 3px solid var(--theme-color); /* Add border for active state */
+    padding-bottom: 5px; /* Optional padding */
+}
 
 .custom-dropdown .custom-menu {
   display: none; 
@@ -143,6 +147,10 @@
   border-color: #e9ecef;
 }
 
+.nav-link.active {
+  border-bottom: 3px solid var(--theme-color); /* Change this to your desired color */
+  padding-bottom: 5px; /* Optional: Add some padding to create space above the border */
+}
 
 
 
@@ -153,7 +161,7 @@
   left: 0;
   right: 0;
   height: 60px;
-  background: rgba(255, 255, 255, 0);
+  background: var(--theme-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -212,21 +220,58 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 }
 
 /* ========== Side Menu Styles ========== */
+
+
 .side-menu {
   position: fixed;
   top: 0;
-  left: -300px;
-  width: 300px;
+  left: -100%; 
+  width: 100%;
   height: 100%;
-  background: var(--primary-color);
-  transition: left 0.3s ease;
+  background: url('../Assests/Images/Side-Menu-Bg.jpg') no-repeat center center;
+  background-size: cover; 
   z-index: 999;
+  transition: left 0.3s ease;
 }
+.side-menu > ul > li.active {
+  font-weight: bold;
+  position: relative; 
+}
+
+.side-menu > ul > li.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0; 
+  left: 20px; 
+  right: 20px; 
+  height: 3px; 
+  background-color: var(--white-color); 
+  transform: scaleX(1); 
+  transform-origin: center; 
+  transition: transform 0.5s ease; 
+}
+
+
+
+.side-menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--theme-color); 
+  opacity: 0.7; 
+  z-index: 1; 
+}
+
 
 .side-menu ul {
   list-style: none;
   padding: 20px 0;
   margin-top: 60px;
+  position: relative; 
+  z-index: 2; 
 }
 
 .side-menu li {
@@ -242,12 +287,26 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
   align-items: center;
 }
 
+
+.submenu {
+  display: none; 
+  padding-left: 20px; 
+  border-radius: 8px;
+  margin-top: 0px !important;
+  background: rgba(255, 255, 255, 0.1); 
+}
+
+
 /* ========== Media Query to hide mobile header and menu on large screens ========== */
 @media (min-width: 768px) {
   .mobile-header,
   .side-menu {
-      display: none;
+    display: none;
   }
+}
+
+.side-menu.active {
+  left: 0; 
 }
 
 /* ========== END Header ========== */
@@ -379,6 +438,31 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
     height: 100vh;
     width: screen;
 }
+
+
+#website-carousel-1 , #website-carousel-2 {
+  height: 500px !important;
+  overflow: hidden; 
+  transform: rotate(25deg);
+  transform-origin: center; /* Set the origin of the transformation to the top */
+  transform: translateY(100px) rotate(-25deg); /* Translate from the top */
+ 
+}
+
+
+
+.webiste-carousel-img {
+  height: 400px;
+  width: 200px;
+  overflow: hidden;
+}
+.webiste-carousel-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
 
 
 .hero-section .hero-text{
@@ -564,6 +648,10 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
   bottom: -50px;
   right: 0;
   z-index: -1;
+}
+.logo-tab-icon{
+  height: 84px;
+  width: 84px;
 }
 
 /* ========== END Logos Section ========== */
@@ -1330,7 +1418,85 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
   background-repeat: no-repeat;
   background-position: center center;
   min-height: 600px;
+  padding: 60px 0px;
 }
+
+.form-container {
+  background-color: var(--white-color);
+}
+
+.form-container-before {
+  background: repeating-linear-gradient(
+    45deg,
+    #000, 
+    #000 5px, 
+    #fff 5px, 
+    #fff 10px 
+  );
+  padding: 4px;
+  z-index: 0;
+  box-sizing: content-box; 
+}
+
+
+.input-container {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+}
+.input-label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: white;
+  padding: 0 5px;
+  color: #b0b8c7; /* Label color */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  align-items: center;
+}
+.input-label .icon {
+  width: 8px;
+  height: 8px;
+  background-color: var(--theme-color); /* Icon color */
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  margin: 0 8px;
+}
+.styled-input {
+  width: 100%;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  border: 1px solid #d1d7e0;
+  border-radius: 5px;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: #b0b8c7; /* Input text color */
+}
+
+.text-area{
+  padding: 20px 0px 80px 15px;
+}
+
+.fa-caret-right {
+  color: #f2135c;
+  border-bottom: 2px solid transparent; /* Bottom border on hover */
+  transition: transform 0.3s ease, border-bottom 0.3s ease; /* Smooth transition for both effects */
+}
+
+.fa-caret-right:hover {
+  border-color:  #698cc5; /* Bottom border on hover */
+}
+
+.form-btn{
+  background-color: var(--theme-color);
+  color: var(--white-color);
+}
+
 
 
 /* ========== Form Section Styles Ends ========== */
@@ -1428,18 +1594,65 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
   
 
 /* ========== Tabs ========== */
+
 .tab-content-section {
   display: none; /* Hide all tab contents */
 }
 
 .active-tab {
-  display: block; /* Show only the active tab */
+  display: block; 
 }
 
-ul li.active {
-  font-weight: bold;
-  border-bottom: 3px solid var(--theme-color); /* Optional: highlight active tab */
+
+
+/* Combined styles for both tabs */
+#Portfolio-Tab li:hover,
+#logo-Tab li:hover,
+#Packages-Tab li:hover {
+    cursor: pointer; /* Change cursor to pointer on hover */
+  
 }
+
+/* General styles for the list items */
+#Portfolio-Tab ul,
+#logo-Tab ul,
+#Packages-Tab ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+#Portfolio-Tab li,
+#logo-Tab li,
+#Packages-Tab li {
+    padding: 10px 0px; /* Add some padding */
+    background-color: transparent; /* Light background for visibility */
+    margin: 5px 0; /* Add some margin between items */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+#Portfolio-Tab li.active {
+  background-color: var(--theme-color); /* Change this to your desired color */
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: #fff; /* Change text color if needed */
+}
+
+
+#logo-Tab li.active {
+  background-color: var(--theme-color); /* Change this to your desired color */
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: #fff; /* Change text color if needed */
+}
+
+
+#Packages-Tab  li.active {
+  background-color: var(--theme-color); /* Change this to your desired color */
+  padding: 10px 30px;
+  border-radius: 20px;
+  color: #fff; /* Change text color if needed */
+}
+
 
 /* ========== END Tabs ========== */
 
@@ -1449,7 +1662,9 @@ ul li.active {
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-.swiper-container {
+
+
+#logo-swiper .swiper-container {
   height: 500px; /* Adjust height as needed */
   overflow: hidden; /* Prevent overflow */
   transform: rotate(25deg);
@@ -1459,7 +1674,7 @@ ul li.active {
 
 
 
-.swiper-container .swiper-slide {
+#logo-swiper .swiper-container .swiper-slide {
   height: auto; /* Allows slides to adjust based on content */
   display: flex;
   align-items: center;
@@ -1481,3 +1696,34 @@ ul li.active {
 }
 
 /* ========== LOGO Page Css Ends ========== */
+
+
+
+.mobile-app-hero-img{
+  margin-top: 170px;
+}
+
+
+.mobile-app-hero-img img{
+ height: 400px;
+}
+
+
+.app-category-img{
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.app-category-img img{
+  height: 100%;
+  width: 100%;
+ object-fit: cover;
+}
+
+.app-category-content{
+  width: 100%;
+  background-color: #eff5ff;
+ padding: 20px;
+}
