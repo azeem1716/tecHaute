@@ -15,10 +15,14 @@
     --yellow : #ffc107 ;
 }
 
-body{
-    overflow-x: hidden;
-}
-
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    overflow-x: hidden !important;
+  }
+  
 
 
 /* ========== COLORS ========== */

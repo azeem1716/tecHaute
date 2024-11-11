@@ -582,17 +582,30 @@ anime({
     return isY ? Math.random() * max - max / 2 : Math.random() * max - max / 2; // Generate random position within range
   }
   
+  // function animateArrow() {
+  //   anime({
+  //     targets: ['.arrow-2 img','.arrow-3 img',],
+  //     translateX: getRandomPosition(600), // Horizontal movement remains large
+  //     translateY: getRandomPosition(100, true), // Decreased vertical range to -50 to 50
+  //     duration: 2000, // Duration of the animation
+  //     easing: 'easeInOutQuad', // Easing function
+  //     complete: animateArrow // Repeat the animation when complete
+  //   });
+  // }
+  
   function animateArrow() {
     anime({
-      targets: ['.arrow-2 img','.arrow-3 img',],
-      translateX: getRandomPosition(600), // Horizontal movement remains large
-      translateY: getRandomPosition(100, true), // Decreased vertical range to -50 to 50
-      duration: 2000, // Duration of the animation
-      easing: 'easeInOutQuad', // Easing function
-      complete: animateArrow // Repeat the animation when complete
+      targets: ['.arrow-2 img', '.arrow-3 img'],
+      rotate: {
+        value: 360, // Rotate 360 degrees
+        duration: 2000, // Duration of the animation
+        easing: 'easeInOutQuad'
+      },
+      loop: true // Repeat the animation infinitely
     });
   }
   
+
   // Start the animation
   animateArrow();
   anime({
