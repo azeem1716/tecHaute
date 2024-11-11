@@ -993,6 +993,42 @@ $(document).ready(function() {
 
 
 
+
+$(document).ready(function() {
+  // Initially, hide all tab content except the first one
+  $('.package-tab-content').hide(); // Hide all content sections
+  $('.package-tab-content:first').show().addClass('active-tab'); // Show the first content section by default
+  $('#Packages-Tab li:first').addClass('active'); // Set the first tab as active
+
+  // When a tab is clicked
+  $('#Packages-Tab li').click(function() {
+     // Remove active class from all tabs
+     $('#Packages-Tab li').removeClass('active');
+     // Add active class to the clicked tab
+     $(this).addClass('active');
+
+     // Hide all content sections
+     $('.package-tab-content').hide().removeClass('active-tab');
+
+     // Get the target content section based on the clicked tab's data-target attribute
+     var target = $(this).data('target');
+     
+     // Show the selected content and add the active class
+     $(target).fadeIn().addClass('active-tab');
+
+     // Refresh ScrollTrigger after showing the new tab content
+     gsap.delayedCall(0.1, function() {
+       ScrollTrigger.refresh(); // Recalculate the ScrollTrigger elements
+     });
+  });
+
+
+
+});
+
+
+
+
 $(document).ready(function() {
   // Show and keep dropdown open when hovering over the container
   $('#servicesDropdownContainer').hover(

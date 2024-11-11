@@ -156,7 +156,7 @@
 
 /* ========== Mobile Header ========== */
 .mobile-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -856,11 +856,15 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
   position: relative;
 }
 
-.mockup-image img {
+.mockup-image  {
   position: absolute;
   bottom: -200px;
   right: 50px;
-  height: 90%;
+  height:600px;
+}
+
+.mockup-image img{
+  height: 100%;
 }
 
 /* ========== END Combo Section ========== */
@@ -1021,38 +1025,65 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 
 
 /* ========== Accordion Styles ========== */
+/* Keep the base styles as is */
+/* Common styles */
 .accordion-item {
   margin-bottom: 15px;
-}
-
-.accordion-item {
   border: none !important;
 }
 
 .accordion-button::after {
-  background-image: url('../Assets/Icons/Accordion-Arrow.png') !important;
+  background-image: url('../Assests/Icons/Accordion-Arrow.png') !important;
 }
-
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(90deg) !important;
+}
 .accordion-button:focus {
   box-shadow: none !important;
   outline: none !important;
 }
 
-.accordion-button:not(.collapsed)::after {
-  transform: rotate(90deg) !important;
-}
-
-.accordion-item > .accordion-header .accordion-button {
+/* First Accordion Styles */
+#accordionExample1 .accordion-item > .accordion-header .accordion-button {
   background-color: #fafcff !important;
   border: 1px solid #f0f0f0 !important;
   border-radius: 42px !important;
 }
+#accordionExample1 .accordion-item > .accordion-header .accordion-button:not(.collapsed) {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom: 0 !important;
+  background-color: #eaf5ff !important;
+  border-color: skyblue !important;
+}
+#accordionExample1 .accordion-item > .accordion-collapse {
+  background-color: #eaf5ff !important;
+  border: 1px solid skyblue !important;
+  border-radius: 0 0 42px 42px !important;
+  margin-top: -1px;
+}
 
-.accordion-item > .accordion-collapse {
+/* Second Accordion Styles */
+#accordionExample2 .accordion-item > .accordion-header .accordion-button {
   background-color: #fafcff !important;
   border: 1px solid #f0f0f0 !important;
   border-radius: 42px !important;
 }
+#accordionExample2 .accordion-item > .accordion-header .accordion-button:not(.collapsed) {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom: 0 !important;
+  background-color: #eaf5ff !important;
+}
+
+
+#accordionExample2 .accordion-item > .accordion-collapse {
+  background-color: #eaf5ff !important; /* Different background color */
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 0 0 42px 42px !important;
+  margin-top: -1px;
+}
+
 
 /* ========== END Accordion Styles ========== */
 
