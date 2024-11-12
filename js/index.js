@@ -167,6 +167,7 @@ $(document).ready(function () {
     autoHeight: true,
     slidesPerView: 1,
     spaceBetween: 10,
+    speed: 1000,
     navigation: {
       nextEl: '.custom-nav .next',
       prevEl: '.custom-nav .prev',
