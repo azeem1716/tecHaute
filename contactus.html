@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Contact-Us</title>
 
      <!-- ========== Custom CSS ========== -->
@@ -39,136 +39,191 @@
 
 </head>
 <body>
-     <!-- ==========  Header for Desktop ========== -->
-    <header class="desktop-header">
-      <div
-        class="d-none d-lg-flex justify-content-between align-items-center container my-4"
-      >
-        <div class="d-flex gap-4 text-white">
-          <i class="fa-brands fa-facebook-f"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-google"></i>
-          <i class="fa-brands fa-pinterest-p"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-solid fa-wifi"></i>
+    
+   <!-- ==========  Header for Desktop ========== -->
+   <header class="desktop-header">
+    <div
+      class="d-none d-lg-flex justify-content-between align-items-center container my-4"
+    >
+      <div class="d-flex gap-4 text-white">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-google"></i>
+        <i class="fa-brands fa-pinterest-p"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+
+      <div class="d-flex gap-4">
+        <div class="d-flex justify-content-center align-items-baseline gap-2">
+          <div>
+            <img
+              src="Assests/Icons/live-chat svg.svg"
+              id="header-icon"
+              alt=""
+            />
+          </div>
+          <div>
+            <h6 class="text-md text-white poppins-medium lh-0">Live Chat</h6>
+            <span class="text-sm text-white poppins-regular lh-0"
+              >Feel Free to chat with us
+            </span>
+          </div>
         </div>
 
-        <div class="d-flex gap-4">
-          <div class="d-flex justify-content-center align-items-baseline gap-2">
-            <div>
-              <img
-                src="Assests/Icons/live-chat svg.svg"
-                id="header-icon"
-                alt=""
-              />
-            </div>
-            <div>
-              <h6 class="text-md text-white poppins-medium lh-0">Live Chat</h6>
-              <span class="text-sm text-white poppins-regular lh-0"
-                >Feel Free to chat with us
-              </span>
-            </div>
+        <div class="d-flex justify-content-center align-items-baseline gap-2">
+          <div>
+            <img src="Assests/Icons/call-us.svg" id="header-icon" alt="" />
           </div>
-
-          <div class="d-flex justify-content-center align-items-baseline gap-2">
-            <div>
-              <img src="Assests/Icons/call-us.svg" id="header-icon" alt="" />
-            </div>
-            <div>
-              <h6
-                class="text-md text-white poppins-medium lh-0 text-capitalize"
-              >
-                Call or text us
-              </h6>
-              <span
-                class="text-sm text-white poppins-regular lh-0 text-capitalize"
-                >Call Us On +123 456 7890
-              </span>
-            </div>
+          <div>
+            <h6
+              class="text-md text-white poppins-medium lh-0 text-capitalize"
+            >
+              Call or text us
+            </h6>
+            <span
+              class="text-sm text-white poppins-regular lh-0 text-capitalize"
+              >Call Us On +123 456 7890
+            </span>
           </div>
         </div>
       </div>
+    </div>
 
+    <div
+      class="header-container d-none d-lg-flex align-items-center container rounded-3"
+    >
       <div
-        class="header-container d-none d-lg-flex align-items-center container rounded-3"
+        class="container d-flex justify-content-between align-items-center"
       >
-        <div
-          class="container d-flex justify-content-between align-items-center"
-        >
-          <!-- Logo -->
-          <div class="logo">
-            <a href="#">
-              <img
-                src="Assests/Icons/techaute_logo.svg"
-                alt="Logo"
-                class="img-fluid"
-                style="max-height: 50px"
-              />
-            </a>
-          </div>
-
-          <!-- Navigation Links -->
-          <nav class="navigation d-flex justify-content-center">
-            <ul class="nav-list d-flex list-unstyled m-0">
-              <li class="nav-item mx-4">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-divider">|</li>
-              <li class="nav-item mx-4">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-divider">|</li>
-              <li class="nav-item custom-dropdown mx-4" id="servicesDropdownContainer">
-                <a class="nav-link" href="#" id="servicesDropdown">Services <i class="fa-solid fa-angle-down"></i></a>
-                <ul class="dropdown-menu custom-menu" id="customDropdownMenu">
-                  <li><a class="dropdown-item" href="logo.html">Logo Design</a></li>
-                  <li><a class="dropdown-item" href="website.html">Website Development</a></li>
-                  <li><a class="dropdown-item" href="#">Branding</a></li>
-                  <li><a class="dropdown-item" href="#">Ecommerce Solution</a></li>
-                  <li><a class="dropdown-item" href="#">Mobile App</a></li>
-                </ul>
-              </li>
-              
-              
-              <li class="nav-divider">|</li>
-              <li class="nav-item mx-4">
-                <a class="nav-link" href="#">Combo Packages</a>
-              </li>
-              <li class="nav-divider">|</li>
-              <li class="nav-item mx-4">
-                <a class="nav-link" href="#">Reviews</a>
-              </li>
-              <li class="nav-divider">|</li>
-              <li class="nav-item mx-4">
-                <a class="nav-link" href="contactus.html">Contact</a>
-              </li>
-            </ul>
-          </nav>
-
-          <!-- Button at the end -->
-          <button class="btn-comp">
-            <span class="button-content"> Get Started</span>
-          </button>
-        </div>
-      </div>
-    </header>
-    <!-- ==========  Header for Desktop ========== -->
-  
-      <!-- ==========  Header for Mobile ========== -->
-      <header class="mobile-header">
+        <!-- Logo -->
         <div class="logo">
-          <img src="Assests/Images/TecHaute-White-logo.png" alt="" />
+          <a href="#">
+            <img
+              src="Assests/Icons/techaute_logo.svg"
+              alt="Logo"
+              class="img-fluid"
+              style="max-height: 50px"
+            />
+          </a>
         </div>
-        <label for="check" class="hamburger">
-          <input type="checkbox" id="check" />
-          <div class="bar-container">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </label>
-      </header>
-      <!-- ==========  Header for Mobile ========== -->
+
+        <!-- Navigation Links -->
+        <nav class="navigation d-flex justify-content-center">
+          <ul class="nav-list d-flex list-unstyled m-0">
+            <li class="nav-item mx-4">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-divider">|</li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-divider">|</li>
+            <li
+              class="nav-item custom-dropdown mx-4"
+              id="servicesDropdownContainer"
+            >
+              <a class="nav-link" href="#" id="servicesDropdown"
+                >Services <i class="fa-solid fa-angle-down"></i
+              ></a>
+              <ul class="dropdown-menu custom-menu" id="customDropdownMenu">
+                <li>
+                  <a class="dropdown-item" href="logo.html">Logo Design</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="website.html"
+                    >Website Development</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="branding.html">Branding</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Ecommerce Solution</a>
+                </li>
+                <li><a class="dropdown-item" href="mobile-app.html">Mobile App</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-divider">|</li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">Combo Packages</a>
+            </li>
+            <li class="nav-divider">|</li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="#">Reviews</a>
+            </li>
+            <li class="nav-divider">|</li>
+            <li class="nav-item mx-4">
+              <a class="nav-link" href="contactus.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Button at the end -->
+        <button class="btn-comp">
+          <span class="button-content"> Get Started</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- ==========  Header for Desktop ========== -->
+
+  <!-- ========== Header for Mobile ========== -->
+  <header class="mobile-header">
+    <div class="logo">
+      <img src="Assests/Images/TecHaute-White-logo.png" alt="" />
+    </div>
+    <label for="check" class="hamburger">
+      <input type="checkbox" id="check" />
+      <div class="bar-container">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </label>
+  </header>
+
+  <nav class="side-menu" id="side-menu">
+    <ul>
+      <li class="d-flex justify-content-between">
+        <a href="index.html"><span class="icon-about">Home</span></a>
+      </li>
+      <li class="d-flex justify-content-between">
+        <a href="About.html"><span class="icon-about">About</span></a>
+      </li>
+  
+      <li class="">
+       <div class="d-flex justify-content-between">
+        <a href="#"><span class="icon-services">Services</span></a>
+        <span class="toggle-submenu"><i class="fa-solid fa-chevron-down text-white"></i></span> <!-- Icon for submenu toggle -->
+       </div>
+        <ul class="submenu poppins-regular">
+          <li><a href="logo.html">Logo Design</a></li>
+          <li><a href="website.html">Website Development</a></li>
+          <li><a href="branding.html">Branding</a></li>
+          <li><a href="#">Ecommerce Solution</a></li>
+          <li><a href="mobile-app.html">Mobile App</a></li>
+        </ul>
+      </li>
+      
+      
+  
+      <li class="d-flex justify-content-between">
+        <a href="#"><span class="icon-combo">Combo Packages</span></a>
+      </li>
+  
+      <li class="d-flex justify-content-between">
+        <a href="#"><span class="icon-reviews">Reviews</span></a>
+      </li>
+  
+      <li class="d-flex justify-content-between">
+        <a href="#"><span class="icon-contact">Contact</span></a>
+      </li>
+    </ul>
+  </nav>
+  
+  <!-- ========== Header for Mobile ========== -->
   
       <!-- ========== Contact Us Hero Section ========== -->
       <div

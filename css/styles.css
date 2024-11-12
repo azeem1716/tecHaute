@@ -162,7 +162,8 @@ html {
 
 /* ========== Mobile Header ========== */
 .mobile-header {
-  position: absolute;
+  position: fixed;
+  border-radius: 20px;
   top: 0;
   left: 0;
   right: 0;
@@ -176,9 +177,8 @@ html {
 }
 
 /* ========== Logo Styles ========== */
-.logo {
-  font-size: 24px;
-  color: #fff;
+.logo img{
+  width: 100px;
 }
 
 /* ========== Hamburger Styles ========== */
@@ -237,8 +237,20 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
   background: url('../Assests/Images/Side-Menu-Bg.jpg') no-repeat center center;
   background-size: cover; 
   z-index: 999;
-  transition: left 0.3s ease;
+  transition: left 0.5s ease;
 }
+
+.side-menu > ul {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Position below its normal position */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for both opacity and position */
+}
+
+.side-menu > ul.show  {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Slide up to its original position */
+}
+
 .side-menu > ul > li.active {
   font-weight: bold;
   position: relative; 
@@ -253,9 +265,11 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
   height: 3px; 
   background-color: var(--white-color); 
   transform: scaleX(1); 
-  transform-origin: center; 
-  transition: transform 0.5s ease; 
+  /* transform-origin: center;  */
+  transition: 0.5s ease; 
 }
+
+
 
 
 
@@ -281,7 +295,7 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
 }
 
 .side-menu li {
-  padding: 15px 20px;
+  padding: 10px 20px;
 }
 
 .side-menu a {
@@ -301,6 +315,8 @@ input[type="checkbox"]:checked ~ .bar-container span:nth-of-type(2) {
   margin-top: 0px !important;
   background: rgba(255, 255, 255, 0.1); 
 }
+
+
 
 
 /* ========== Media Query to hide mobile header and menu on large screens ========== */

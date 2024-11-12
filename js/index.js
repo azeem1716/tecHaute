@@ -1,18 +1,39 @@
+// document.getElementById("check").addEventListener("change", function() {
+//   const sideMenu = document.getElementById("side-menu");
+//   if (this.checked) {
+//       sideMenu.style.left = "0"; // Open menu (slide in)
+//   } else {
+//       sideMenu.style.left = "-100%"; // Close menu (slide out)
+//   }
+// });
+
 document.getElementById("check").addEventListener("change", function() {
   const sideMenu = document.getElementById("side-menu");
+  const menuList = sideMenu.querySelector("#side-menu > ul"); // Select the <ul> inside side-menu
+
   if (this.checked) {
       sideMenu.style.left = "0"; // Open menu (slide in)
+      
+      // Delay adding the 'show' class to <ul> by 1 second (1000 ms)
+      setTimeout(() => {
+          menuList.classList.add("show");
+      }, 600);
   } else {
       sideMenu.style.left = "-100%"; // Close menu (slide out)
+      
+      // Remove the 'show' class from <ul> immediately to hide it
+      menuList.classList.remove("show");
   }
 });
+
 
 $(document).ready(function() {
   $('.toggle-submenu').on('click', function(event) {
     event.preventDefault(); // Prevent default anchor behavior
-    $(this).closest('li').find('.submenu').toggle(); // Toggle the display of the corresponding submenu
+    $(this).closest('li').find('.submenu').slideToggle(400); // Slide toggle the corresponding submenu with animation
   });
 });
+
 
 $(document).ready(function() {
   $('.nav-link').on('click', function() {
