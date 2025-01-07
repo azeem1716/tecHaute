@@ -1135,7 +1135,24 @@ $(document).ready(function() {
 
 
 
-
+  // $(document).ready(function() {
+  //   // Tab button click event
+  //   $('.package-button button').on('click', function() {
+  //     // Remove active class from all buttons
+  //     $('.package-button button').removeClass('active');
+  
+  //     // Add active class to the clicked button
+  //     $(this).addClass('active');
+  
+  //     // Get the target tab
+  //     var targetTab = $(this).data('tabs-target');
+  
+  //     // Hide all tabs and show the selected tab
+  //     $('.package-content').hide(); // Ensure package-content elements are hidden
+  //     $(targetTab).show(); // Show the selected tab
+  //   });
+  // });
+  
 
 
 
@@ -1186,3 +1203,6 @@ $(document).ready(function() {
 // .helo-btn:hover {
 //   color: #fff; /* Adjust text color if needed */
 // }
+
+
+
